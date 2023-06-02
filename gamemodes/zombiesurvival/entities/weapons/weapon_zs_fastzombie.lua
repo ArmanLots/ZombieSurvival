@@ -20,20 +20,20 @@ SWEP.MeleeDamageType = DMG_SLASH
 SWEP.Primary.Delay = 0.32
 
 SWEP.SlowMeleeDelay = 0.8
-SWEP.SlowMeleeDamage = 18
+SWEP.SlowMeleeDamage = 16
 
-SWEP.PounceDamage = 20
+SWEP.PounceDamage = 16
 SWEP.PounceDamageVsPlayerMul = 0.2
 SWEP.PounceDamageType = DMG_IMPACT
 SWEP.PounceReach = 26
 SWEP.PounceSize = 12
-SWEP.PounceStartDelay = 0.5
-SWEP.PounceDelay = 1.25
+SWEP.PounceStartDelay = 0.25
+SWEP.PounceDelay = 0.75
 SWEP.PounceVelocity = 700
 
 SWEP.RoarTime = 1.6
 
-SWEP.Secondary.Automatic = false
+SWEP.Secondary.Automatic = true
 
 SWEP.NextClimbSound = 0
 SWEP.NextAllowPounce = 0

@@ -13,7 +13,7 @@ CLASS.Revives = true
 
 CLASS.Health = 150
 CLASS.DynamicHealth = 2
-CLASS.Speed = 255
+CLASS.Speed = 230
 CLASS.SWEP = "weapon_zs_fastzombie"
 
 CLASS.DamageNeedPerPoint = GM.NoHeadboxZombiePointRatio
