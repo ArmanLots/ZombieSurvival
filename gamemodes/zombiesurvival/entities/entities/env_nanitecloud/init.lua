@@ -2,7 +2,7 @@ INC_SERVER()
 
 ENT.TickTime = 1
 ENT.Ticks = 10
-ENT.HealPower = 17.5
+ENT.HealPower = 28
 
 function ENT:Initialize()
 	local owner = self:GetOwner()
