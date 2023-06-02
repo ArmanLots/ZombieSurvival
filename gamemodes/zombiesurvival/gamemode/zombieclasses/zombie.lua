@@ -210,7 +210,7 @@ if SERVER then
 		pl:StartFeignDeath()
 	end
 
-	function CLASS:ProcessDamage(pl, dmginfo)
+	--[[function CLASS:ProcessDamage(pl, dmginfo)
 		local damage = dmginfo:GetDamage()
 		if damage >= 70 or damage < pl:Health() then return end
 
@@ -238,7 +238,7 @@ if SERVER then
 		end
 
 		return true
-	end
+	end--]]
 
 	function CLASS:ReviveCallback(pl, attacker, dmginfo)
 		if not pl:ShouldReviveFrom(dmginfo) then return false end
