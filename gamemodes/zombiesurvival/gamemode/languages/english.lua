@@ -317,7 +317,7 @@ LANGUAGE.class_howler								= "Howler"
 LANGUAGE.class_extinctioncrab						= "Extinction Crab"
 
 -- Class descriptions
-LANGUAGE.description_drencher           = "A being worth avoiding, These brutes have greatly mutated blood cells\ngiving them superior strength and making them extremely hard to put down.\nTheir deaths are a violent blood storm, greatly damaging structures and humans nearby.
+LANGUAGE.description_drencher           = "A being worth avoiding, These brutes have greatly mutated blood cells\ngiving them superior strength and making them extremely hard to put down.\nTheir deaths are a violent blood storm, greatly damaging structures and humans nearby."
 LANGUAGE.description_boar_zombie      = "Boar zombies are durable evolutions of the standard zombie.\nBeing simply better in every way"
 LANGUAGE.description_zombie							= "The basic zombie is very durable and has powerful claws.\nIt's hard to keep down, especially if not shot in the head."
 LANGUAGE.description_zombie_gore_blaster			= "Gore Blaster Zombies send viscera in all direction when killed which can cause minor harm.\nTheir claws can also inflict bleeding."
