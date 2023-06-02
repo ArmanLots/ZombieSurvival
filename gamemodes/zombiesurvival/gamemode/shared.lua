@@ -78,7 +78,7 @@ include_library("ammoexpand")
 GM.EndRound = false
 GM.StartingPlayerHealth = 100
 --GM.StartingPlayerSpeed = 225 -- see sh_globals.lua for editing SPEED_NORMAL
-GM.StartingWorth = 100
+GM.StartingWorth = 200
 GM.ZombieVolunteers = {}
 
 team.SetUp(TEAM_ZOMBIE, "The Undead", Color(0, 255, 0, 255))
