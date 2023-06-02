@@ -3,9 +3,9 @@ CLASS.TranslationName = "class_eradicator"
 CLASS.Description = "description_eradicator"
 CLASS.Help = "controls_eradicator"
 
-CLASS.BetterVersion = "Eradicator II"
+--CLASS.BetterVersion = "Eradicator II"
 
-CLASS.Wave = 6 / GM.NumberOfWaves
+CLASS.Wave = 5 / GM.NumberOfWaves
 
 CLASS.Health = 410
 CLASS.DynamicHealth = 6
@@ -190,7 +190,7 @@ if SERVER then
 		if pl.EradiVived then return end
 
 		local damage = dmginfo:GetDamage()
-		if damage >= 80 or damage < pl:Health() then return end
+		if damage >= 15 or damage < pl:Health() then return end
 
 		local attacker, inflictor = dmginfo:GetAttacker(), dmginfo:GetInflictor()
 		if attacker == pl or not attacker:IsPlayer() or inflictor.IsMelee or inflictor.NoReviveFromKills then return end

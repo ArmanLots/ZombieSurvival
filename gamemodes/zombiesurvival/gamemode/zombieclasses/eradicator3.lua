@@ -5,7 +5,9 @@ CLASS.TranslationName = "class_eradicator_iii"
 CLASS.Description = "description_eradicator_iii"
 CLASS.Help = "controls_eradicator"
 
-CLASS.Wave = 11 / GM.NumberOfWaves
+--CLASS.Wave = 11 / GM.NumberOfWaves
+CLASS.Disabled = true
+CLASS.Hidden = true
 
 CLASS.Health = 470
 CLASS.DynamicHealth = 8
