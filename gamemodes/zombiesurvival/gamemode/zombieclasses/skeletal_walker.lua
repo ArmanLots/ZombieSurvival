@@ -10,6 +10,7 @@ CLASS.DynamicHealth = 2
 CLASS.Speed = 155
 
 CLASS.CanTaunt = true
+CLASS.Revives = false
 
 CLASS.DamageNeedPerPoint = GM.SkeletonPointRatio
 CLASS.Points = CLASS.Health/GM.SkeletonPointRatio
