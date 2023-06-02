@@ -32,6 +32,7 @@ function ENT:Initialize()
 	local object = self:GetObject()
 	if object:IsValid() then
 		object.IgnoreMeleeTeam = TEAM_HUMAN
+		object.IgnoreMeleeTeam = TEAM_UNDEAD
 		object.IgnoreTraces = true
 		object.IgnoreBullets = true
 
@@ -262,8 +263,8 @@ function ENT:Think()
 		elseif owner:KeyDown(IN_WALK) then
 			local xdiff = math.NormalizeAngle(self.StartX - (owner.InputMouseX or 0))
 			local ydiff = math.NormalizeAngle(self.StartY - (owner.InputMouseY or 0))
-			local sxdiff = xdiff * FrameTime() * 8
-			local sydiff = ydiff * FrameTime() * 8
+			local sxdiff = xdiff * FrameTime() * 60
+			local sydiff = ydiff * FrameTime() * 60
 
 			self.ObjectAngles:RotateAroundAxis(owner:GetUp(), sxdiff)
 			self.ObjectAngles:RotateAroundAxis(owner:GetRight(), sydiff)

@@ -44,7 +44,7 @@ function ENT:SetProp(ent)
 	ent.PreHoldCollisionGroup = ent.PreHoldCollisionGroup or ent:GetCollisionGroup()
 
 	ent:SetCollisionGroup(COLLISION_GROUP_WEAPON)
-	ent:SetMaterial("models/spawn_effect")
+	ent:SetMaterial("models/wireframe")
 end
 
 function ENT:OnRemove()
@@ -76,7 +76,7 @@ function ENT:Think()
 	local pushout = false
 	local timeout = self:GetTimeOut() > 0 and CurTime() >= self:GetTimeOut()
 	--local teamid = self:GetTeam()
-	local rate = 900 * FrameTime()
+	local rate = 0 * FrameTime()
 	local center = ent:LocalToWorld(ent:OBBCenter())
 
 	rate = rate * math.Clamp(1 - (self.PushPeak - CurTime()) / self.PushRamp, 0, 1)
