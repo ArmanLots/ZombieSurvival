@@ -11,6 +11,7 @@ function ENT:Initialize()
 	self:SetSolid(SOLID_VPHYSICS)
 	self:SetModelScale(0.2, 0)
 	self:SetUseType(SIMPLE_USE)
+	self:SetNestBuilt(true)
 
 	self:SetCustomCollisionCheck(true)
 	self:CollisionRulesChanged() --self:SetCollisionGroup(COLLISION_GROUP_DEBRIS_TRIGGER)
