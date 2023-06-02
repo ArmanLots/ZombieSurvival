@@ -428,10 +428,10 @@ GM:AddPointShopItem("nail",				ITEMCAT_AMMO,			3,				nil,	"Nail",							"It's ju
 item.NoClassicMode = true
 item.CanMakeFromScrap = true
 item =
-GM:AddPointShopItem("board",			ITEMCAT_AMMO,			20,				nil,	"Board",						"A board for aegis and prop packs.",	nil,							function(pl) pl:GiveAmmo(1, "SniperRound", true) end)
-item.NoCraftWithScrap = true
-item.Model = "models/props_debris/wood_board04a.mdl"
-item =
+--GM:AddPointShopItem("board",			ITEMCAT_AMMO,			20,				nil,	"Board",						"A board for aegis and prop packs.",	nil,							function(pl) pl:GiveAmmo(1, "SniperRound", true) end)
+--item.NoCraftWithScrap = true
+--item.Model = "models/props_debris/wood_board04a.mdl"
+--item =
 GM:AddPointShopItem("scrap",			ITEMCAT_AMMO,			9,				nil,	"3 Scrap",						"Scrap used in remantler.",				"ammo_scrap",					function(pl) pl:GiveAmmo(3, "scrap", true) end)
 item.NoCraftWithScrap = true
 -- Tier 1
