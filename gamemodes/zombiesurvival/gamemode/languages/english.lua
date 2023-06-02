@@ -249,6 +249,7 @@ LANGUAGE.message_beacon_24							= "Zombies are coming. Build a barricade!"
 LANGUAGE.message_beacon_25							= "Plan B here"
 
 -- Class names
+LANGUAGE.class_drencher               = "Drencher"
 LANGUAGE.class_zombie								= "Zombie"
 LANGUAGE.class_zombie_gore_blaster					= "Gore Blaster Zombie"
 LANGUAGE.class_boar_zombie            = "Boar Zombie"
@@ -316,6 +317,7 @@ LANGUAGE.class_howler								= "Howler"
 LANGUAGE.class_extinctioncrab						= "Extinction Crab"
 
 -- Class descriptions
+LANGUAGE.description_drencher           = "A being worth avoiding, These brutes have greatly mutated blood cells\ngiving them superior strength and making them extremely hard to put down.\nTheir deaths are a violent blood storm, greatly damaging structures and humans nearby.
 LANGUAGE.description_boar_zombie      = "Boar zombies are durable evolutions of the standard zombie.\nBeing simply better in every way"
 LANGUAGE.description_zombie							= "The basic zombie is very durable and has powerful claws.\nIt's hard to keep down, especially if not shot in the head."
 LANGUAGE.description_zombie_gore_blaster			= "Gore Blaster Zombies send viscera in all direction when killed which can cause minor harm.\nTheir claws can also inflict bleeding."
@@ -379,6 +381,7 @@ LANGUAGE.description_howler							= "A terrifying flesh titan with a piercing sh
 LANGUAGE.description_extinctioncrab					= "Vile diseases churn within this giant headcrab.\nThe spores it spits will afflict those near it, reducing the effectiveness of healing."
 
 -- Class control schemes
+LANGUAGE.controls_drencher              ="> PRIMARY: Bleeding Claws\n> SECONDARY: Moan\n> ON DEATH: Blood Storm"
 LANGUAGE.controls_zombie							= "> PRIMARY: Claws\n> SECONDARY: Scream\n> RELOAD: Moan\n> SPRINT: Feign death\n> ON FATAL HIT IN LEGS: Revive / Transform"
 LANGUAGE.controls_zombie_gore_blaster				= "> PRIMARY: Claws\n> ON HIT HUMAN: Bleed\n> SECONDARY: Scream\n> SPRINT: Feign death\n> ON DEATH: Gore Blast"
 LANGUAGE.controls_poison_zombie						= "> PRIMARY: Claws\n> SECONDARY: Flesh toss\n> RELOAD: Scream"
