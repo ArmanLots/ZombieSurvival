@@ -5,9 +5,9 @@ CLASS.TranslationName = "class_vile_bloated_zombie"
 CLASS.Description = "description_vile_bloated_zombie"
 CLASS.Help = "controls_vile_bloated_zombie"
 
-CLASS.Wave = 3 / GM.NumberOfWaves
+CLASS.Wave = 4 / GM.NumberOfWaves
 
-CLASS.Health = 350
+CLASS.Health = 400
 CLASS.DynamicHealth = 4
 CLASS.Speed = 135
 
