@@ -90,7 +90,7 @@ cvars.AddChangeCallback("zs_maxdroppeditems", function(cvar, oldvalue, newvalue)
 	GAMEMODE.MaxDroppedItems = tonumber(newvalue) or 48
 end)]]
 
-GM.NailHealthPerRepair = CreateConVar("zs_nailhealthperrepair", "10", FCVAR_ARCHIVE + FCVAR_NOTIFY, "How much health a nail gets when being repaired."):GetInt()
+GM.NailHealthPerRepair = CreateConVar("zs_nailhealthperrepair", "28", FCVAR_ARCHIVE + FCVAR_NOTIFY, "How much health a nail gets when being repaired."):GetInt()
 cvars.AddChangeCallback("zs_nailhealthperrepair", function(cvar, oldvalue, newvalue)
 	GAMEMODE.NailHealthPerRepair = tonumber(newvalue) or 1
 end)
@@ -127,6 +127,16 @@ end)
 GM.ZombieXPMulti = CreateConVar("zs_xpgainmul_zombie", "1", FCVAR_ARCHIVE + FCVAR_NOTIFY, "XP gain multiplier for zombies."):GetFloat()
 cvars.AddChangeCallback("zs_xpgainmul_zombie", function(cvar, oldvalue, newvalue)
 	GAMEMODE.ZombieXPMulti = tonumber(newvalue) or 1
+end)
+
+GM.BarricadeHealthMassFactor = math.ceil(100 * CreateConVar("zs_barricadehealthmassfactor", "2.5", FCVAR_ARCHIVE + FCVAR_NOTIFY, "Nailed props receive this much health per kg."):GetFloat()) * 0.01
+cvars.AddChangeCallback("zs_barricadehealthmassfactor", function(cvar, oldvalue, newvalue)
+	GAMEMODE.BarricadeHealthMassFactor = tonumber(newvalue) or 2.5
+end)
+
+GM.BarricadeHealthMax = CreateConVar("zs_barricadehealthmax", "99999", FCVAR_ARCHIVE + FCVAR_NOTIFY, "Nailed props can not have more than this health."):GetInt()
+cvars.AddChangeCallback("zs_barricadehealthmax", function(cvar, oldvalue, newvalue)
+	GAMEMODE.BarricadeHealthMax = tonumber(newvalue) or 99999
 end)
 
 

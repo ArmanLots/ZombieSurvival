@@ -768,7 +768,7 @@ GM:AddDeployableInfo("prop_drone_hauler",		"Hauler Drone",			"weapon_zs_drone_ha
 GM:AddDeployableInfo("prop_rollermine",			"Rollermine",			"weapon_zs_rollermine")
 GM:AddDeployableInfo("prop_tv",                   	 "TV",                    	"weapon_zs_tv")
 
-GM.MaxSigils = 3
+GM.MaxSigils = 1
 
 GM.DefaultRedeem = CreateConVar("zs_redeem", "3", FCVAR_REPLICATED + FCVAR_ARCHIVE + FCVAR_NOTIFY, "The amount of kills a zombie needs to do in order to redeem. Set to 0 to disable."):GetInt()
 cvars.AddChangeCallback("zs_redeem", function(cvar, oldvalue, newvalue)
@@ -850,7 +850,7 @@ GM.NoNewHumansWave = 3 --2
 GM.NoSuicideWave = 0
 
 -- How long 'wave 0' should last in seconds. This is the time you should give for new players to join and get ready. (There is extra 40 seconds on first round of map for players to load)
-GM.WaveZeroLength = 170 --150
+GM.WaveZeroLength = 240 --150
 -- Default: 170
 
 -- Time humans have between waves to do stuff without NEW zombies spawning. Any dead zombies will be in spectator (crow) view and any living ones will still be living.
@@ -930,8 +930,8 @@ GM.TimeAddedPerWaveIntermissionClassic = 1
 GM.WaveIntermissionLengthMaxClassic = 25
 
 -- Max amount of damage left to tick on these. Any more pending damage is ignored.
-GM.MaxPoisonDamage = 60
-GM.MaxBleedDamage = 55
+GM.MaxPoisonDamage = 50
+GM.MaxBleedDamage = 50
 
 -- Give humans this many points when the wave ends.
 GM.EndWavePointsBonus = 5
@@ -940,7 +940,7 @@ GM.EndWavePointsBonus = 5
 GM.EndWavePointsBonusPerWave = 1
 
 -- Should humans need to be near arsenal crates to buy items
-GM.NeedArsenalToBuyItems = true
+GM.NeedArsenalToBuyItems = false
 
 -- Use the zombie class for classic mode
 GM.ClassicZombieClass = "Classic Zombie"
