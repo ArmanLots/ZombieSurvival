@@ -251,6 +251,7 @@ LANGUAGE.message_beacon_25							= "Plan B here"
 -- Class names
 LANGUAGE.class_zombie								= "Zombie"
 LANGUAGE.class_zombie_gore_blaster					= "Gore Blaster Zombie"
+LANGUAGE.class_boar_zombie            = "Boar Zombie"
 LANGUAGE.class_poison_zombie						= "Poison Zombie"
 LANGUAGE.class_wild_poison_zombie					= "Wild Poison Zombie"
 LANGUAGE.class_fast_zombie							= "Fast Zombie"
@@ -315,6 +316,7 @@ LANGUAGE.class_howler								= "Howler"
 LANGUAGE.class_extinctioncrab						= "Extinction Crab"
 
 -- Class descriptions
+LANGUAGE.description_boar_zombie      = "Boar zombies are durable evolutions of the standard zombie.\nBeing simply better in every way"
 LANGUAGE.description_zombie							= "The basic zombie is very durable and has powerful claws.\nIt's hard to keep down, especially if not shot in the head."
 LANGUAGE.description_zombie_gore_blaster			= "Gore Blaster Zombies send viscera in all direction when killed which can cause minor harm.\nTheir claws can also inflict bleeding."
 LANGUAGE.description_poison_zombie					= "This mutated zombie is not only extremely durable but has abnormal strength.\nIts body is extremely toxic and will even tear out and toss its own flesh at things too far away to hit."
