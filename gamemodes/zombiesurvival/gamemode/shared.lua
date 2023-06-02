@@ -369,7 +369,7 @@ end
 
 GM.DynamicSpawnDist = 512
 GM.DynamicSpawnDistVis = 2048
-GM.CreeperNestDist = 150
+GM.CreeperNestDist = 0
 GM.CreeperNestDistBuild = 420
 GM.CreeperNestDistBuildNest = 192
 GM.CreeperNestDistBuildZSpawn = 256
