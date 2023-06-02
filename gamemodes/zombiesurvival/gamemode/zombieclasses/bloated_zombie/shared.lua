@@ -9,7 +9,7 @@ CLASS.Wave = 2 / GM.NumberOfWaves
 
 CLASS.Health = 325
 CLASS.DynamicHealth = 3
-CLASS.Speed = 125
+CLASS.Speed = 145
 --CLASS.JumpPower = DEFAULT_JUMP_POWER * 0.811
 CLASS.Mass = DEFAULT_MASS * 2
 

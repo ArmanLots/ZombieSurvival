@@ -16,7 +16,7 @@ CLASS.Wave = 2 / GM.NumberOfWaves
 
 CLASS.Health = 220
 CLASS.DynamicHealth = 3
-CLASS.Speed = 180
+CLASS.Speed = 165
 
 CLASS.DamageNeedPerPoint = GM.HumanoidZombiePointRatio
 CLASS.Points = CLASS.Health/GM.HumanoidZombiePointRatio

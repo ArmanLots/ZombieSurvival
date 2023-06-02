@@ -11,7 +11,7 @@ CLASS.Wave = 0
 CLASS.Unlocked = true
 
 CLASS.Health = 220
-CLASS.Speed = 180
+CLASS.Speed = 160
 CLASS.Revives = false
 
 CLASS.DamageNeedPerPoint = GM.HumanoidZombiePointRatio

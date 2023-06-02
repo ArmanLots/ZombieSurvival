@@ -9,7 +9,7 @@ CLASS.Health = 160
 CLASS.DynamicHealth = 4
 CLASS.DamageNeedPerPoint = GM.NoHeadboxZombiePointRatio
 CLASS.Points = CLASS.Health/GM.NoHeadboxZombiePointRatio
-CLASS.Speed = 150
+CLASS.Speed = 185
 
 CLASS.Wave = 3 / GM.NumberOfWaves
 

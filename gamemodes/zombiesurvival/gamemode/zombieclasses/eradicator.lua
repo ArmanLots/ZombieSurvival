@@ -9,7 +9,7 @@ CLASS.Wave = 5 / GM.NumberOfWaves
 
 CLASS.Health = 410
 CLASS.DynamicHealth = 6
-CLASS.Speed = 150
+CLASS.Speed = 170
 
 CLASS.CanTaunt = true
 CLASS.IsEradicator = true

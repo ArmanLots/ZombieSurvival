@@ -9,7 +9,7 @@ CLASS.Wave = 8 / GM.NumberOfWaves
 
 CLASS.Health = 390
 CLASS.DynamicHealth = 6
-CLASS.Speed = 225
+CLASS.Speed = 210
 CLASS.SWEP = "weapon_zs_lacerator_charging_deadly"
 
 CLASS.Hull = {Vector(-16, -16, 0), Vector(16, 16, 58)}

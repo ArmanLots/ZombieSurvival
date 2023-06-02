@@ -7,7 +7,7 @@ CLASS.Wave = 2 / GM.NumberOfWaves
 
 CLASS.Health = 100
 CLASS.DynamicHealth = 2
-CLASS.Speed = 150
+CLASS.Speed = 155
 
 CLASS.CanTaunt = true
 

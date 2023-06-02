@@ -14,7 +14,7 @@ CLASS.Unlocked = true
 CLASS.Health = 125
 CLASS.DamageNeedPerPoint = GM.NoHeadboxZombiePointRatio
 CLASS.Points = CLASS.Health/GM.NoHeadboxZombiePointRatio
-CLASS.Speed = 220
+CLASS.Speed = 205
 
 CLASS.Hull = {Vector(-16, -16, 0), Vector(16, 16, 58)}
 CLASS.HullDuck = {Vector(-16, -16, 0), Vector(16, 16, 32)}
