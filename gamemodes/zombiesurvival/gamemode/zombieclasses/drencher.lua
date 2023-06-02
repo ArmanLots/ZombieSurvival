@@ -9,7 +9,8 @@ CLASS.Help = "controls_drencher"
 
 CLASS.Boss = true
 
-CLASS.Health = 15000
+CLASS.Health = 9000
+CLASS.DynamicHealth = 225
 CLASS.Speed = 130
 
 CLASS.CanTaunt = true
