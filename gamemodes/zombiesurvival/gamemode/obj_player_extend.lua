@@ -233,6 +233,7 @@ function meta:NearArsenalCrate()
 	local ars_ents = {}
 	table.Add(ars_ents, ents.FindByClass("prop_arsenalcrate"))
 	table.Add(ars_ents, ents.FindByClass("status_arsenalpack"))
+	table.Add(ars_ents, ents.FindByClass("prop_obj_sigil"))
 
 	for _, ent in pairs(ars_ents) do
 		local nearest = ent:NearestPoint(pos)
