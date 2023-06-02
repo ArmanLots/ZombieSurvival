@@ -693,9 +693,9 @@ s = GM:AddSkill(SKILL_WARP, "Warp", GOOD.."-5% sigil teleportation time",
 2, 2, {}, TREE_SPEEDTREE)
 GM:AddSkillModifier(SKILL_WARP, SKILLMOD_SIGIL_TELEPORT_MUL, -0.05)
 
-s = GM:AddSkill(SKILL_SAFEFALL, "Safe Fall", GOOD.."-25% fall damage taken\n"..GOOD.."-30% fall damage knockdown duration\n"..BAD.."+45% slow down from landing or fall damage",
+s = GM:AddSkill(SKILL_SAFEFALL, "Safe Fall", GOOD.."-50% fall damage taken\n"..GOOD.."-30% fall damage knockdown duration\n"..BAD.."+45% slow down from landing or fall damage",
 0, 0, {}, TREE_SPEEDTREE)
-GM:AddSkillModifier(SKILL_SAFEFALL, SKILLMOD_FALLDAMAGE_DAMAGE_MUL, -0.25)
+GM:AddSkillModifier(SKILL_SAFEFALL, SKILLMOD_FALLDAMAGE_DAMAGE_MUL, -0.50)
 GM:AddSkillModifier(SKILL_SAFEFALL, SKILLMOD_FALLDAMAGE_RECOVERY_MUL, -0.3)
 GM:AddSkillModifier(SKILL_SAFEFALL, SKILLMOD_FALLDAMAGE_SLOWDOWN_MUL, 0.45)
 
