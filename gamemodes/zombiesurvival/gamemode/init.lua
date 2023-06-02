@@ -4875,7 +4875,7 @@ function GM:WaveStateChanged(newstate)
 			end
 
 			-- We should spawn a crate in a random spawn point if no one has any.
-			if not self.ZombieEscape and #ents.FindByClass("prop_arsenalcrate") == 0 then
+			--[[if not self.ZombieEscape and #ents.FindByClass("prop_arsenalcrate") == 0 then
 				local have = false
 				for _, pl in pairs(humans) do
 					if pl:HasWeapon("weapon_zs_arsenalcrate") then
@@ -4897,7 +4897,7 @@ function GM:WaveStateChanged(newstate)
 						end
 					end
 				end
-			end
+			end--]]
 		end
 
 		local prevwave = self:GetWave()
