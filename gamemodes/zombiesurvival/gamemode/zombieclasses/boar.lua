@@ -5,10 +5,9 @@ CLASS.Help = "controls_zombie"
 
 CLASS.BetterVersion = "Eradicator"
 
-CLASS.Wave = 3
-CLASS.Unlocked = true
-CLASS.IsDefault = true
-CLASS.Order = 0
+CLASS.Wave = 3 / GM.NumberOfWaves
+
+CLASS.DynamicHealth = 6
 
 CLASS.Health = 280
 CLASS.Speed = 165
