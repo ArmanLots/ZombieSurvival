@@ -4,6 +4,7 @@ ENT.StrictNoSkyCade = true
 
 function ENT:Initialize()
 	self:SetModel("models/props_debris/wood_board05a.mdl")
+	self:SetMaterial("models/props_combine/stasisshield_sheet")
 	self:PhysicsInit(SOLID_VPHYSICS)
 
 	self:CollisionRulesChanged()
