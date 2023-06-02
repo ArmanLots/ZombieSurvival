@@ -60,7 +60,7 @@ SWEP.ViewModel = "models/weapons/cstrike/c_shot_xm1014.mdl"
 SWEP.WorldModel = "models/weapons/w_shot_xm1014.mdl"
 SWEP.UseHands = false
 
-SWEP.Primary.Damage = 135
+SWEP.Primary.Damage = 155
 SWEP.Primary.NumShots = 1
 SWEP.Primary.Delay = 1
 SWEP.HeadshotMulti = 1.75
@@ -88,8 +88,8 @@ SWEP.TracerName = "tracer_colossus"
 SWEP.ReloadSpeed = 1
 SWEP.Tier = 5
 
-SWEP.MaxStock = 2
-SWEP.Pierces = 3
+--SWEP.MaxStock = 2
+SWEP.Pierces = 4
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_RELOAD_SPEED, 0.032)
 
