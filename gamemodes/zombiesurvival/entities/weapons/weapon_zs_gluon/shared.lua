@@ -11,9 +11,9 @@ SWEP.ShowViewModel = false
 SWEP.ShowWorldModel = false
 SWEP.UseHands = true
 
-SWEP.Primary.Damage = 13.25
+SWEP.Primary.Damage = 18
 SWEP.Primary.NumShots = 1
-SWEP.Primary.Delay = 0.09
+SWEP.Primary.Delay = 0.07
 SWEP.Primary.KnockbackScale = 0.1
 SWEP.Primary.MaxDistance = 764
 
@@ -25,8 +25,8 @@ GAMEMODE:SetupDefaultClip(SWEP.Primary)
 SWEP.ConeMax = 0
 SWEP.ConeMin = 0
 
-SWEP.Tier = 4
-SWEP.MaxStock = 3
+SWEP.Tier = 5
+--SWEP.MaxStock = 3
 
 SWEP.HeatBuildShort = 0.10
 SWEP.HeatBuildLong = 0.045
@@ -232,7 +232,7 @@ function SWEP:ManageHeat()
 			self:SetShortHeat(math.min(self:GetShortHeat() + frametime * self.HeatBuildShort, 1))
 			self:SetLongHeat(math.min(self:GetLongHeat() + frametime * self.HeatBuildLong, 1))
 
-			if CLIENT then owner.GunSway = true end
+			if CLIENT then owner.GunSway = false end
 		elseif self:GetGunState() == 2 then
 			self.FiringSound:Stop()
 			if CLIENT then
