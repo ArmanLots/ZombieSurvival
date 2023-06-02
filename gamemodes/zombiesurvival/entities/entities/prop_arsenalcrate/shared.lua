@@ -39,3 +39,7 @@ end
 function ENT:ClearObjectOwner()
 	self:SetObjectOwner(NULL)
 end
+
+function ENT:ShouldNotCollide(ent)
+	return ent:IsPlayer() and ent:Team() == TEAM_HUMAN
+	end
