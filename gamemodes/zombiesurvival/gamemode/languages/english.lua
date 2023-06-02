@@ -381,7 +381,7 @@ LANGUAGE.description_howler							= "A terrifying flesh titan with a piercing sh
 LANGUAGE.description_extinctioncrab					= "Vile diseases churn within this giant headcrab.\nThe spores it spits will afflict those near it, reducing the effectiveness of healing."
 
 -- Class control schemes
-LANGUAGE.controls_drencher              ="> PRIMARY: Bleeding Claws\n> SECONDARY: Moan\n> ON DEATH: Blood Storm"
+LANGUAGE.controls_drencher              = "> PRIMARY: Bleeding Claws\n> SECONDARY: Moan\n> ON DEATH: Blood Storm"
 LANGUAGE.controls_zombie							= "> PRIMARY: Claws\n> SECONDARY: Scream\n> RELOAD: Moan\n> SPRINT: Feign death\n> ON FATAL HIT IN LEGS: Revive / Transform"
 LANGUAGE.controls_zombie_gore_blaster				= "> PRIMARY: Claws\n> ON HIT HUMAN: Bleed\n> SECONDARY: Scream\n> SPRINT: Feign death\n> ON DEATH: Gore Blast"
 LANGUAGE.controls_poison_zombie						= "> PRIMARY: Claws\n> SECONDARY: Flesh toss\n> RELOAD: Scream"
