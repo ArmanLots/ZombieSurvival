@@ -933,7 +933,7 @@ GM:AddSkillModifier(SKILL_TURRETOVERLOAD, SKILLMOD_TURRET_SCANSPEED_MUL, 1.0)
 --s.AlwaysActive = true
 
 s = GM:AddSkill(SKILL_FIELDAMP, "Field Amplifier", GOOD.."-20% zapper and repair field delay\n"..BAD.."-40% zapper and repair field range",
-6, 4, {}, TREE_BUILDINGTREE)
+6, 4, {SKILL_TECHNICIAN}, TREE_BUILDINGTREE)
 GM:AddSkillModifier(SKILL_FIELDAMP, SKILLMOD_FIELD_RANGE_MUL, -0.4)
 GM:AddSkillModifier(SKILL_FIELDAMP, SKILLMOD_FIELD_DELAY_MUL, -0.2)
 
