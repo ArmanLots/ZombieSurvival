@@ -13,13 +13,12 @@ function SWEP:Reload()
 	self:SecondaryAttack()
 end
 
-function SWEP:PlayAlertSound()
-	self:GetOwner():EmitSound("npc/combine_gunship/gunship_moan.wav", 75, math.random(70,75))
-end
-SWEP.PlayIdleSound = SWEP.PlayAlertSound
-
 function SWEP:PlayAttackSound()
-	self:EmitSound("npc/antlion_guard/angry"..math.random(3)..".wav", 75, math.random(75,80))
+	self:EmitSound("npc/zombie/zo_attack"..math.random(2)..".wav", 70, math.random(87, 92))
+end
+
+function SWEP:PlayAlertSound()
+	self:GetOwner():EmitSound("npc/zombie/zombie_alert"..math.random(3)..".wav", 70, math.random(87, 92))
 end
 
 if not CLIENT then return end
