@@ -2148,8 +2148,8 @@ function GM:_PrePlayerDraw(pl)
 	local myteam = P_Team(MySelf)
 	local theirteam = P_Team(pl)
 
-	local medic_skip = not self.MedicalAura or self.MedicalAura and pl:Health() == pl:GetMaxHealth()
-	if radius > 0 and myteam == theirteam and pl ~= MySelf and not (GAMEMODE.AlwaysDrawFriend and pl:IsFriend()) and medic_skip then
+	local radius = self.TransparencyRadius
+	if radius > 0 and myteam == theirteam and pl ~= MySelf and not (GAMEMODE.AlwaysDrawFriend and pl:IsFriend()) and not self.MedicalAura then
 		local dist = pl:GetPos():DistToSqr(EyePos())
 		if dist < radius then
 			local blend = (dist / radius) ^ 1.4
