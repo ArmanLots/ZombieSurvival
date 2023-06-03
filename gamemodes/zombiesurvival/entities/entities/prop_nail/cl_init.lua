@@ -35,11 +35,9 @@ function ENT:OnRemove()
 	emitter:Finish() emitter = nil collectgarbage("step", 64)
 end
 
-local matExpert = Material("zombiesurvival/padlock.png")
-local matHeart = Material("icon16/heart.png")
+local matOutlineWhite = Material("white_outline")
+local ScaleOutline = 1.4
 local colNail = Color(0, 0, 5, 220)
-local colText = Color(240, 240, 240, 105)
-local colDead = Color(230, 80, 80, 95)
 function ENT:DrawTranslucent()
 	local parent = self:GetParent()
 	if not parent:IsValid() or RealTime() == parent.LastNailInfoDraw then
@@ -51,6 +49,7 @@ function ENT:DrawTranslucent()
 	local myteam
 	local pos
 	local eyepos
+
 	if MySelf:IsValid() then
 		myteam = MySelf:Team()
 		pos = self:GetPos()
@@ -62,67 +61,38 @@ function ENT:DrawTranslucent()
 		end
 	end
 
-	self:DrawModel()
+	if drawowner then
+		render.SuppressEngineLighting(true)
+		render.SetAmbientLight(1, 1, 1)
 
-	local nhp = self:GetNailHealth()
-	local mnhp = self:GetMaxNailHealth()
+		local health = self:GetNailHealth() / self:GetMaxNailHealth()
+		render.SetColorModulation(1 - health, health, 0)
 
-	if nhp/mnhp < 0.35 and CurTime() > self.NextEmit then
-		local normal = self:GetForward() * -1
-		local epos = self:GetPos() + normal
+		local scale = self:GetModelScale()
+		self:SetModelScale(ScaleOutline * scale, 0)
+		render.ModelMaterialOverride(matOutlineWhite)
 
-		sound.Play("physics/metal/metal_box_impact_bullet"..math.random(1, 3)..".wav", pos, 58, math.random(210, 240))
+		self:DrawModel()
 
-		local emitter = ParticleEmitter(epos)
-		emitter:SetNearClip(22, 32)
-		for i=1, math.random(6, 12) do
-			local vNormal = (VectorRand() * 0.6 + normal):GetNormalized()
-			local particle = emitter:Add("effects/spark", epos + vNormal)
-			particle:SetDieTime(math.Rand(0.1, 0.2))
-			particle:SetGravity(Vector(math.random(-5, 5), math.random(-5, 5), math.random(1, 3)):GetNormal() * 50)
-			particle:SetStartAlpha(100)
-			particle:SetEndAlpha(0)
-			particle:SetStartSize(4)
-			particle:SetEndSize(1)
-			particle:SetStartLength(10)
-			particle:SetEndLength(0)
-			particle:SetColor(165, 188, 0)
-			particle:SetRoll(math.Rand(0, 360))
-			particle:SetRollDelta(math.Rand(-20, 20))
-		end
-		emitter:Finish() emitter = nil collectgarbage("step", 64)
+		render.ModelMaterialOverride()
+		self:SetModelScale(scale, 0)
 
-		self.NextEmit = CurTime() + math.Rand(4.2, 5.8)
+		render.SuppressEngineLighting(false)
+		render.SetColorModulation(1, 1, 1)
 	end
 
-	if drawinfo then
-		parent.LastNailInfoDraw = RealTime()
+	self:DrawModel()
 
+	if drawowner then
 		local displayowner = self:GetDTString(0)
 		local redname = false
-		local expert = false
-		local hcolor = COLOR_WHITE
-
-		local deployer = self:GetOwner()
 		if displayowner == "" then
 			displayowner = nil
 
+			local deployer = self:GetOwner()
 			if deployer:IsValid() then
 				displayowner = deployer:Name()
-				if deployer:Team() == TEAM_HUMAN and deployer:Alive() then
-					local rlvl = deployer:GetZSRemortLevel()
-					expert = rlvl > 0
-
-					if expert then
-						local rlvlmod, hlvl = math.floor((rlvl % 40) / 4), 0
-						for rlvlr, rcolor in pairs(GAMEMODE.RemortColors) do
-							if rlvlmod >= rlvlr and rlvlr >= hlvl then
-								hlvl = rlvlr
-								hcolor = rcolor
-							end
-						end
-					end
-				else
+				if deployer:Team() == TEAM_UNDEAD or not deployer:Alive() then
 					displayowner = "(DEAD) "..displayowner
 					redname = true
 				end
@@ -149,69 +119,41 @@ function ENT:DrawTranslucent()
 			local wid, hei = 150, 6
 			local x, y = wid * -0.5 + 2, 0
 
-			local validfriend = deployer:IsValidLivingHuman() and deployer.ZSFriendAdded
+			if self:GetMaxRepairs() > 0 then
+				local repairs = self:GetRepairs()
+				local ru = 1 - math.Clamp(repairs / self:GetMaxRepairs(), 0, 1)
+				surface.SetDrawColor(0, 0, 0, 220)
+				surface.DrawRect(x, y, wid, hei)
+				surface.SetDrawColor(40, 40, 40, 220)
+				surface.DrawOutlinedRect(x, y, wid, hei)
+				surface.SetDrawColor(230, 5, 5, ru == 1 and (150 + math.abs(math.sin(RealTime() * 5)) * 105) or 220)
+				surface.DrawRect(x + 1, y + 1, (wid - 2) * ru, hei - 2)
 
-			if validfriend or expert then
-				surface.SetMaterial(validfriend and matHeart or matExpert)
-				surface.SetDrawColor(hcolor.r, hcolor.g, hcolor.b, 240 * vis)
-				surface.DrawTexturedRect(
-					x - (validfriend and 24 or 32),
-					y - (validfriend and 0 or 5),
-					validfriend and 16 or 24,
-					validfriend and 16 or 24
-				)
+				draw.SimpleText(math.ceil(repairs), "ZS3D2DFont2Smaller", x + wid, y - 1, repairs <= 0 and COLOR_DARKRED or COLOR_GRAY, TEXT_ALIGN_RIGHT, TEXT_ALIGN_BOTTOM)
 			end
 
-			if self:GetMaxRepairs() > 0 or self:GetMaxNailHealth() > 0 then
-				local repairs = self:GetRepairs()
-				local mrps = self:GetMaxRepairs()
-
-				local repairs2 = math.min(repairs, 6000)
-				local mrps2 = math.min(mrps, 6000)
-				local nhp2 = math.min(nhp, 6000)
-				local mnhp2 = math.min(mnhp, 6000)
-
-				surface.SetDrawColor(0, 0, 0, 210 * vis)
-				surface.DrawRect(x - 1, y, mrps/5 + mrps/50 + 1, hei)
-
-				for i = 0, repairs2, 200 do
-					local val = math.Clamp(repairs - i, 0, 200)
-
-					surface.SetDrawColor(100, 170, 215, 240 * vis)
-					surface.DrawRect(x + 1 + i/5 + i/50, y + 1, val/5, hei - 2)
-				end
-
-				local mu = math.Clamp(nhp / mnhp, 0, 1)
+			if self:GetMaxNailHealth() > 0 then
+				local mu = math.Clamp(self:GetNailHealth() / self:GetMaxNailHealth(), 0, 1)
 				local green = mu * 200
 				colNail.r = 200 - green
 				colNail.g = green
-				colNail.a = 240 * vis
 
 				y = y + hei + 3
 				hei = 8
 				x = wid * -0.5 + 2
+				surface.SetDrawColor(0, 0, 0, 220)
+				surface.DrawRect(x, y, wid, hei)
+				surface.SetDrawColor(40, 40, 40, 220)
+				surface.DrawOutlinedRect(x, y, wid, hei)
+				surface.SetDrawColor(colNail)
+				surface.DrawRect(x + 1, y + 1, (wid - 2) * mu, hei - 2)
 
-				surface.SetDrawColor(0, 0, 0, 210 * vis)
-				surface.DrawRect(x - 1, y, mnhp/5 + mnhp/50 + 2, hei)
+				draw.SimpleText(math.ceil(self:GetNailHealth()).." / "..math.ceil(self:GetMaxNailHealth()), "ZS3D2DFont2Smaller", x + wid / 2, y + hei + 1, colNail, TEXT_ALIGN_CENTER)
+			end
 
-				for i = 0, nhp2, 200 do
-					local val = math.Clamp(nhp - i, 0, 200)
-
-					surface.SetDrawColor(colNail)
-					surface.DrawRect(x + 1 + i/5 + i/50, y + 1, val/5, hei - 2)
-				end
-
-				if displayowner then
-					local col = redname and colDead or colText
-					col.a = 125 * vis
-
-					draw.SimpleText(displayowner, "ZS3D2DUnstyleSmallest", 0, y + 20, col, TEXT_ALIGN_CENTER)
-					draw.SimpleText(math.Round(nhp, 1) .."/".. math.Round(self:GetMaxNailHealth(), 1).." ("..math.Round(nhp / self:GetMaxNailHealth() * 100).."%)", "ZS3D2DUnstyleTiny", x + 25, y - 30, col, TEXT_ALIGN_CENTER)
-					draw.SimpleText(math.Round(repairs, 1) .."/".. math.Round(mrps, 1).." ("..math.Round(repairs / mrps * 100).."%)", "ZS3D2DUnstyleTiny", x + 25, y - 48, Color(207,255,255), TEXT_ALIGN_CENTER)
-				end
+			if displayowner then
+				draw.SimpleText(displayowner, "ZS3D2DFont2Smaller", 0, y + 38, redname and COLOR_DARKRED or COLOR_DARKGRAY, TEXT_ALIGN_CENTER)
 			end
 		cam.End3D2D()
-
-		cam.IgnoreZ(false)
 	end
 end
