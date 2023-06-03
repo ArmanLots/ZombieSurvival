@@ -73,7 +73,7 @@ SWEP.ConeMax = 6
 SWEP.ConeMin = 0.25
 
 SWEP.Tier = 4
-SWEP.MaxStock = 3
+--SWEP.MaxStock = 3
 
 SWEP.IronSightsPos = Vector(0, 0, 0)
 SWEP.IronSightsAng = Vector(0, -1, 0)

@@ -16,18 +16,18 @@ SWEP.Primary.Sound = Sound("Weapon_Crossbow.Single")
 SWEP.Primary.Delay = 1.25
 SWEP.Primary.Automatic = true
 SWEP.Primary.Damage = 20.5
-SWEP.Primary.NumShots = 7
+SWEP.Primary.NumShots = 14
 
 SWEP.Primary.ClipSize = 6
 SWEP.Primary.Ammo = "scrap"
 SWEP.Primary.DefaultClip = 15
 
-SWEP.Recoil = 7
+SWEP.Recoil = 2
 
 SWEP.WalkSpeed = SPEED_SLOWEST
 
 SWEP.Tier = 5
-SWEP.MaxStock = 2
+--SWEP.MaxStock = 2
 
 SWEP.ConeMax = 6.5
 SWEP.ConeMin = 5.75

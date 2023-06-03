@@ -37,7 +37,7 @@ SWEP.ConeMax = 11.5
 SWEP.ConeMin = 10
 
 SWEP.Tier = 6
-SWEP.MaxStock = 1
+--SWEP.MaxStock = 1
 
 SWEP.WalkSpeed = SPEED_SLOWER
 SWEP.FireAnimSpeed = 0.4

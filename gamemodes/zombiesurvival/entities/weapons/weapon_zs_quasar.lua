@@ -92,7 +92,7 @@ SWEP.TracerName = "AR2Tracer"
 SWEP.FireAnimSpeed = 1.3
 
 SWEP.Tier = 4
-SWEP.MaxStock = 3
+--SWEP.MaxStock = 3
 
 SWEP.PointsMultiplier = GAMEMODE.PulsePointsMultiplier
 

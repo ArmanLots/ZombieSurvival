@@ -32,7 +32,7 @@ SWEP.SwingHoldType = "melee"
 SWEP.SwingTimeSecondary = 0.85
 
 SWEP.Tier = 5
-SWEP.MaxStock = 2
+--SWEP.MaxStock = 2
 
 SWEP.AllowQualityWeapons = true
 
