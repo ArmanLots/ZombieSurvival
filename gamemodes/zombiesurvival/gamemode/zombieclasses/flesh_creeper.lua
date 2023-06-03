@@ -3,16 +3,16 @@ CLASS.TranslationName = "class_flesh_creeper"
 CLASS.Description = "description_flesh_creeper"
 CLASS.Help = "controls_flesh_creeper"
 
-CLASS.Wave = 0
-CLASS.Hidden = true
-CLASS.Unlocked = true
-CLASS.NotRandomStart = true
+CLASS.Wave = 2 / GM.NumberOfWaves
+--CLASS.Hidden = true
+--CLASS.Unlocked = true
+--CLASS.NotRandomStart = true
 
-CLASS.Health = 115
-CLASS.DynamicHealth = 1
+CLASS.Health = 170
+CLASS.DynamicHealth = 5
 CLASS.SWEP = "weapon_zs_fleshcreeper"
 CLASS.Model = Model("models/antlion.mdl")
-CLASS.Speed = 160
+CLASS.Speed = 210
 CLASS.JumpPower = 220
 
 CLASS.DamageNeedPerPoint = GM.NoHeadboxZombiePointRatio
