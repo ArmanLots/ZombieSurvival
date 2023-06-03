@@ -2258,15 +2258,15 @@ function GM:HUDPaintBackgroundEndRound()
 	end
 end
 
-function GM:DrawBarricadeHUD(ent)
+--function GM:DrawBarricadeHUD(ent)
 --	surface.SetDrawColor(Color(0,0,0,230))
 --	surface.DrawOutlinedRect((ScrW() / 2) - 140, (ScrH() / 2) - 200, 280, 40)
 --	surface.SetDrawColor(Color(205,205,205,130))
 --	surface.DrawRect((ScrW() / 2) - 140, (ScrH() / 2) - 200, 280, 40)
 
 --	draw_SimpleText(Format("Prop Health: %d / %d", ent:Health(), ent:GetMaxHealth()), "ZSHUDFontTiny", ScrW() / 2, (ScrH() / 2) - 240, COLOR_WHITE, TEXT_ALIGN_CENTER)
-	draw_SimpleText(Format("Barricade HP: %d / %d (%d / %d)", ent:GetBarricadeHealth(), ent:GetMaxBarricadeHealth(), ent:GetBarricadeRepairs(), ent:GetMaxBarricadeRepairs()), "ZSHUDFontTiny", ScrW() / 2, (ScrH() / 2) - 220, COLOR_WHITE, TEXT_ALIGN_CENTER)
-end
+	--draw_SimpleText(Format("Barricade HP: %d / %d (%d / %d)", ent:GetBarricadeHealth(), ent:GetMaxBarricadeHealth(), ent:GetBarricadeRepairs(), ent:GetMaxBarricadeRepairs()), "ZSHUDFontTiny", ScrW() / 2, (ScrH() / 2) - 220, COLOR_WHITE, TEXT_ALIGN_CENTER)
+--end
 
 local function EndRoundCalcView(pl, origin, angles, fov, znear, zfar)
 	if GAMEMODE.EndTime and CurTime() < GAMEMODE.EndTime + (GAMEMODE.ZombieEscape and 3 or 5) then
