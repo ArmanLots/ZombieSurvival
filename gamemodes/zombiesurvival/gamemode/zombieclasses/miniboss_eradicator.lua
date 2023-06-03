@@ -11,6 +11,9 @@ CLASS.MiniBoss = true
 CLASS.CanTaunt = true
 CLASS.IsEradicator = true
 
+CLASS.Disabled = true
+CLASS.Hidden = true
+
 CLASS.DamageNeedPerPoint = GM.HumanoidZombiePointRatio
 CLASS.Points = CLASS.Health/GM.HumanoidZombiePointRatio
 

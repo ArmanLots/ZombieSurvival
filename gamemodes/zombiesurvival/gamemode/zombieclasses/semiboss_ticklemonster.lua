@@ -3,15 +3,15 @@ CLASS.TranslationName = "class_the_tickle_monster"
 CLASS.Description = "description_the_tickle_monster"
 CLASS.Help = "controls_the_tickle_monster"
 
-CLASS.Boss = true
+CLASS.SemiBoss = true
 
 CLASS.KnockbackScale = 0
 
-CLASS.Health = 1750
-CLASS.DynamicHealth = 85
+CLASS.Health = 910
+CLASS.DynamicHealth = 35
 CLASS.Speed = 150
 
-CLASS.FearPerInstance = 1
+CLASS.FearPerInstance = 0.4
 
 CLASS.CanTaunt = true
 

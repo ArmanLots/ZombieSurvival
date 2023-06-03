@@ -4,7 +4,7 @@ CLASS.Description = "description_miniboss_chem_zombie"
 CLASS.Help = "controls_miniboss_chem_zombie"
 
 --CLASS.Sanity = 2 / 3
-CLASS.Health = 260
+CLASS.Health = 550
 CLASS.DynamicHealth = 15
 CLASS.SWEP = "weapon_zs_chemzombie_miniboss"
 CLASS.Model = Model("models/Zombie/Poison.mdl")

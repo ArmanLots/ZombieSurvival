@@ -205,8 +205,9 @@ if SERVER then
 	function CLASS:AltUse(pl)
 		pl:StartFeignDeath()
 	end
+end
 
-	function CLASS:ProcessDamage(pl, dmginfo)
+	--[[function CLASS:ProcessDamage(pl, dmginfo)
 		local damage = dmginfo:GetDamage()
 		if damage >= 0 or damage < pl:Health() then return end
 
@@ -234,7 +235,7 @@ if SERVER then
 		end
 
 		return true
-	end
+	end--]]
 
 	--function CLASS:ReviveCallback(pl, attacker, dmginfo)
 		--if not pl:ShouldReviveFrom(dmginfo) then return false end
@@ -275,9 +276,8 @@ if SERVER then
 		--return false
 	--end
 
-	function CLASS:OnSecondWind(pl)
-		pl:EmitSound("npc/zombie/zombie_voice_idle"..math_random(14)..".wav", 100, 85)
-	end
+function CLASS:OnSecondWind(pl)
+	pl:EmitSound("npc/zombie/zombie_voice_idle"..math_random(14)..".wav", 100, 85)
 end
 
 if CLIENT then

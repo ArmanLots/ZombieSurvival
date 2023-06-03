@@ -8,12 +8,14 @@ CLASS.Help = "controls_lacerator"
 
 CLASS.Model = Model("models/player/zombie_lacerator2.mdl")
 
-CLASS.Wave = 7 / GM.NumberOfWaves
-
-CLASS.Health = 295
-CLASS.DynamicHealth = 4
+CLASS.Health = 780
+CLASS.DynamicHealth = 15
 CLASS.Speed = 275
 CLASS.SWEP = "weapon_zs_mutated_lacerator"
+
+CLASS.FearPerInstance = 0.4
+
+CLASS.SemiBoss = true
 
 CLASS.Hull = {Vector(-16, -16, 0), Vector(16, 16, 58)}
 CLASS.HullDuck = {Vector(-16, -16, 0), Vector(16, 16, 32)}

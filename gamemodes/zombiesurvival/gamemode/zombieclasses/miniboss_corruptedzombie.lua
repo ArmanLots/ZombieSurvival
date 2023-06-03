@@ -10,6 +10,9 @@ CLASS.DynamicHealth = 20
 CLASS.Speed = 180
 CLASS.Revives = true
 
+CLASS.Disabled = true
+CLASS.Hidden = true
+
 CLASS.CanTaunt = true
 CLASS.MiniBoss = true
 

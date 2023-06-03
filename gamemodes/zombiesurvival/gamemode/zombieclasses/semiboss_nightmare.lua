@@ -11,6 +11,9 @@ CLASS.Health = 950
 CLASS.DynamicHealth = 50
 CLASS.Speed = 260 -- 150
 
+CLASS.Hidden = true
+CLASS.Disabled = true
+
 CLASS.CanTaunt = true
 
 CLASS.FearPerInstance = 0.4

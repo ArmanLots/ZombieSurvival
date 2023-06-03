@@ -8,12 +8,12 @@ function SWEP:Think()
 	end
 
 	if self.NextAura <= CurTime() then
-		self.NextAura = CurTime() + 2
+		self.NextAura = CurTime() + 0.5
 
 		local origin = self:GetOwner():LocalToWorld(self:GetOwner():OBBCenter())
-		for _, ent in pairs(ents.FindInSphere(origin, 40)) do
-			if ent and ent:IsValidLivingHuman() and TrueVisible(origin, ent:NearestPoint(origin)) then
-				ent:PoisonDamage(1, self:GetOwner(), self)
+		for _, ent in pairs(ents.FindInSphere(origin, 60)) do
+			if ent and ent:IsValidLivingHuman() and ent:IsBarricadeProp() and TrueVisible(origin, ent:NearestPoint(origin)) then
+				ent:PoisonDamage(4, self:GetOwner(), self)
 			end
 		end
 	end

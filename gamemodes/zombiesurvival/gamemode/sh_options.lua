@@ -952,7 +952,7 @@ GM.EndWavePointsBonus = 5
 GM.EndWavePointsBonusPerWave = 1
 
 -- Should humans need to be near arsenal crates to buy items
-GM.NeedArsenalToBuyItems = false
+GM.NeedArsenalToBuyItems = true
 
 -- Use the zombie class for classic mode
 GM.ClassicZombieClass = "Classic Zombie"
