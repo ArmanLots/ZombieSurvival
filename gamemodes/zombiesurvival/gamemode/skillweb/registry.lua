@@ -835,7 +835,7 @@ GM:AddSkillModifier(SKILL_POINTFULNESS4, SKILLMOD_POINT_MULTIPLIER, 0.01)
 --s.AlwaysActive = true
 
 s = GM:AddSkill(SKILL_DISPERSION, "Dispersion", GOOD.."+15% cloud bomb radius\n"..BAD.."-10% cloud bomb time",
-0, -4, {}, TREE_SUPPORTTREE)
+0, -4, {SKILL_OUTREACH}, TREE_SUPPORTTREE)
 GM:AddSkillModifier(SKILL_DISPERSION, SKILLMOD_CLOUD_RADIUS, 0.15)
 GM:AddSkillModifier(SKILL_DISPERSION, SKILLMOD_CLOUD_TIME, -0.1)
 
@@ -880,7 +880,7 @@ GM:AddSkillModifier(SKILL_HAMMERDISCIPLINE2, SKILLMOD_HAMMER_SWING_DELAY_MUL, -0
 GM:AddSkillModifier(SKILL_HAMMERDISCIPLINE2, SKILLMOD_REPAIRRATE_MUL, -0.12)
 
 s = GM:AddSkill(SKILL_BARRICADEEXPERT, "Reinforcer", GOOD.."Gives 8% damage protection for props that were hit with a hammer for 2.5 seconds\n"..GOOD.."Gain points from protected props\n"..BAD.."+30% hammer swing delay\nElectrohammer gives prop buff for 3 seconds",
-0, 3, {}, TREE_BUILDINGTREE)
+0, 3, {SKILL_DOOR_DESTROYER}, TREE_BUILDINGTREE)
 GM:AddSkillModifier(SKILL_BARRICADEEXPERT, SKILLMOD_HAMMER_SWING_DELAY_MUL, 0.3)
 
 s = GM:AddSkill(SKILL_LOADEDHULL, "Loaded Hull", GOOD.."Controllables explode when destroyed, dealing explosive damage\n"..BAD.."-10% Controllable health",
@@ -894,7 +894,7 @@ GM:AddSkillModifier(SKILL_REINFORCEDHULL, SKILLMOD_CONTROLLABLE_HANDLING_MUL, -0
 GM:AddSkillModifier(SKILL_REINFORCEDHULL, SKILLMOD_CONTROLLABLE_SPEED_MUL, -0.2)
 
 s = GM:AddSkill(SKILL_STABLEHULL, "Stable Hull", GOOD.."Controllables are immune to high speed impacts\n"..BAD.."-20% Controllable speed",
-0, -3, {SKILL_U_DRONE}, TREE_BUILDINGTREE)
+0, -3, {SKILL_U_DRONE, SKILL_STOWAGE}, TREE_BUILDINGTREE)
 GM:AddSkillModifier(SKILL_STABLEHULL, SKILLMOD_CONTROLLABLE_SPEED_MUL, -0.2)
 
 s = GM:AddSkill(SKILL_REINFORCEDBLADES, "Reinforced Blades", GOOD.."+25% Manhack damage\n"..BAD.."-15% Manhack health",
@@ -913,14 +913,14 @@ GM:AddSkillModifier(SKILL_AVIATOR, SKILLMOD_CONTROLLABLE_HEALTH_MUL, -0.25)
 --s.AlwaysActive = true
 
 s = GM:AddSkill(SKILL_TURRETLOCK, "Turret Lock", "-90% turret scan angle\n"..BAD.."-90% turret target lock angle",
--6, -2, {}, TREE_BUILDINGTREE)
+-6, -2, {SKILL_HANDY3}, TREE_BUILDINGTREE)
 GM:AddSkillModifier(SKILL_TURRETLOCK, SKILLMOD_TURRET_SCANANGLE_MUL, -0.9)
 
 s = GM:AddSkill(SKILL_TWINVOLLEY, "Twin Volley", GOOD.."Fire twice as many bullets in manual turret mode\n"..BAD.."+100% turret ammo usage in manual turret mode\n"..BAD.."+50% turret fire delay in manual turret mode",
--10, -5, {}, TREE_BUILDINGTREE)
+-10, -5, {SKILL_INSTRUMENTS}, TREE_BUILDINGTREE)
 
 s = GM:AddSkill(SKILL_TURRETOVERLOAD, "Turret Overload", GOOD.." +100% Turret scan speed\n"..BAD.."-30% Turret range",
--8, -2, {SKILL_INSTRUMENTS}, TREE_BUILDINGTREE)
+-8, -2, {SKILL_INSTRUMENTS, SKILL_TURRETLOCK}, TREE_BUILDINGTREE)
 GM:AddSkillModifier(SKILL_TURRETOVERLOAD, SKILLMOD_TURRET_RANGE_MUL, -0.3)
 GM:AddSkillModifier(SKILL_TURRETOVERLOAD, SKILLMOD_TURRET_SCANSPEED_MUL, 1.0)
 
@@ -943,7 +943,7 @@ GM:AddSkillModifier(SKILL_TECHNICIAN, SKILLMOD_FIELD_RANGE_MUL, 0.03)
 GM:AddSkillModifier(SKILL_TECHNICIAN, SKILLMOD_FIELD_DELAY_MUL, -0.03)
 
 s = GM:AddSkill(SKILL_PULSEEXPERT, "Pulse expert", GOOD.."+10% pulse slowdown\n"..GOOD.."+5% reload speed for Pulse weapons\n"..BAD.."+25% zapper and repair field delay",
-6, 4, {}, TREE_BUILDINGTREE)
+6, 2, {}, TREE_BUILDINGTREE)
 GM:AddSkillModifier(SKILL_PULSEEXPERT, SKILLMOD_PULSE_WEAPON_SLOW_MUL, 0.1)
 GM:AddSkillModifier(SKILL_PULSEEXPERT, SKILLMOD_RELOADSPEED_PULSE_MUL, 0.05)
 GM:AddSkillModifier(SKILL_PULSEEXPERT, SKILLMOD_FIELD_DELAY_MUL, 0.25)
@@ -1023,7 +1023,7 @@ GM:AddSkillFunction(SKILL_STOWAGE, function(pl, active)
 end)
 
 s = GM:AddSkill(SKILL_DOOR_DESTROYER, "Door Destroyer", GOOD.."3x damage dealt to hinged doors\n"..BAD.."-10% repair rate\n"..BAD.."-5% health to nailed props",
-4, 2, {}, TREE_BUILDINGTREE)
+4, 2, {SKILL_INSIGHT, SKILL_TECHNICIAN}, TREE_BUILDINGTREE)
 GM:AddSkillModifier(SKILL_DOOR_DESTROYER, SKILLMOD_REPAIRRATE_MUL, -0.1)
 GM:AddSkillModifier(SKILL_DOOR_DESTROYER, SKILLMOD_BARRICADE_HEALTH_MUL, -0.05)
 
