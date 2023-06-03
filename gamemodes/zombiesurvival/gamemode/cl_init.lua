@@ -930,7 +930,7 @@ local function DrawPreRoundHUD(w, h)
 		local txth = draw_GetFontHeight("ZSHUDFontSmall")
 		local desiredzombies = GAMEMODE:GetDesiredStartingZombies()
 
-		draw_SimpleTextBlurry(translate.Get("waiting_for_players").." "..util.ToMinutesSecondsMilliseconds(math.max(0, GAMEMODE:GetWaveStart() - CurTime())), "ZSHUDFontSmall", w * 0.5, h * 0.25, COLOR_GRAY, TEXT_ALIGN_CENTER)
+		draw_SimpleTextBlurry(translate.Get("waiting_for_players").." "..util.ToMinutesSeconds(math.max(0, GAMEMODE:GetWaveStart() - CurTime())), "ZSHUDFontSmall", w * 0.5, h * 0.25, COLOR_GRAY, TEXT_ALIGN_CENTER)
 
 		if desiredzombies > 0 then
 			draw_SimpleTextBlurry(translate.Get(GAMEMODE:HasSigils() and "humans_furthest_from_sigils_are_zombies" or "humans_closest_to_spawns_are_zombies"), "ZSHUDFontSmall", w * 0.5, h * 0.25 + txth, COLOR_GRAY, TEXT_ALIGN_CENTER)
@@ -2148,8 +2148,8 @@ function GM:_PrePlayerDraw(pl)
 	local myteam = P_Team(MySelf)
 	local theirteam = P_Team(pl)
 
-	local radius = self.TransparencyRadius
-	if radius > 0 and myteam == theirteam and pl ~= MySelf and not (GAMEMODE.AlwaysDrawFriend and pl:IsFriend()) and not self.MedicalAura then
+	local medic_skip = not self.MedicalAura or self.MedicalAura and pl:Health() == pl:GetMaxHealth()
+	if radius > 0 and myteam == theirteam and pl ~= MySelf and not (GAMEMODE.AlwaysDrawFriend and pl:IsFriend()) and medic_skip then
 		local dist = pl:GetPos():DistToSqr(EyePos())
 		if dist < radius then
 			local blend = (dist / radius) ^ 1.4

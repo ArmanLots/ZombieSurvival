@@ -232,7 +232,7 @@ function util.BlastDamageEx(inflictor, attacker, epicenter, radius, damage, dama
 
 				ent:TakeSpecialDamage(((radius - nearest:Distance(epicenter)) / radius) * basedmg, damagetype, attacker, inflictor, nearest)
 
-				if taperfactor and ent:IsPlayer() then
+				if taperfactor and ent:IsPlayer() and ent:Alive() and ent:Team() ~= attacker:Team() then
 					basedmg = basedmg * taperfactor
 				end
 			end

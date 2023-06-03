@@ -22,7 +22,7 @@ SWEP.ModelScale = 0.55
 SWEP.MaxStock = 5
 
 SWEP.Repair = 8
-SWEP.MaxDistance = 75
+SWEP.MaxDistance = 120
 
 SWEP.WalkSpeed = SPEED_NORMAL
 SWEP.FullWalkSpeed = SPEED_SLOWEST
@@ -35,7 +35,7 @@ SWEP.DeployClass = "prop_repairfield"
 SWEP.NoDeploySpeedChange = true
 SWEP.AllowQualityWeapons = true
 
-GAMEMODE:SetPrimaryWeaponModifier(SWEP, WEAPON_MODIFIER_REPAIR, 0.75)
+GAMEMODE:SetPrimaryWeaponModifier(SWEP, WEAPON_MODIFIER_REPAIR, 2.25)
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_MAX_DISTANCE, 4)
 
 function SWEP:Initialize()

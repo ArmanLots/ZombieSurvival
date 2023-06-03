@@ -24,7 +24,7 @@ SWEP.ReloadDelay = 0.5
 SWEP.Primary.Sound = Sound("weapons/shotgun/shotgun_dbl_fire.wav")
 SWEP.Primary.Damage = 25
 SWEP.Primary.NumShots = 7
-SWEP.Primary.Delay = 1
+SWEP.Primary.Delay = 0.1
 
 SWEP.Recoil = 7.5
 

@@ -7,8 +7,8 @@ CLASS.Help = "controls_zombie_gore_blaster"
 
 CLASS.BetterVersion = "Chem Burster"
 
-CLASS.Wave = 0
-CLASS.Unlocked = true
+CLASS.Wave = 2 / GM.NumberOfWaves
+--CLASS.Unlocked = true
 
 CLASS.Health = 220
 CLASS.Speed = 160

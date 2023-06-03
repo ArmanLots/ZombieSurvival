@@ -33,7 +33,7 @@ hook.Add("PostDrawTranslucentRenderables", "DrawDamage", function()
 			c.a = math.Clamp(particle.DieTime - curtime, 0, 1) * 220
 
 			cam.Start3D2D(particle:GetPos(), ang, 0.1 * GAMEMODE.DamageNumberScale * (particle.Type == 1 and 0.7 or 1))
-				draw.SimpleText(math.Round(particle.Amount, 1), "ZS3D2DFont2", 0, 0, c, TEXT_ALIGN_CENTER, TEXT_ALIGN_BOTTOM)
+				draw.SimpleText(math.floor(particle.Amount, 1), "ZS3D2DFont2", 0, 0, c, TEXT_ALIGN_CENTER, TEXT_ALIGN_BOTTOM)
 			cam.End3D2D()
 		end
 	end

@@ -5,8 +5,8 @@ CLASS.Help = "controls_wraith"
 
 CLASS.BetterVersion = "Tormented Wraith"
 
-CLASS.Wave = 0
-CLASS.Unlocked = true
+CLASS.Wave = 2 / GM.NumberOfWaves
+--CLASS.Unlocked = true
 
 CLASS.Health = 135
 

@@ -124,16 +124,16 @@ SKILL_LOADEDHULL = 20
 SKILL_REINFORCEDHULL = 21
 SKILL_REINFORCEDBLADES = 22
 SKILL_AVIATOR = 23
-SKILL_U_BLASTTURRET = 24
+--SKILL_U_BLASTTURRET = 24
 SKILL_TURRETLOCK = 25
 SKILL_TWINVOLLEY = 26
 SKILL_TURRETOVERLOAD = 27
-SKILL_U_DRONE = 28
-SKILL_U_NANITECLOUD = 29
+--SKILL_U_DRONE = 28
+--SKILL_U_NANITECLOUD = 29
 SKILL_HAMMERDISCIPLINE1 = 30
 SKILL_FIELDAMP = 31
-SKILL_U_ROLLERMINE = 32
-SKILL_HAULMODULE = 33
+--SKILL_U_ROLLERMINE = 32
+--SKILL_HAULMODULE = 33
 SKILL_LIGHTCONSTRUCT = 34
 SKILL_TRIGGER_DISCIPLINE1 = 35
 SKILL_TRIGGER_DISCIPLINE2 = 36
@@ -156,7 +156,7 @@ SKILL_BATTLER5 = 52
 SKILL_HEAVYSTRIKES = 53
 SKILL_LASTSTAND = 54
 SKILL_D_NOODLEARMS = 55
-SKILL_GLASSWEAPONS = 56
+--SKILL_GLASSWEAPONS = 56
 SKILL_CANNONBALL = 57
 SKILL_D_CLUMSY = 58
 SKILL_CHEAPKNUCKLE = 59
@@ -164,15 +164,15 @@ SKILL_CRITICALKNUCKLE = 60
 SKILL_KNUCKLEMASTER = 61
 SKILL_COMBOKNUCKLE = 62
 SKILL_D_LATEBUYER = 63
-SKILL_U_CRAFTINGPACK = 64
+--SKILL_U_CRAFTINGPACK = 64
 SKILL_VITALITY1 = 66
 SKILL_JOUSTER1 = 65
 SKILL_SCAVENGER = 67
-SKILL_U_ZAPPER_ARC = 68
-SKILL_TAUT = 69
+--SKILL_U_ZAPPER_ARC = 68
+--SKILL_TAUT = 69
 SKILL_ULTRANIMBLE = 70
 SKILL_D_FRAIL = 71
-SKILL_U_MEDICCLOUD = 72
+--SKILL_U_MEDICCLOUD = 72
 SKILL_SMARTTARGETING = 73
 SKILL_INSIGHT = 74
 SKILL_GLUTTON = 75
@@ -187,7 +187,7 @@ SKILL_SAFEFALL = 83
 SKILL_VITALITY3 = 84
 SKILL_D_WIDELOAD = 85
 SKILL_TANKER = 86
-SKILL_U_CORRUPTEDFRAGMENT = 87
+--SKILL_U_CORRUPTEDFRAGMENT = 87
 SKILL_WORTHINESS4 = 88
 SKILL_FORAGER = 89
 SKILL_LANKY1 = 90
@@ -195,16 +195,16 @@ SKILL_PITCHER = 91
 SKILL_BLASTPROOF = 92
 SKILL_MASTERCHEF = 93
 SKILL_SUGARRUSH = 94
-SKILL_U_STRENGTHSHOT = 95
+--SKILL_U_STRENGTHSHOT = 95
 SKILL_STABLEHULL = 96
 SKILL_LIGHTWEIGHT = 97
 SKILL_AGILE1 = 98
-SKILL_U_CRYGASGREN = 99
+--SKILL_U_CRYGASGREN = 99
 SKILL_SOFTDET = 100
 SKILL_STOCKPILE = 101
 SKILL_ACUITY = 102
 SKILL_VISION = 103
-SKILL_U_ROCKETTURRET = 104
+--SKILL_U_ROCKETTURRET = 104
 SKILL_RECLAIMSOL = 105
 SKILL_ORPHICFOCUS = 106
 SKILL_IRONBLOOD = 107
@@ -225,7 +225,7 @@ SKILL_CARDIOTONIC = 121
 SKILL_BLOODLUST = 122
 SKILL_SCOURER = 123
 SKILL_LANKY2 = 124
-SKILL_U_ANTITODESHOT = 125
+--SKILL_U_ANTITODESHOT = 125
 SKILL_DISPERSION = 126
 SKILL_MOTION2 = 127
 SKILL_MOTION3 = 128
@@ -278,7 +278,7 @@ SKILL_JOUSTER2 = 172
 SKILL_SIGILDEFENDER1 = 173
 SKILL_FISTER = 174
 SKILL_CARRIER = 175
-SKILL_U_DOOMSTICK = 176
+--SKILL_U_DOOMSTICK = 176
 SKILL_SIGILDEFENDER2 = 177
 SKILL_SIGILDEFENDER3 = 178
 SKILL_SIGILDEFENDER4 = 179
@@ -707,9 +707,9 @@ GM:AddSkillFunction(SKILL_D_WIDELOAD, function(pl, active)
 	pl.NoGhosting = active
 end)
 
-s = GM:AddSkill(SKILL_U_CORRUPTEDFRAGMENT, "Unlock: Corrupted Fragment", GOOD.."Unlocks purchasing the Corrupted Fragment\nGoes to corrupted sigils instead",
--2, 2, {}, TREE_SPEEDTREE)
-s.AlwaysActive = true
+--s = GM:AddSkill(SKILL_U_CORRUPTEDFRAGMENT, "Unlock: Corrupted Fragment", GOOD.."Unlocks purchasing the Corrupted Fragment\nGoes to corrupted sigils instead",
+--2, 2, {}, TREE_SPEEDTREE)
+--s.AlwaysActive = true
 
 s = GM:AddSkill(SKILL_ULTRANIMBLE, "Ultra Nimble", GOOD.."+15 movement speed\n"..BAD.."-20 maximum health",
 0, -6, {}, TREE_SPEEDTREE)
@@ -801,9 +801,9 @@ GM:AddSkillFunction(SKILL_D_FRAIL, function(pl, active)
 	pl:SetDTBool(DT_PLAYER_BOOL_FRAIL, active)
 end)
 
-s = GM:AddSkill(SKILL_U_MEDICCLOUD, "Unlock: Medic Cloud Bomb", GOOD.."Unlocks purchasing the Medic Cloud Bomb\nSlowly heals all humans inside the cloud",
-0, -2, {SKILL_DISPERSION}, TREE_SUPPORTTREE)
-s.AlwaysActive = true
+--s = GM:AddSkill(SKILL_U_MEDICCLOUD, "Unlock: Medic Cloud Bomb", GOOD.."Unlocks purchasing the Medic Cloud Bomb\nSlowly heals all humans inside the cloud",
+--0, -2, {SKILL_DISPERSION}, TREE_SUPPORTTREE)
+--s.AlwaysActive = true
 
 s = GM:AddSkill(SKILL_SMARTTARGETING, "Smart Targeting", GOOD.."Medical weapon darts lock onto targets with right click\n"..BAD.."+75% medic tool fire delay\n"..BAD.."-20% healing effectiveness on medical darts",
 0, 2, {}, TREE_SUPPORTTREE)
@@ -815,9 +815,9 @@ s = GM:AddSkill(SKILL_RECLAIMSOL, "Recoverable Solution", GOOD.."60% of wasted m
 GM:AddSkillModifier(SKILL_RECLAIMSOL, SKILLMOD_MEDGUN_FIRE_DELAY_MUL, 1.5)
 GM:AddSkillModifier(SKILL_RECLAIMSOL, SKILLMOD_MEDGUN_RELOAD_SPEED_MUL, -0.4)
 
-s = GM:AddSkill(SKILL_U_STRENGTHSHOT, "Unlock: Strength Shot Gun", GOOD.."Unlocks purchasing the Strength Shot Gun\nTarget damage +25% for 10 seconds\nExtra damage is given to you as points\nTarget is not healed",
-0, 0, {SKILL_SMARTTARGETING}, TREE_SUPPORTTREE)
-s.AlwaysActive = true
+--s = GM:AddSkill(SKILL_U_STRENGTHSHOT, "Unlock: Strength Shot Gun", GOOD.."Unlocks purchasing the Strength Shot Gun\nTarget damage +25% for 10 seconds\nExtra damage is given to you as points\nTarget is not healed",
+--0, 0, {SKILL_SMARTTARGETING}, TREE_SUPPORTTREE)
+--s.AlwaysActive = true
 
 s = GM:AddSkill(SKILL_WORTHINESS4, "Worthiness IV", GOOD.."+5 starting worth\n"..BAD.."-3 starting points",
 -5, 2, {SKILL_POINTFULNESS4}, TREE_SUPPORTTREE)
@@ -830,9 +830,9 @@ GM:AddSkillModifier(SKILL_POINTFULNESS4, SKILLMOD_WORTH, -10)
 GM:AddSkillModifier(SKILL_POINTFULNESS4, SKILLMOD_POINTS, 3)
 GM:AddSkillModifier(SKILL_POINTFULNESS4, SKILLMOD_POINT_MULTIPLIER, 0.01)
 
-s = GM:AddSkill(SKILL_U_ANTITODESHOT, "Unlock: Antidote Handgun", GOOD.."Unlocks purchasing the Antidote Handgun\nFires piercing blasts that heal poison greatly\nCleanses statuses from targets with a small point gain\nDoes not heal health",
-4, -2, {}, TREE_SUPPORTTREE)
-s.AlwaysActive = true
+--s = GM:AddSkill(SKILL_U_ANTITODESHOT, "Unlock: Antidote Handgun", GOOD.."Unlocks purchasing the Antidote Handgun\nFires piercing blasts that heal poison greatly\nCleanses statuses from targets with a small point gain\nDoes not heal health",
+--4, -2, {}, TREE_SUPPORTTREE)
+--s.AlwaysActive = true
 
 s = GM:AddSkill(SKILL_DISPERSION, "Dispersion", GOOD.."+15% cloud bomb radius\n"..BAD.."-10% cloud bomb time",
 0, -4, {}, TREE_SUPPORTTREE)
@@ -908,9 +908,9 @@ GM:AddSkillModifier(SKILL_AVIATOR, SKILLMOD_CONTROLLABLE_SPEED_MUL, 0.3)
 GM:AddSkillModifier(SKILL_AVIATOR, SKILLMOD_CONTROLLABLE_HANDLING_MUL, 0.3)
 GM:AddSkillModifier(SKILL_AVIATOR, SKILLMOD_CONTROLLABLE_HEALTH_MUL, -0.25)
 
-s = GM:AddSkill(SKILL_U_BLASTTURRET, "Unlock: Blast Turret", GOOD.."Unlocks purchasing the Blast Turret\nFires buckshot instead of SMG ammo\nDamage is higher close up\nCannot scan for targets far away",
--8, -4, {SKILL_TURRETLOCK, SKILL_TWINVOLLEY, SKILL_TURRETOVERLOAD}, TREE_BUILDINGTREE)
-s.AlwaysActive = true
+--s = GM:AddSkill(SKILL_U_BLASTTURRET, "Unlock: Blast Turret", GOOD.."Unlocks purchasing the Blast Turret\nFires buckshot instead of SMG ammo\nDamage is higher close up\nCannot scan for targets far away",
+--8, -4, {SKILL_TURRETLOCK, SKILL_TWINVOLLEY, SKILL_TURRETOVERLOAD}, TREE_BUILDINGTREE)
+--s.AlwaysActive = true
 
 s = GM:AddSkill(SKILL_TURRETLOCK, "Turret Lock", "-90% turret scan angle\n"..BAD.."-90% turret target lock angle",
 -6, -2, {}, TREE_BUILDINGTREE)
@@ -924,13 +924,13 @@ s = GM:AddSkill(SKILL_TURRETOVERLOAD, "Turret Overload", GOOD.." +100% Turret sc
 GM:AddSkillModifier(SKILL_TURRETOVERLOAD, SKILLMOD_TURRET_RANGE_MUL, -0.3)
 GM:AddSkillModifier(SKILL_TURRETOVERLOAD, SKILLMOD_TURRET_SCANSPEED_MUL, 1.0)
 
-s = GM:AddSkill(SKILL_U_DRONE, "Unlock: Pulse Drone", GOOD.."Unlocks the Pulse Drone Variant\nFires short range pulse projectiles instead of bullets",
-2, -3, {SKILL_HAULMODULE, SKILL_U_ROLLERMINE}, TREE_BUILDINGTREE)
-s.AlwaysActive = true
+--s = GM:AddSkill(SKILL_U_DRONE, "Unlock: Pulse Drone", GOOD.."Unlocks the Pulse Drone Variant\nFires short range pulse projectiles instead of bullets",
+--2, -3, {SKILL_HAULMODULE, SKILL_U_ROLLERMINE}, TREE_BUILDINGTREE)
+--s.AlwaysActive = true
 
-s = GM:AddSkill(SKILL_U_NANITECLOUD, "Unlock: Nanite Cloud Bomb", GOOD.."Unlocks purchasing the Nanite Cloud Bomb\nSlowly repairs all props and deployables inside the cloud",
-3, 1, {SKILL_HAMMERDISCIPLINE1, SKILL_DOOR_DESTROYER}, TREE_BUILDINGTREE)
-s.AlwaysActive = true
+--s = GM:AddSkill(SKILL_U_NANITECLOUD, "Unlock: Nanite Cloud Bomb", GOOD.."Unlocks purchasing the Nanite Cloud Bomb\nSlowly repairs all props and deployables inside the cloud",
+--3, 1, {SKILL_HAMMERDISCIPLINE1, SKILL_DOOR_DESTROYER}, TREE_BUILDINGTREE)
+--s.AlwaysActive = true
 
 s = GM:AddSkill(SKILL_FIELDAMP, "Field Amplifier", GOOD.."-20% zapper and repair field delay\n"..BAD.."-40% zapper and repair field range",
 6, 4, {}, TREE_BUILDINGTREE)
@@ -948,13 +948,13 @@ GM:AddSkillModifier(SKILL_PULSEEXPERT, SKILLMOD_PULSE_WEAPON_SLOW_MUL, 0.1)
 GM:AddSkillModifier(SKILL_PULSEEXPERT, SKILLMOD_RELOADSPEED_PULSE_MUL, 0.05)
 GM:AddSkillModifier(SKILL_PULSEEXPERT, SKILLMOD_FIELD_DELAY_MUL, 0.25)
 
-s = GM:AddSkill(SKILL_U_ROLLERMINE, "Unlock: Rollermine", GOOD.."Unlocks purchasing Rollermines\nRolls along the ground, shocking zombies and dealing damage",
-3, -5, {}, TREE_BUILDINGTREE)
-s.AlwaysActive = true
+--s = GM:AddSkill(SKILL_U_ROLLERMINE, "Unlock: Rollermine", GOOD.."Unlocks purchasing Rollermines\nRolls along the ground, shocking zombies and dealing damage",
+--3, -5, {}, TREE_BUILDINGTREE)
+--s.AlwaysActive = true
 
-s = GM:AddSkill(SKILL_HAULMODULE, "Unlock: Hauling Drone", GOOD.."Unlocks the Hauling Drone\nRapidly transports props and items but cannot attack",
-2, -1, {SKILL_U_NANITECLOUD}, TREE_BUILDINGTREE)
-s.AlwaysActive = true
+--s = GM:AddSkill(SKILL_HAULMODULE, "Unlock: Hauling Drone", GOOD.."Unlocks the Hauling Drone\nRapidly transports props and items but cannot attack",
+--2, -1, {SKILL_U_NANITECLOUD}, TREE_BUILDINGTREE)
+--s.AlwaysActive = true
 
 s = GM:AddSkill(SKILL_LIGHTCONSTRUCT, "Light Construction", GOOD.."-25% deployable pack time\n"..BAD.."-25% deployable health",
 8, -1, {SKILL_CARRIER}, TREE_BUILDINGTREE)
@@ -974,17 +974,17 @@ s = GM:AddSkill(SKILL_ACUITY, "Supplier's Acuity", GOOD.."Locate nearby resupply
 s = GM:AddSkill(SKILL_VISION, "Refiner's Vision", GOOD.."Locate nearby remantlers if behind walls\n"..GOOD.."Locate nearby unplaced remantlers on players through walls",
 6, -6, {SKILL_NONE, SKILL_ACUITY}, TREE_BUILDINGTREE)
 
-s = GM:AddSkill(SKILL_U_ROCKETTURRET, "Unlock: Rocket Turret", GOOD.."Unlocks purchasing the Rocket Turret\nFires explosives instead of SMG ammo\nDeals damage in a radius\nHigh tier deployable",
--8, -0, {SKILL_TURRETOVERLOAD}, TREE_BUILDINGTREE)
-s.AlwaysActive = true
+--s = GM:AddSkill(SKILL_U_ROCKETTURRET, "Unlock: Rocket Turret", GOOD.."Unlocks purchasing the Rocket Turret\nFires explosives instead of SMG ammo\nDeals damage in a radius\nHigh tier deployable",
+--8, -0, {SKILL_TURRETOVERLOAD}, TREE_BUILDINGTREE)
+--s.AlwaysActive = true
 
 s = GM:AddSkill(SKILL_INSIGHT, "Buyer's Insight", GOOD.."Locate nearby arsenal crates if behind walls\n"..GOOD.."Locate nearby unplaced arsenal crates on players through walls\n"..GOOD.."Locate nearby arsenal packs through walls",
 6, -0, {SKILL_U_NANITECLOUD, SKILL_U_ZAPPER_ARC, SKILL_LIGHTCONSTRUCT, SKILL_D_LATEBUYER}, TREE_BUILDINGTREE)
 s.AlwaysActive = true
 
-s = GM:AddSkill(SKILL_U_ZAPPER_ARC, "Unlock: Arc Zapper", GOOD.."Unlocks purchasing the Arc Zapper\nZaps zombies that get nearby, and jumps in an arc\nMid tier deployable and long cooldown\nRequires a steady upkeep of pulse ammo",
-6, 2, {SKILL_FIELDAMP, SKILL_TECHNICIAN}, TREE_BUILDINGTREE)
-s.AlwaysActive = true
+--s = GM:AddSkill(SKILL_U_ZAPPER_ARC, "Unlock: Arc Zapper", GOOD.."Unlocks purchasing the Arc Zapper\nZaps zombies that get nearby, and jumps in an arc\nMid tier deployable and long cooldown\nRequires a steady upkeep of pulse ammo",
+--6, 2, {SKILL_FIELDAMP, SKILL_TECHNICIAN}, TREE_BUILDINGTREE)
+--s.AlwaysActive = true
 
 s = GM:AddSkill(SKILL_D_LATEBUYER, "Debuff: Late Buyer", GOOD.."+20 starting Worth\n"..GOOD.."-2% resupply delay\n"..GOOD.."-4% arsenal item prices\n"..BAD.."Unable to use points at arsenal crates until the second half of the round",
 8, 1, {}, TREE_BUILDINGTREE)
@@ -992,16 +992,16 @@ GM:AddSkillModifier(SKILL_D_LATEBUYER, SKILLMOD_WORTH, 20)
 GM:AddSkillModifier(SKILL_D_LATEBUYER, SKILLMOD_RESUPPLY_DELAY_MUL, -0.02)
 GM:AddSkillModifier(SKILL_D_LATEBUYER, SKILLMOD_ARSENAL_DISCOUNT, -0.04)
 
-s = GM:AddSkill(SKILL_U_CRAFTINGPACK, "Unlock: Crafting Pack", GOOD.."Unlocks purchasing the Sawblade component\n"..GOOD.."Unlocks purchasing the Electrobattery component\n"..GOOD.."Unlocks purchasing the CPU Parts component",
-4, -1, {}, TREE_BUILDINGTREE)
-s.AlwaysActive = true
+--s = GM:AddSkill(SKILL_U_CRAFTINGPACK, "Unlock: Crafting Pack", GOOD.."Unlocks purchasing the Sawblade component\n"..GOOD.."Unlocks purchasing the Electrobattery component\n"..GOOD.."Unlocks purchasing the CPU Parts component",
+--4, -1, {}, TREE_BUILDINGTREE)
+--s.AlwaysActive = true
 
-s = GM:AddSkill(SKILL_TAUT, "Taut", GOOD.."Damage does not make you drop props\n"..BAD.."+45% prop carrying slow down",
--5, 3, {}, TREE_BUILDINGTREE)
-GM:AddSkillModifier(SKILL_TAUT, SKILLMOD_PROP_CARRY_SLOW_MUL, 0.45)
-GM:AddSkillFunction(SKILL_TAUT, function(pl, active)
-	pl.BuffTaut = active
-end)
+--s = GM:AddSkill(SKILL_TAUT, "Taut", GOOD.."Damage does not make you drop props\n"..BAD.."+45% prop carrying slow down",
+---5, 3, {}, TREE_BUILDINGTREE)
+--GM:AddSkillModifier(SKILL_TAUT, SKILLMOD_PROP_CARRY_SLOW_MUL, 0.45)
+--GM:AddSkillFunction(SKILL_TAUT, function(pl, active)
+	--pl.BuffTaut = active
+--end)
 
 s = GM:AddSkill(SKILL_D_NOODLEARMS, "Debuff: Noodle Arms", GOOD.."+5 starting Worth\n"..GOOD.."+1 starting scrap\n"..BAD.."Unable to pickup props",
 -7, 2, {}, TREE_BUILDINGTREE)
@@ -1108,8 +1108,8 @@ s.CanUseInZE = true
 GM:AddSkillModifier(SKILL_QUICKFIRE, SKILLMOD_RELOADSPEED_MUL, -0.25)
 GM:AddSkillModifier(SKILL_QUICKFIRE, SKILLMOD_WEAPON_FIREDELAY_MUL, -0.05)
 
-s = GM:AddSkill(SKILL_U_DOOMSTICK, "Unlock: Doom Stick", GOOD.."Unlocks purchasing the Doom Stick\nTier 6 weapon\nMore powerful than Boom Stick",
--6.5, 1.5, {}, TREE_GUNTREE)
+--s = GM:AddSkill(SKILL_U_DOOMSTICK, "Unlock: Doom Stick", GOOD.."Unlocks purchasing the Doom Stick\nTier 6 weapon\nMore powerful than Boom Stick",
+--6.5, 1.5, {}, TREE_GUNTREE)
 
 s = GM:AddSkill(SKILL_SLEIGHTOFHAND, "Sleight of Hand", GOOD.."+10% weapon reload speed\n"..BAD.."+20% weapon aim spread",
 -5, -1, {}, TREE_GUNTREE)
@@ -1117,9 +1117,9 @@ s.CanUseInZE = true
 GM:AddSkillModifier(SKILL_SLEIGHTOFHAND, SKILLMOD_RELOADSPEED_MUL, 0.10)
 GM:AddSkillModifier(SKILL_SLEIGHTOFHAND, SKILLMOD_AIMSPREAD_MUL, 0.2)
 
-s = GM:AddSkill(SKILL_U_CRYGASGREN, "Unlock: Cryo Gas Grenade", GOOD.."Unlocks purchasing the Cryo Gas Grenade\nVariant of the Corrosive Gas Grenade\nCryo gas deals a bit of damage over time\nZombies are slowed in the effect",
-2, -2.5, {SKILL_EGOCENTRIC}, TREE_GUNTREE)
-s.AlwaysActive = true
+--s = GM:AddSkill(SKILL_U_CRYGASGREN, "Unlock: Cryo Gas Grenade", GOOD.."Unlocks purchasing the Cryo Gas Grenade\nVariant of the Corrosive Gas Grenade\nCryo gas deals a bit of damage over time\nZombies are slowed in the effect",
+--2, -2.5, {SKILL_EGOCENTRIC}, TREE_GUNTREE)
+--s.AlwaysActive = true
 
 s = GM:AddSkill(SKILL_SOFTDET, "Soft Detonation", GOOD.."-30% explosive damage taken\n"..BAD.."-10% explosive damage radius",
 0, -5, {}, TREE_GUNTREE)
@@ -1262,8 +1262,8 @@ s = GM:AddSkill(SKILL_LASTSTAND, "Last Stand", GOOD.."1.85x melee damage when be
 GM:AddSkillModifier(SKILL_LASTSTAND, SKILLMOD_HEALTH, -5)
 GM:AddSkillModifier(SKILL_LASTSTAND, SKILLMOD_BLOODARMOR, -5)
 
-s = GM:AddSkill(SKILL_GLASSWEAPONS, "Glass Weapons", VERYGOOD.."3.23x melee weapon damage vs. zombies\n"..BAD.."Your melee weapons have a 35% chance to break when hitting a zombie\n"..NEUTRAL.."Some melee weapons are not affected by this skill", --\nFirst melee hit will never break a melee weapon,
-2, 4.5, {}, TREE_MELEETREE)
+--s = GM:AddSkill(SKILL_GLASSWEAPONS, "Glass Weapons", VERYGOOD.."3.23x melee weapon damage vs. zombies\n"..BAD.."Your melee weapons have a 35% chance to break when hitting a zombie\n"..NEUTRAL.."Some melee weapons are not affected by this skill", --\nFirst melee hit will never break a melee weapon,
+--2, 4.5, {}, TREE_MELEETREE)
 
 s = GM:AddSkill(SKILL_D_CLUMSY, "Debuff: Clumsy", GOOD.."+20 starting Worth\n"..GOOD.."+5 starting points\n"..BAD.."Very easy to be knocked down",
 -2, 2, {}, TREE_MELEETREE)

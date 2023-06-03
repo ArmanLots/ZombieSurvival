@@ -61,7 +61,7 @@ function SWEP:PostOnMeleeHit(hitent, hitflesh, tr)
 		local combo = self:GetDTInt(2)
 		local owner = self:GetOwner()
 		local armdelay = owner:GetMeleeSpeedMul() * (owner.MeleeFireDelay or 1)
-		self:SetNextPrimaryFire(CurTime() + math.max(0.2, self.Primary.Delay * (1 - combo / 10)) * armdelay)
+		self:SetNextPrimaryFire(CurTime() + math.max(0.15, self.Primary.Delay * (1 - combo / 10)) * armdelay)
 
 		self:SetDTInt(2, combo + 1)
 	end

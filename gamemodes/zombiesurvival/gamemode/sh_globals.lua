@@ -99,7 +99,7 @@ DEFAULT_MASS = 80
 DEFAULT_MODELSCALE = 1
 
 -- Humans can not carry OR drag anything heavier than this (in kg.?)
-CARRY_MAXIMUM_MASS = 300
+CARRY_MAXIMUM_MASS = 500
 -- Humans can not carry anything with a volume more than this (OBBMins():Length() + OBBMaxs():Length()).
 CARRY_MAXIMUM_VOLUME = 150
 -- Objects with more mass than this will be dragged instead of carried.
@@ -167,7 +167,7 @@ GM.BarricadeHealthMin = 75 --50
 GM.BarricadeHealthMax = 1300 * 0.85 --1100 * 0.85	-- Note: Unaffected by health prop mul skill modifier
 GM.BarricadeHealthMassFactor = 3.625 * 0.85 --3.5 * 0.85
 GM.BarricadeHealthVolumeFactor = 4.125 * 0.85 --4 * 0.85
-GM.BarricadeRepairCapacity = 1.35 --1.25
+GM.BarricadeRepairCapacity = 1.75 --1.25
 
 -- Allow Semiboss zombies?
 GM.SemiBossZombies = true
@@ -182,7 +182,7 @@ GM.SemiBossZombieSpawnBeforeWaveStart = 1
 GM.BossZombiePlayersRequired = 8
 
 -- Amount (in seconds) for the boss to spawn in before wave starts
-GM.BossZombieSpawnBeforeWaveStart = 3
+GM.BossZombieSpawnBeforeWaveStart = 5
 
 -- Allow superboses to be spawned?
 GM.SuperBossZombies = true

@@ -8,4 +8,4 @@ SWEP.ShowWorldModel = false
 
 SWEP.Primary.Ammo = "bloodshot"
 
-SWEP.MaxStock = 3
+SWEP.MaxStock = 4

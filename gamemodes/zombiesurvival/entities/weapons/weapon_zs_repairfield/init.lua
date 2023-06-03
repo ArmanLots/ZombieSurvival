@@ -57,7 +57,7 @@ function SWEP:PrimaryAttack()
 
 		ent:EmitSound("npc/dog/dog_servo12.wav")
 
-		ent:SetNextRepairPulse(CurTime() + 4)
+		ent:SetNextRepairPulse(CurTime() + 1)
 
 		self:TakePrimaryAmmo(1)
 

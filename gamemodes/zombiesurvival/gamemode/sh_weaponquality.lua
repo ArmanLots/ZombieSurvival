@@ -103,7 +103,7 @@ local function ApplyWeaponModifier(modinfo, wept, datatab, remantledescs, i)
 	for var, isprimary in pairs(modinfo.VarTable) do
 		mtbl = isprimary and wept.Primary or wept
 		if mtbl[var] then
-			qfactor = i - (datatab.QualityStart - 1)
+			qfactor = math.max(0, i - (datatab.QualityStart - 1))
 			basestat = mtbl[var]
 			newstat = basestat + datatab.Amount * qfactor
 

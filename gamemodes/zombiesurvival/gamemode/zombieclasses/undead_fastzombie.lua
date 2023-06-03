@@ -7,6 +7,9 @@ CLASS.Help = "controls_fast_zombie"
 
 CLASS.Model = Model("models/player/zombie_fast.mdl")
 
+CLASS.Hidden = true
+CLASS.Disabled = true
+
 CLASS.Wave = 13 / GM.NumberOfWaves
 CLASS.Infliction = 0.93
 CLASS.Revives = true

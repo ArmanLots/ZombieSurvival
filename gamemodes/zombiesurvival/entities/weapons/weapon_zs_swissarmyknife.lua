@@ -22,7 +22,7 @@ SWEP.MeleeSize = 0.875
 
 SWEP.WalkSpeed = SPEED_FASTEST
 
-SWEP.Primary.Delay = 0.85
+SWEP.Primary.Delay = 0.45
 
 SWEP.HitDecal = "Manhackcut"
 
@@ -36,7 +36,7 @@ SWEP.NoHitSoundFlesh = true
 
 SWEP.AllowQualityWeapons = true
 
-GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_FIRE_DELAY, -0.085)
+--GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_FIRE_DELAY, -0.085)
 
 function SWEP:PlaySwingSound()
 	self:EmitSound("weapons/knife/knife_slash"..math.random(2)..".wav")

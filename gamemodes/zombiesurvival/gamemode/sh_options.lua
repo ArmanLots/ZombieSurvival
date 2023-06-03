@@ -231,10 +231,10 @@ GM:AddStartingItem("medkit",			ITEMCAT_TOOLS,			30,				"weapon_zs_medicalkit")
 GM:AddStartingItem("medgun",			ITEMCAT_TOOLS,			35,				"weapon_zs_medicgun")
 item =
 GM:AddStartingItem("strengthshot",		ITEMCAT_TOOLS,			35,				"weapon_zs_strengthshot")
-item.SkillRequirement = SKILL_U_STRENGTHSHOT
+--item.SkillRequirement = SKILL_U_STRENGTHSHOT
 item =
 GM:AddStartingItem("antidoteshot",		ITEMCAT_TOOLS,			35,				"weapon_zs_antidoteshot")
-item.SkillRequirement = SKILL_U_ANTITODESHOT
+--item.SkillRequirement = SKILL_U_ANTITODESHOT
 GM:AddStartingItem("arscrate",			ITEMCAT_DEPLOYABLES,	30,				"weapon_zs_arsenalcrate")
 .Countables = "prop_arsenalcrate"
 GM:AddStartingItem("resupplybox",		ITEMCAT_DEPLOYABLES,	30,				"weapon_zs_resupplybox")
@@ -249,7 +249,7 @@ item =
 GM:AddStartingItem("blastturret",		ITEMCAT_DEPLOYABLES,	55,				"weapon_zs_gunturret_buckshot",	nil,	nil,			nil,					function(pl) pl:GiveEmptyWeapon("weapon_zs_gunturret_buckshot") pl:GiveAmmo(1, "turret_buckshot") pl:GiveAmmo(30, "buckshot") end)
 item.Countables = "prop_gunturret_buckshot"
 item.NoClassicMode = true
-item.SkillRequirement = SKILL_U_BLASTTURRET
+--item.SkillRequirement = SKILL_U_BLASTTURRET
 item =
 GM:AddStartingItem("repairfield",		ITEMCAT_DEPLOYABLES,	40,				"weapon_zs_repairfield",		nil,	nil,			nil,					function(pl) pl:GiveEmptyWeapon("weapon_zs_repairfield") pl:GiveAmmo(1, "repairfield") pl:GiveAmmo(50, "pulse") end)
 item.Countables = "prop_repairfield"
@@ -266,24 +266,24 @@ item.Countables = "prop_drone"
 item =
 GM:AddStartingItem("pulsedrone",		ITEMCAT_DEPLOYABLES,	45,				"weapon_zs_drone_pulse",		nil,	nil,			nil,					function(pl) pl:GiveEmptyWeapon("weapon_zs_drone_pulse") pl:GiveAmmo(1, "pulse_cutter") pl:GiveAmmo(60, "pulse") end)
 item.Countables = "prop_drone_pulse"
-item.SkillRequirement = SKILL_U_DRONE
+--item.SkillRequirement = SKILL_U_DRONE
 item =
 GM:AddStartingItem("hauldrone",			ITEMCAT_DEPLOYABLES,	15,				"weapon_zs_drone_hauler",		nil,	nil,			nil,					function(pl) pl:GiveEmptyWeapon("weapon_zs_drone_hauler") pl:GiveAmmo(1, "drone_hauler") end)
 item.Countables = "prop_drone_hauler"
-item.SkillRequirement = SKILL_HAULMODULE
+--item.SkillRequirement = SKILL_HAULMODULE
 item =
 GM:AddStartingItem("rollermine",		ITEMCAT_DEPLOYABLES,	30,				"weapon_zs_rollermine",			nil,	nil,			nil,					function(pl) pl:GiveEmptyWeapon("weapon_zs_rollermine") pl:GiveAmmo(1, "rollermine") end)
 item.Countables = "prop_rollermine"
-item.SkillRequirement = SKILL_U_ROLLERMINE
+--item.SkillRequirement = SKILL_U_ROLLERMINE
 
 GM:AddStartingItem("wrench",			ITEMCAT_TOOLS,			15,				"weapon_zs_wrench").NoClassicMode = true
 GM:AddStartingItem("crphmr",			ITEMCAT_TOOLS,			30,				"weapon_zs_hammer").NoClassicMode = true
 GM:AddStartingItem("junkpack",			ITEMCAT_DEPLOYABLES,	30,				"weapon_zs_boardpack")
 GM:AddStartingItem("propanetank",		ITEMCAT_TOOLS,			15,				"comp_propanecan")
 GM:AddStartingItem("busthead",			ITEMCAT_TOOLS,			15,				"comp_busthead")
-GM:AddStartingItem("sawblade",			ITEMCAT_TOOLS,			15,				"comp_sawblade").SkillRequirement = SKILL_U_CRAFTINGPACK
-GM:AddStartingItem("cpuparts",			ITEMCAT_TOOLS,			15,				"comp_cpuparts").SkillRequirement = SKILL_U_CRAFTINGPACK
-GM:AddStartingItem("electrobattery",	ITEMCAT_TOOLS,			25,				"comp_electrobattery").SkillRequirement = SKILL_U_CRAFTINGPACK
+GM:AddStartingItem("sawblade",			ITEMCAT_TOOLS,			15,				"comp_sawblade")--.SkillRequirement = SKILL_U_CRAFTINGPACK
+GM:AddStartingItem("cpuparts",			ITEMCAT_TOOLS,			15,				"comp_cpuparts")--.SkillRequirement = SKILL_U_CRAFTINGPACK
+GM:AddStartingItem("electrobattery",	ITEMCAT_TOOLS,			25,				"comp_electrobattery")--.SkillRequirement = SKILL_U_CRAFTINGPACK
 GM:AddStartingItem("msgbeacon",			ITEMCAT_DEPLOYABLES,	5,				"weapon_zs_messagebeacon").Countables = "prop_messagebeacon"
 item =
 GM:AddStartingItem("ffemitter",			ITEMCAT_DEPLOYABLES,	40,				"weapon_zs_ffemitter",			nil,	nil,			nil,					function(pl) pl:GiveEmptyWeapon("weapon_zs_ffemitter") pl:GiveAmmo(1, "slam") pl:GiveAmmo(50, "pulse") end)
@@ -322,7 +322,7 @@ GM:AddStartingItem("flashbomb",			ITEMCAT_OTHER,			10,				"weapon_zs_flashbomb")
 GM:AddStartingItem("molotov",			ITEMCAT_OTHER,			30,				"weapon_zs_molotov")
 GM:AddStartingItem("betty",				ITEMCAT_OTHER,			25,				"weapon_zs_proxymine")
 GM:AddStartingItem("corgasgrenade",		ITEMCAT_OTHER,			30,				"weapon_zs_corgasgrenade")
-GM:AddStartingItem("crygasgrenade",		ITEMCAT_OTHER,			30,				"weapon_zs_crygasgrenade").SkillRequirement = SKILL_U_CRYGASGREN
+GM:AddStartingItem("crygasgrenade",		ITEMCAT_OTHER,			30,				"weapon_zs_crygasgrenade")--.SkillRequirement = SKILL_U_CRYGASGREN
 GM:AddStartingItem("detpck",			ITEMCAT_OTHER,			30,				"weapon_zs_detpack").Countables = "prop_detpack"
 item =
 --GM:AddStartingItem("sigfragment",		ITEMCAT_OTHER,			25,				"weapon_zs_sigilfragment")
@@ -333,10 +333,10 @@ item =
 --item.SkillRequirement = SKILL_U_CORRUPTEDFRAGMENT
 --item =
 GM:AddStartingItem("medcloud",			ITEMCAT_OTHER,			20,				"weapon_zs_mediccloudbomb")
-item.SkillRequirement = SKILL_U_MEDICCLOUD
+--item.SkillRequirement = SKILL_U_MEDICCLOUD
 item =
 GM:AddStartingItem("nanitecloud",		ITEMCAT_OTHER,			20,				"weapon_zs_nanitecloudbomb")
-item.SkillRequirement = SKILL_U_NANITECLOUD
+--item.SkillRequirement = SKILL_U_NANITECLOUD
 GM:AddStartingItem("bloodshot",			ITEMCAT_OTHER,			35,				"weapon_zs_bloodshotbomb")
 
 ------------
@@ -408,23 +408,34 @@ GM:AddPointShopItem("broadside",		ITEMCAT_GUNS,			200,			"weapon_zs_broadside")
 GM:AddPointShopItem("smelter",			ITEMCAT_GUNS,			200,			"weapon_zs_smelter")
 
 -- Tier 6?
-GM:AddPointShopItem("doomstick",		ITEMCAT_GUNS,			280,			"weapon_zs_doomstick").SkillRequirement = SKILL_U_DOOMSTICK
+GM:AddPointShopItem("doomstick",		ITEMCAT_GUNS,			280,			"weapon_zs_doomstick")--.SkillRequirement = SKILL_U_DOOMSTICK
 
 
 GM:AddPointShopItem("pistolammo",		ITEMCAT_AMMO,			8,				nil,	"14 pistol ammo",				nil,									"ammo_pistol",					function(pl) pl:GiveAmmo(14, "pistol", true) end)
+GM:AddPointShopItem("pistolammo2",		ITEMCAT_AMMO,			40,				nil,	"70 pistol ammo",				nil,									"ammo_pistol",					function(pl) pl:GiveAmmo(70, "pistol", true) end)
 GM:AddPointShopItem("shotgunammo",		ITEMCAT_AMMO,			8,				nil,	"12 shotgun ammo",				nil,									"ammo_shotgun",					function(pl) pl:GiveAmmo(12, "buckshot", true) end)
+GM:AddPointShopItem("shotgunammo2",		ITEMCAT_AMMO,			40,				nil,	"60 shotgun ammo",				nil,									"ammo_shotgun",					function(pl) pl:GiveAmmo(60, "buckshot", true) end)
 GM:AddPointShopItem("smgammo",			ITEMCAT_AMMO,			8,				nil,	"36 SMG ammo",					nil,									"ammo_smg",						function(pl) pl:GiveAmmo(36, "smg1", true) end)
+GM:AddPointShopItem("smgammo2",			ITEMCAT_AMMO,			40,				nil,	"180 SMG ammo",					nil,									"ammo_smg",						function(pl) pl:GiveAmmo(180, "smg1", true) end)
 GM:AddPointShopItem("rifleammo",		ITEMCAT_AMMO,			8,				nil,	"8 rifle ammo",					nil,									"ammo_rifle",					function(pl) pl:GiveAmmo(8, "357", true) end)
+GM:AddPointShopItem("rifleammo2",		ITEMCAT_AMMO,			40,				nil,	"40 rifle ammo",				nil,									"ammo_rifle",					function(pl) pl:GiveAmmo(40, "357", true) end)
 GM:AddPointShopItem("crossbowammo",		ITEMCAT_AMMO,			8,				nil,	"8 crossbow bolts",				nil,									"ammo_bolts",					function(pl) pl:GiveAmmo(8,	"XBowBolt",	true) end)
+GM:AddPointShopItem("crossbowammo2",	ITEMCAT_AMMO,			40,				nil,	"40 crossbow bolts",			nil,									"ammo_bolts",					function(pl) pl:GiveAmmo(40, "XBowBolt", true) end)
 GM:AddPointShopItem("assaultrifleammo",	ITEMCAT_AMMO,			8,				nil,	"32 assault rifle ammo",		nil,									"ammo_assault",					function(pl) pl:GiveAmmo(32, "ar2", true) end)
+GM:AddPointShopItem("assaultrifleammo2",	ITEMCAT_AMMO,		40,				nil,	"160 assault rifle ammo",		nil,									"ammo_assault",					function(pl) pl:GiveAmmo(160, "ar2", true) end)
 GM:AddPointShopItem("pulseammo",		ITEMCAT_AMMO,			8,				nil,	"30 pulse ammo",				nil,									"ammo_pulse",					function(pl) pl:GiveAmmo(30, "pulse", true) end)
+GM:AddPointShopItem("pulseammo2",		ITEMCAT_AMMO,			40,				nil,	"150 pulse ammo",				nil,									"ammo_pulse",					function(pl) pl:GiveAmmo(150, "pulse", true) end)
 GM:AddPointShopItem("impactmine",		ITEMCAT_AMMO,			8,				nil,	"3 explosives",					nil,									"ammo_explosive",				function(pl) pl:GiveAmmo(3, "impactmine", true) end)
+GM:AddPointShopItem("impactmine2",		ITEMCAT_AMMO,			40,				nil,	"15 explosives",				nil,									"ammo_explosive",				function(pl) pl:GiveAmmo(15, "impactmine", true) end)
 GM:AddPointShopItem("chemical",			ITEMCAT_AMMO,			8,				nil,	"20 chemical vials",			nil,									"ammo_chemical",				function(pl) pl:GiveAmmo(20, "chemical", true) end)
+GM:AddPointShopItem("chemical2",		ITEMCAT_AMMO,		    40,				nil,	"100 chemical vials",			nil,									"ammo_chemical",				function(pl) pl:GiveAmmo(100, "chemical", true) end)
 item =
 GM:AddPointShopItem("medammo",			ITEMCAT_AMMO,			8,				nil,	"25 Medical Kit power",			"25 extra power for the Medical Kit.",	"ammo_medpower",				function(pl) pl:GiveAmmo(25, "Battery", true) end)
+GM:AddPointShopItem("medammo2",			ITEMCAT_AMMO,			40,				nil,	"125 Medical Kit power",		"125 extra power for the Medical Kit.",	"ammo_medpower",				function(pl) pl:GiveAmmo(125, "Battery", true) end)
 item.CanMakeFromScrap = true
 item =
-GM:AddPointShopItem("nail",				ITEMCAT_AMMO,			2,				nil,	"Nail",							"4 nails.",					"ammo_nail",					function(pl) pl:GiveAmmo(4, "GaussEnergy", true) end)
+GM:AddPointShopItem("nail",				ITEMCAT_AMMO,			2,				nil,	"4 Nail",							"4 nails.",					"ammo_nail",					function(pl) pl:GiveAmmo(4, "GaussEnergy", true) end)
+GM:AddPointShopItem("nail2",			ITEMCAT_AMMO,			10,				nil,	"20 Nails",							"20 nails.",				"ammo_nail",					function(pl) pl:GiveAmmo(20, "GaussEnergy", true) end)
 item.NoClassicMode = true
 item.CanMakeFromScrap = true
 item =
@@ -433,6 +444,7 @@ item =
 --item.Model = "models/props_debris/wood_board04a.mdl"
 --item =
 GM:AddPointShopItem("scrap",			ITEMCAT_AMMO,			8,				nil,	"6 Scrap",						"Scrap used in remantler.",				"ammo_scrap",					function(pl) pl:GiveAmmo(6, "scrap", true) end)
+GM:AddPointShopItem("scrap2",			ITEMCAT_AMMO,			40,				nil,	"30 Scrap",						"Scrap used in remantler.",				"ammo_scrap",					function(pl) pl:GiveAmmo(30, "scrap", true) end)
 item.NoCraftWithScrap = true
 -- Tier 1
 GM:AddPointShopItem("brassknuckles",	ITEMCAT_MELEE,			10,				"weapon_zs_brassknuckles").Model = "models/props_c17/utilityconnecter005.mdl"
@@ -483,7 +495,7 @@ item =
 GM:AddPointShopItem("blastturret",		ITEMCAT_DEPLOYABLES,			45,				"weapon_zs_gunturret_buckshot",	nil,							nil,									nil,											function(pl) pl:GiveEmptyWeapon("weapon_zs_gunturret_buckshot") pl:GiveAmmo(1, "turret_buckshot") end)
 item.Countables = "prop_gunturret_buckshot"
 item.NoClassicMode = true
-item.SkillRequirement = SKILL_U_BLASTTURRET
+--item.SkillRequirement = SKILL_U_BLASTTURRET
 item =
 GM:AddPointShopItem("assaultturret",	ITEMCAT_DEPLOYABLES,			115,			"weapon_zs_gunturret_assault",	nil,							nil,									nil,											function(pl) pl:GiveEmptyWeapon("weapon_zs_gunturret_assault") pl:GiveAmmo(1, "turret_assault") end)
 item.NoClassicMode = true
@@ -492,7 +504,7 @@ item =
 GM:AddPointShopItem("rocketturret",		ITEMCAT_DEPLOYABLES,			140,			"weapon_zs_gunturret_rocket",	nil,							nil,									nil,											function(pl) pl:GiveEmptyWeapon("weapon_zs_gunturret_rocket") pl:GiveAmmo(1, "turret_rocket") end)
 item.Countables = "prop_gunturret_rocket"
 item.NoClassicMode = true
-item.SkillRequirement = SKILL_U_ROCKETTURRET
+--item.SkillRequirement = SKILL_U_ROCKETTURRET
 GM:AddPointShopItem("manhack",			ITEMCAT_DEPLOYABLES,			25,				"weapon_zs_manhack").Countables = "prop_manhack"
 item =
 GM:AddPointShopItem("drone",			ITEMCAT_DEPLOYABLES,			30,				"weapon_zs_drone")
@@ -500,15 +512,15 @@ item.Countables = "prop_drone"
 item =
 GM:AddPointShopItem("pulsedrone",		ITEMCAT_DEPLOYABLES,			30,				"weapon_zs_drone_pulse")
 item.Countables = "prop_drone_pulse"
-item.SkillRequirement = SKILL_U_DRONE
+--item.SkillRequirement = SKILL_U_DRONE
 item =
 GM:AddPointShopItem("hauldrone",		ITEMCAT_DEPLOYABLES,			15,				"weapon_zs_drone_hauler")
 item.Countables = "prop_drone_hauler"
-item.SkillRequirement = SKILL_HAULMODULE
+--item.SkillRequirement = SKILL_HAULMODULE
 item =
 GM:AddPointShopItem("rollermine",		ITEMCAT_DEPLOYABLES,			30,				"weapon_zs_rollermine")
 item.Countables = "prop_rollermine"
-item.SkillRequirement = SKILL_U_ROLLERMINE
+--item.SkillRequirement = SKILL_U_ROLLERMINE
 
 item =
 GM:AddPointShopItem("repairfield",		ITEMCAT_DEPLOYABLES,			30,				"weapon_zs_repairfield",		nil,							nil,									nil,											function(pl) pl:GiveEmptyWeapon("weapon_zs_repairfield") pl:GiveAmmo(1, "repairfield") pl:GiveAmmo(30, "pulse") end)
@@ -522,24 +534,24 @@ item =
 GM:AddPointShopItem("zapper_arc",		ITEMCAT_DEPLOYABLES,			115,			"weapon_zs_zapper_arc",			nil,							nil,									nil,											function(pl) pl:GiveEmptyWeapon("weapon_zs_zapper_arc") pl:GiveAmmo(1, "zapper_arc") pl:GiveAmmo(30, "pulse") end)
 item.Countables = "prop_zapper_arc"
 item.NoClassicMode = true
-item.SkillRequirement = SKILL_U_ZAPPER_ARC
+--item.SkillRequirement = SKILL_U_ZAPPER_ARC
 item =
 GM:AddPointShopItem("ffemitter",		ITEMCAT_DEPLOYABLES,			45,				"weapon_zs_ffemitter",			nil,							nil,									nil,											function(pl) pl:GiveEmptyWeapon("weapon_zs_ffemitter") pl:GiveAmmo(1, "slam") pl:GiveAmmo(30, "pulse") end)
 item.Countables = "prop_ffemitter"
 GM:AddPointShopItem("propanetank",		ITEMCAT_TOOLS,			15,				"comp_propanecan")
 GM:AddPointShopItem("busthead",			ITEMCAT_TOOLS,			15,				"comp_busthead")
-GM:AddPointShopItem("sawblade",			ITEMCAT_TOOLS,			15,				"comp_sawblade").SkillRequirement = SKILL_U_CRAFTINGPACK
-GM:AddPointShopItem("cpuparts",			ITEMCAT_TOOLS,			15,				"comp_cpuparts").SkillRequirement = SKILL_U_CRAFTINGPACK
-GM:AddPointShopItem("electrobattery",	ITEMCAT_TOOLS,			25,				"comp_electrobattery").SkillRequirement = SKILL_U_CRAFTINGPACK
+GM:AddPointShopItem("sawblade",			ITEMCAT_TOOLS,			15,				"comp_sawblade")--.SkillRequirement = SKILL_U_CRAFTINGPACK
+GM:AddPointShopItem("cpuparts",			ITEMCAT_TOOLS,			15,				"comp_cpuparts")--.SkillRequirement = SKILL_U_CRAFTINGPACK
+GM:AddPointShopItem("electrobattery",	ITEMCAT_TOOLS,			25,				"comp_electrobattery")--.SkillRequirement = SKILL_U_CRAFTINGPACK
 GM:AddPointShopItem("barricadekit",		ITEMCAT_DEPLOYABLES,	70,				"weapon_zs_barricadekit")
 GM:AddPointShopItem("medkit",			ITEMCAT_TOOLS,			30,				"weapon_zs_medicalkit")
 GM:AddPointShopItem("medgun",			ITEMCAT_TOOLS,			30,				"weapon_zs_medicgun")
 item =
 GM:AddPointShopItem("strengthshot",		ITEMCAT_TOOLS,			30,				"weapon_zs_strengthshot")
-item.SkillRequirement = SKILL_U_STRENGTHSHOT
+--item.SkillRequirement = SKILL_U_STRENGTHSHOT
 item =
 GM:AddPointShopItem("antidote",			ITEMCAT_TOOLS,			30,				"weapon_zs_antidoteshot")
-item.SkillRequirement = SKILL_U_ANTITODESHOT
+--item.SkillRequirement = SKILL_U_ANTITODESHOT
 GM:AddPointShopItem("medrifle",			ITEMCAT_TOOLS,			45,				"weapon_zs_medicrifle")
 GM:AddPointShopItem("healray",			ITEMCAT_TOOLS,			115,			"weapon_zs_healingray")
 
@@ -624,20 +636,20 @@ GM:AddPointShopItem("betty",			ITEMCAT_OTHER,			35,				"weapon_zs_proxymine")
 GM:AddPointShopItem("detpck",			ITEMCAT_OTHER,			40,				"weapon_zs_detpack")
 item =
 GM:AddPointShopItem("crygasgrenade",	ITEMCAT_OTHER,			30,				"weapon_zs_crygasgrenade")
-item.SkillRequirement = SKILL_U_CRYGASGREN
+--item.SkillRequirement = SKILL_U_CRYGASGREN
 GM:AddPointShopItem("corgasgrenade",	ITEMCAT_OTHER,			30,				"weapon_zs_corgasgrenade")
---GM:AddPointShopItem("sigfragment",		ITEMCAT_OTHER,			30,				"weapon_zs_sigilfragment")
+GM:AddPointShopItem("sigfragment",		ITEMCAT_OTHER,			30,				"weapon_zs_sigilfragment")
 GM:AddPointShopItem("bloodshot",		ITEMCAT_OTHER,			30,				"weapon_zs_bloodshotbomb")
 item =
---GM:AddPointShopItem("corruptedfragment",ITEMCAT_OTHER,			55,				"weapon_zs_corruptedfragment")
---item.NoClassicMode = true
+GM:AddPointShopItem("corruptedfragment",ITEMCAT_OTHER,			55,				"weapon_zs_corruptedfragment")
+item.NoClassicMode = true
 --item.SkillRequirement = SKILL_U_CORRUPTEDFRAGMENT
---item =
+item =
 GM:AddPointShopItem("medcloud",			ITEMCAT_OTHER,			30,				"weapon_zs_mediccloudbomb")
-item.SkillRequirement = SKILL_U_MEDICCLOUD
+--item.SkillRequirement = SKILL_U_MEDICCLOUD
 item =
 GM:AddPointShopItem("nanitecloud",		ITEMCAT_OTHER,			30,				"weapon_zs_nanitecloudbomb")
-item.SkillRequirement = SKILL_U_NANITECLOUD
+--item.SkillRequirement = SKILL_U_NANITECLOUD
 
 -- ZS Mutations
 GM:AddMutation("m_zombie_health", "Zombie Health Upgrade", "Increases health by 6.5%.", CATEGORY_MUTATIONS, 100, function(pl)

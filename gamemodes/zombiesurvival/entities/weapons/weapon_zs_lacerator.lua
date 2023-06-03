@@ -28,7 +28,7 @@ SWEP.PounceDamage = 30
 
 function SWEP:MeleeHit(ent, trace, damage, forcescale)
 	if not ent:IsPlayer() then
-		damage = math.floor(damage * 18/22)
+		damage = math.floor(damage * 1.6)
 	end
 
 	self.BaseClass.MeleeHit(self, ent, trace, damage, forcescale)

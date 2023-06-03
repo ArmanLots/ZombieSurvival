@@ -2,10 +2,10 @@ ENT.Type = "anim"
 ENT.RenderGroup = RENDERGROUP_TRANSLUCENT
 
 ENT.CanPackUp = true
-ENT.PackUpTime = 3
-ENT.MaxAmmo = 300 -- 10 minutes of repair time when fully loaded.
+ENT.PackUpTime = 2
+ENT.MaxAmmo = 500 -- 10 minutes of repair time when fully loaded.
 ENT.HealValue = 8
-ENT.MaxDistance = 75
+ENT.MaxDistance = 120
 
 ENT.m_NoNailUnfreeze = true
 ENT.NoNails = true

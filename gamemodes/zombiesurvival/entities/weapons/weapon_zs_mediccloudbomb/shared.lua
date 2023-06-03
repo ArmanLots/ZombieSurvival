@@ -11,4 +11,4 @@ SWEP.ShowWorldModel = false
 
 SWEP.Primary.Ammo = "mediccloudbomb"
 
-SWEP.MaxStock = 4
+SWEP.MaxStock = 8

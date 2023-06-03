@@ -4,7 +4,7 @@ CLASS.Description = "description_drencher"
 CLASS.Help = "controls_drencher"
 
 --CLASS.Wave = 7 / 6
---CLASS.Hidden = true
+CLASS.Hidden = true
 --CLASS.Disabled = true
 
 CLASS.Boss = true
