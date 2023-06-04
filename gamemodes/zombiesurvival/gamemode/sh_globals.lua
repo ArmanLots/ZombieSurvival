@@ -176,7 +176,7 @@ GM.SemiBossZombies = true
 GM.SemiBossZombiePlayersRequired = 3
 
 -- Amount (in seconds) for the boss to spawn in before wave starts
-GM.SemiBossZombieSpawnBeforeWaveStart = 1
+GM.SemiBossZombieSpawnBeforeWaveStart = 0.1
 
 -- Amount of players needed for the boss to spawn. (Comment: player bots count too)
 GM.BossZombiePlayersRequired = 8
