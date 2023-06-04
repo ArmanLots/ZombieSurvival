@@ -59,13 +59,13 @@ SWEP.PropModels = {
 	Model("models/props_wasteland/prison_bedframe001b.mdl"),
 	Model("models/props_c17/Lockers001a.mdl"),
 	Model("models/props_c17/FurnitureTable002a.mdl"),
-	Model("models/props_interiors/sofa_chair02.mdl"),
-	Model("models/props_interiors/chairlobby01.mdl"),
-	Model("models/props_interiors/table_bedside.mdl"),
-	Model("models/props_interiors/trashcan01.mdl"),
-	Model("models/props_street/trashbin01.mdl"),
-	Model("models/props_urban/fridge_door003.mdl"),
-	Model("models/props_interiors/refrigerator03.mdl"),
+	--Model("models/props_interiors/sofa_chair02.mdl"),
+	--Model("models/props_interiors/chairlobby01.mdl"),
+	--Model("models/props_interiors/table_bedside.mdl"),
+	--Model("models/props_interiors/trashcan01.mdl"),
+	--Model("models/props_street/trashbin01.mdl"),
+	--Model("models/props_urban/fridge_door003.mdl"),
+	--Model("models/props_interiors/refrigerator03.mdl"),
 }
 
 SWEP.HoldType = "physgun"
@@ -109,13 +109,13 @@ function SWEP:PrimaryAttack()
 			ent:SetAngles(ang)
 			ent:SetModel(self.PropModels[math.random(#self.PropModels)])
 			ent:Spawn()
-			ent:SetHealth(350)
+			ent:SetHealth(750)
 			ent.NoVolumeCarryCheck = true
 			ent.NoDisTime = CurTime() + 15
 			ent.NoDisOwner = self:GetOwner()
 			local phys = ent:GetPhysicsObject()
 			if phys:IsValid() then
-				phys:SetMass(math.min(phys:GetMass(), 50))
+				--phys:SetMass(math.min(phys:GetMass(), 50))
 				phys:SetVelocityInstantaneous(self:GetOwner():GetVelocity())
 			end
 			ent:SetPhysicsAttacker(self:GetOwner())
