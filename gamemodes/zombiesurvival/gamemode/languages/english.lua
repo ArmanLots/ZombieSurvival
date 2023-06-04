@@ -380,6 +380,23 @@ LANGUAGE.description_eradicator						= "Bringers of death and destruction. The E
 LANGUAGE.description_howler							= "A terrifying flesh titan with a piercing shriek.\nIts howl inspires the undead and instills fear in the living."
 LANGUAGE.description_extinctioncrab					= "Vile diseases churn within this giant headcrab.\nThe spores it spits will afflict those near it, reducing the effectiveness of healing."
 
+--Demi Bosses
+LANGUAGE.class_cold_marrow    = "Cold Marrow"
+LANGUAGE.class_darkmare   = "Darkmare"
+LANGUAGE.class_chem_juggernaut    = "Chem Juggernaut"
+LANGUAGE.class_skeleton_warrior   = "Skeleton Warrior"
+LANGUAGE.class_primeghoul   = "Prime Ghoul"
+
+LANGUAGE.description_cold_marrow    = "A more tragic story. This changed. Red marrow has brittle and very cold bones\nIt was previously cryogenically stored so taking damage causes it to unleash a wave of frost\nThis makes the red marrow much weaker however."
+LANGUAGE.description_darkmare   = "A somewhat similar but weaker version of the nightmare."
+LANGUAGE.description_chem_juggernaut    = "The Chem zombie next evolution stage leads to this sturdy monstrosity\nChem juggernauts smear whatever they attack with their violent chemicals\nAllowing further explosive reactions from other sources of damage."
+LANGUAGE.description_skeleton_warrior   = "Forgotten warriors from ages past\nThe weapons they carry made them dangerous against other melee attackers."
+LANGUAGE.description_primeghoul   = "The ascended God of all ghouls\nTheir waves of projectiles will totally triple unlucky victims\nand their body will discharge poison towards attackers when harmed."
+
+LANGUAGE.controls_cold_marrow   = "> PRIMARY: Frost Claws\n> ON 200 DAMAGE TAKEN: Frost Shield"
+LANGUAGE.controls_chem_juggernaut   = "> PRIMARY: Acid Claws"
+LANGUAGE.controls_skeleton_warrior    = "> PRIMARY: Sword clave"
+
 -- Class control schemes
 LANGUAGE.controls_drencher              = "> PRIMARY: Bleeding Claws\n> SECONDARY: Moan\n> ON DEATH: Blood Storm"
 LANGUAGE.controls_zombie							= "> PRIMARY: Claws\n> SECONDARY: Scream\n> RELOAD: Moan\n> SPRINT: Feign death\n> ON FATAL HIT IN LEGS: Revive / Transform"

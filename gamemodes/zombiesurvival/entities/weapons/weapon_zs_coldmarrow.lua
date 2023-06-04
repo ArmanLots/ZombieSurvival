@@ -33,6 +33,21 @@ function SWEP:PlayAttackSound()
 	self:GetOwner():EmitSound("npc/combine_soldier/die"..math.random(1,3)..".wav", 75, math.random(78,90), 0.5)
 end
 
+function SWEP:ApplyMeleeDamage(ent, trace, damage)
+	if ent:IsPlayer() then
+		--ent:GiveStatus("dimvision", 6)
+		local gt = ent:GiveStatus("frost", 8)
+		local owner = self:GetOwner()
+
+		if gt and gt:IsValid() then
+			gt.Applier = owner
+		end
+		ent:AddLegDamageExt(12, owner, self, SLOWTYPE_COLD)
+	end
+
+	self.BaseClass.ApplyMeleeDamage(self, ent, trace, damage)
+end
+
 if not CLIENT then return end
 
 function SWEP:ViewModelDrawn()

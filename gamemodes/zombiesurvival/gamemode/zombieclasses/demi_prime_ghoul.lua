@@ -3,7 +3,7 @@ CLASS.Base = "elder_ghoul"
 CLASS.Name = "Prime Ghoul"
 CLASS.TranslationName = "class_primeghoul"
 CLASS.Description = "description_primeghoul"
-CLASS.Help = "controls_primeghoul"
+CLASS.Help = "controls_noxiousghoul"
 
 CLASS.Health = 820
 CLASS.DynamicHealth = 20
