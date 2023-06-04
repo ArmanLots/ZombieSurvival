@@ -238,7 +238,7 @@ function PANEL:Text2Paint()
 end
 
 function PANEL:Text3Paint()
-	draw.SimpleText(not GAMEMODE:GetDifficultyScalingEnabled() and "" or Format("Add. Difficulty: %s%%", math.Round(GAMEMODE:GetDifficulty(), 2)), self.Font, 0, 0, COLOR_ORANGE)
+	draw.SimpleText(not GAMEMODE:GetDifficultyScalingEnabled() and "" or Format("Difficulty: %s%%", math.Round(GAMEMODE:GetDifficulty(), 2)), self.Font, 0, 0, COLOR_ORANGE)
 	return true
 end
 
