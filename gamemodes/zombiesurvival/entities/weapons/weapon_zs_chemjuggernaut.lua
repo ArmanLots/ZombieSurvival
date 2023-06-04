@@ -30,7 +30,7 @@ end
 SWEP.PlayIdleSound = SWEP.PlayAlertSound
 
 function SWEP:PlayAttackSound()
-	self:EmitSound("NPC_PoisonZombie.ThrowWarn")..math.random(3)..".wav", 75, math.random(75,80))
+	self:EmitSound("NPC_PoisonZombie.ThrowWarn")
 end
 
 if not CLIENT then return end

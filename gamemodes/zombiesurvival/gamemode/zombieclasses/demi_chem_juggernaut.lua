@@ -150,10 +150,10 @@ CLASS.IconColor = Color(127, 255, 0)
 
 function CLASS:PrePlayerDraw(pl)
 	render.ModelMaterialOverride(matSkin)
-	render.SetColorModulation(0, 0.7, 0.2)
+	render.SetColorModulation(0.2, 1, 0)
 end
 
 function CLASS:PostPlayerDraw(pl)
 	render.ModelMaterialOverride()
-	render.SetColorModulation(1, 1, 1)
+	render.SetColorModulation(0.2, 1, 0)
 end

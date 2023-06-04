@@ -127,13 +127,14 @@ end
 if not CLIENT then return end
 
 CLASS.Icon = "zombiesurvival/killicons/skeletal_walker"
+CLASS.IconColor = Color(125, 125, 125)
 
 local render_SetMaterial = render.SetMaterial
 local render_DrawSprite = render.DrawSprite
 local angle_zero = angle_zero
 local LocalToWorld = LocalToWorld
 
-local colGlow = Color(125, 125, 125)
+local colGlow = Color(0, 255, 0)
 local matGlow = Material("sprites/glow04_noz")
 local vecEyeLeft = Vector(4, -4.6, -1)
 local vecEyeRight = Vector(4, -4.6, 1)
