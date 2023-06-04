@@ -791,7 +791,7 @@ LANGUAGE.wave_x                 = "Wave %d"
 LANGUAGE.super_x_has_risen		  = "A Superboss zombie has risen!"
 LANGUAGE.semi_x_has_risen		    = "A DemiBoss zombie has risen!"
 LANGUAGE.miniboss_class_select	= "You will be %s the next time you're a miniboss zombie."
-LANGUAGE.semiboss_class_select	= "You will be %s the next time you're a semiboss zombie."
+LANGUAGE.semiboss_class_select	= "You will be %s the next time you're a Demiboss zombie."
 LANGUAGE.superboss_class_select	= "You will be %s the next time you're a Superboss zombie."
 
 
