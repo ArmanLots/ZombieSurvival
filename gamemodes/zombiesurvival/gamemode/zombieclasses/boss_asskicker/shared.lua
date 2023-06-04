@@ -7,6 +7,9 @@ CLASS.Help = "controls_asskicker"
 
 CLASS.Boss = true
 
+CLASS.Disabled = true
+CLASS.Hidden = true
+
 CLASS.KnockbackScale = 0
 
 CLASS.FearPerInstance = 1

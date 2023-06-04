@@ -7,6 +7,9 @@ CLASS.Model = Model("models/Zombie/Classic_torso.mdl")
 
 CLASS.Boss = true
 
+CLASS.Disabled = true
+CLASS.Hidden = true
+
 CLASS.KnockbackScale = 0
 
 CLASS.FearPerInstance = 1

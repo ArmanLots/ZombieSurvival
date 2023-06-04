@@ -207,7 +207,7 @@ if SERVER then
 	end
 end
 
-	--[[function CLASS:ProcessDamage(pl, dmginfo)
+	function CLASS:ProcessDamage(pl, dmginfo)
 		local damage = dmginfo:GetDamage()
 		if damage >= 0 or damage < pl:Health() then return end
 
@@ -235,46 +235,46 @@ end
 		end
 
 		return true
-	end--]]
+	end
 
-	--function CLASS:ReviveCallback(pl, attacker, dmginfo)
-		--if not pl:ShouldReviveFrom(dmginfo) then return false end
+	function CLASS:ReviveCallback(pl, attacker, dmginfo)
+		if not pl:ShouldReviveFrom(dmginfo) then return false end
 
-		--local classtable = math_random(3) == 3 and GAMEMODE.ZombieClasses["Zombie Legs"] or GAMEMODE.ZombieClasses["Zombie Torso"]
-		--if classtable then
-			--pl:RemoveStatus("overridemodel", false, true)
-			--local deathclass = pl.DeathClass or pl:GetZombieClass()
-			--pl:SetZombieClass(classtable.Index)
-			--pl:DoHulls(classtable.Index, TEAM_UNDEAD)
-			--pl.DeathClass = deathclass
+		local classtable = math_random(3) == 3 and GAMEMODE.ZombieClasses["Zombie Legs"] or GAMEMODE.ZombieClasses["Zombie Torso"]
+		if classtable then
+			pl:RemoveStatus("overridemodel", false, true)
+			local deathclass = pl.DeathClass or pl:GetZombieClass()
+			pl:SetZombieClass(classtable.Index)
+			pl:DoHulls(classtable.Index, TEAM_UNDEAD)
+			pl.DeathClass = deathclass
 
-			--pl:EmitSound("physics/flesh/flesh_bloody_break.wav", 100, 75)
+			pl:EmitSound("physics/flesh/flesh_bloody_break.wav", 100, 75)
 
-			--if classtable == GAMEMODE.ZombieClasses["Zombie Torso"] then
-				--local ent = ents.Create("prop_dynamic_override")
-				--if ent:IsValid() then
-					--ent:SetModel(Model("models/Zombie/Classic_legs.mdl"))
-					--ent:SetPos(pl:GetPos())
-					--ent:SetAngles(pl:GetAngles())
-					--ent:Spawn()
-					--ent:Fire("kill", "", 1.5)
-				--end
-			--end
+			if classtable == GAMEMODE.ZombieClasses["Zombie Torso"] then
+				local ent = ents.Create("prop_dynamic_override")
+				if ent:IsValid() then
+					ent:SetModel(Model("models/Zombie/Classic_legs.mdl"))
+					ent:SetPos(pl:GetPos())
+					ent:SetAngles(pl:GetAngles())
+					ent:Spawn()
+					ent:Fire("kill", "", 1.5)
+				end
+			end
 
-			--pl:Gib()
-			--pl.Gibbed = nil
+			pl:Gib()
+			pl.Gibbed = nil
 
-			--timer.Simple(0, function()
-				--if pl:IsValid() then
-					--pl:SecondWind()
-				--end
-			--end)
+			timer.Simple(0, function()
+				if pl:IsValid() then
+					pl:SecondWind()
+				end
+			end)
 
-			--return true
-		--end
+			return true
+		end
 
-		--return false
-	--end
+		return false
+	end
 
 function CLASS:OnSecondWind(pl)
 	pl:EmitSound("npc/zombie/zombie_voice_idle"..math_random(14)..".wav", 100, 85)
