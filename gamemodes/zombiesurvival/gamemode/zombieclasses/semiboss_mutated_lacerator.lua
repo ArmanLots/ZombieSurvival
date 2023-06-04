@@ -8,9 +8,9 @@ CLASS.Help = "controls_lacerator"
 
 CLASS.Model = Model("models/player/zombie_lacerator2.mdl")
 
-CLASS.Health = 780
+CLASS.Health = 610
 CLASS.DynamicHealth = 15
-CLASS.Speed = 275
+CLASS.Speed = 240
 CLASS.SWEP = "weapon_zs_mutated_lacerator"
 
 CLASS.FearPerInstance = 0.4

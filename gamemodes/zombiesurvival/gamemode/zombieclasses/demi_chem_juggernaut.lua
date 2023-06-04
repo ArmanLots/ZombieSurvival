@@ -24,7 +24,7 @@ CLASS.Speed = 195
 
 CLASS.VoicePitch = 0.65
 
---CLASS.ModelScale = 1.05
+CLASS.ModelScale = 1
 --CLASS.Hull = {Vector(-16, -16, 0), Vector(16, 16, 72)}
 --CLASS.HullDuck = {Vector(-16, -16, 0), Vector(16, 16, 36)}
 --CLASS.ViewOffset = DEFAULT_VIEW_OFFSET * CLASS.ModelScale
@@ -60,7 +60,7 @@ function CLASS:PlayerStepSoundTime(pl, iType, bWalking)
 end
 
 function CLASS:PlayDeathSound(pl)
-	pl:EmitSound("npc/antlion_guard/antlion_guard_die"..math_random(2)..".wav", 100, math_random(80, 90))
+	pl:EmitSound("npc/ichthyosaur/water_growl5.wav", 72, 40)
 
 	return true
 end
@@ -147,3 +147,13 @@ if not CLIENT then return end
 
 CLASS.Icon = "zombiesurvival/killicons/howler"
 CLASS.IconColor = Color(127, 255, 0)
+
+function CLASS:PrePlayerDraw(pl)
+	render.ModelMaterialOverride(matSkin)
+	render.SetColorModulation(0, 0.7, 0.2)
+end
+
+function CLASS:PostPlayerDraw(pl)
+	render.ModelMaterialOverride()
+	render.SetColorModulation(1, 1, 1)
+end

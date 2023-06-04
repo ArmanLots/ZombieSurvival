@@ -8,6 +8,7 @@ SWEP.Base = "weapon_zs_zombie"
 
 SWEP.MeleeDamage = 28
 SWEP.MeleeDamageVsProps = 60
+SWEP.Primary.Delay = 1.6
 
 SWEP.AlertDelay = 3.5
 
@@ -29,7 +30,7 @@ end
 SWEP.PlayIdleSound = SWEP.PlayAlertSound
 
 function SWEP:PlayAttackSound()
-	self:EmitSound("npc/antlion_guard/angry"..math.random(3)..".wav", 75, math.random(75,80))
+	self:EmitSound("NPC_PoisonZombie.ThrowWarn")..math.random(3)..".wav", 75, math.random(75,80))
 end
 
 if not CLIENT then return end
@@ -38,7 +39,6 @@ function SWEP:ViewModelDrawn()
 	render.ModelMaterialOverride(0)
 end
 
-local matSheet = Material("Models/charple/charple4_sheet.vtf")
 function SWEP:PreDrawViewModel(vm)
-	render.ModelMaterialOverride(matSheet)
+	render.SetColorModulation(0, 1, 0)
 end

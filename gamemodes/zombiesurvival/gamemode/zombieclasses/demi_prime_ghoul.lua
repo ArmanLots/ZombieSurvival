@@ -34,7 +34,7 @@ local vecEyeRight = Vector(4, -4.6, 1)
 
 function CLASS:PrePlayerDraw(pl)
 	render.ModelMaterialOverride(matSkin)
-	render.SetColorModulation(0.9, 0.55, 0.9)
+	render.SetColorModulation(1, 0, 0)
 end
 
 function CLASS:PostPlayerDraw(pl)

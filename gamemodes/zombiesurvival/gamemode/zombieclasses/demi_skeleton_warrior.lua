@@ -16,20 +16,21 @@ CLASS.FearPerInstance = 0.4
 
 CLASS.Points = 15
 
-CLASS.SWEP = "weapon_zs_butcherknifez"
+CLASS.SWEP = "weapon_zs_skeletonwarrior"
 
 CLASS.Model = Model("models/player/skeleton.mdl")
 
-CLASS.VoicePitch = 0.8
+CLASS.VoicePitch = 0.6
 
 CLASS.BloodColor = -1
 
-CLASS.Skeletal = true
-CLASS.SkeletalRes = true
+--CLASS.Skeletal = true
+--CLASS.SkeletalRes = true
 
 
 local math_random = math.random
 local math_min = math.min
+local string_format = string.format
 local CurTime = CurTime
 
 local ACT_HL2MP_SWIM_MELEE = ACT_HL2MP_SWIM_MELEE
@@ -75,7 +76,7 @@ function CLASS:CalcMainActivity(pl, velocity)
 		return ACT_HL2MP_WALK_CROUCH_MELEE, -1
 	end
 
-	local swinging = false
+	local swinging = true
 	local wep = pl:GetActiveWeapon()
 	if wep:IsValid() and CurTime() < wep:GetNextPrimaryFire() then
 		swinging = true
@@ -132,13 +133,13 @@ local render_DrawSprite = render.DrawSprite
 local angle_zero = angle_zero
 local LocalToWorld = LocalToWorld
 
-local colGlow = Color(0, 255, 0)
+local colGlow = Color(125, 125, 125)
 local matGlow = Material("sprites/glow04_noz")
 local vecEyeLeft = Vector(4, -4.6, -1)
 local vecEyeRight = Vector(4, -4.6, 1)
 
 function CLASS:PrePlayerDraw(pl)
-	render.SetColorModulation(1, 0.5, 0.5)
+	render.SetColorModulation(0.3, 0.3, 0.3)
 end
 
 function CLASS:PostPlayerDraw(pl)

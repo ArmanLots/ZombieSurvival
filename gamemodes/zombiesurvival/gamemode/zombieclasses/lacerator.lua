@@ -6,7 +6,7 @@ CLASS.TranslationName = "class_lacerator"
 CLASS.Description = "description_lacerator"
 CLASS.Help = "controls_lacerator"
 
-CLASS.BetterVersion = "Mutated Lacerator"
+--CLASS.BetterVersion = "Mutated Lacerator"
 
 CLASS.Model = Model("models/player/zombie_lacerator2.mdl")
 
