@@ -480,6 +480,7 @@ GM:AddPointShopItem("frotchet",			ITEMCAT_MELEE,			150,			"weapon_zs_frotchet")
 GM:AddPointShopItem("ultrabutcherknf",	ITEMCAT_MELEE,			260,				"weapon_zs_ultrabutcherknife")
 
 GM:AddPointShopItem("crphmr",			ITEMCAT_TOOLS,			15,				"weapon_zs_hammer",			nil,							nil,									nil,											function(pl) pl:GiveEmptyWeapon("weapon_zs_hammer") pl:GiveAmmo(5, "GaussEnergy") end)
+GM:AddPointShopItem("galvanismhammer",	ITEMCAT_TOOLS,			115,			"weapon_zs_galvanismhammer",			nil,							nil,									nil,											function(pl) pl:GiveEmptyWeapon("weapon_zs_galvanismhammer") pl:GiveAmmo(5, "GaussEnergy") end)
 GM:AddPointShopItem("wrench",			ITEMCAT_TOOLS,			15,				"weapon_zs_wrench").NoClassicMode = true
 GM:AddPointShopItem("arsenalcrate",		ITEMCAT_DEPLOYABLES,			30,				"weapon_zs_arsenalcrate").Countables = "prop_arsenalcrate"
 GM:AddPointShopItem("resupplybox",		ITEMCAT_DEPLOYABLES,			30,				"weapon_zs_resupplybox").Countables = "prop_resupplybox"
@@ -554,6 +555,7 @@ GM:AddPointShopItem("antidote",			ITEMCAT_TOOLS,			30,				"weapon_zs_antidotesho
 --item.SkillRequirement = SKILL_U_ANTITODESHOT
 GM:AddPointShopItem("medrifle",			ITEMCAT_TOOLS,			45,				"weapon_zs_medicrifle")
 GM:AddPointShopItem("healray",			ITEMCAT_TOOLS,			115,			"weapon_zs_healingray")
+GM:AddPointShopItem("proppack",			ITEMCAT_TOOLS,			60,				"weapon_zs_proppack")
 
 -- Tier 1
 GM:AddPointShopItem("cutlery",			ITEMCAT_TRINKETS,		10,				"trinket_cutlery").SubCategory =						ITEMSUBCAT_TRINKETS_DEFENSIVE
@@ -695,7 +697,21 @@ GM:AddMutation("m_spawn_as_a_miniboss", "Miniboss Zombie", "Spawn as a miniboss 
 
 	GAMEMODE:SpawnMiniBossZombie(pl)
 	return true
-end, true, 15, math.huge)
+end, true, 5, math.huge)
+
+GM:AddMutation("m_spawn_as_a_demiboss", "Demiboss Zombie", "Spawn as a demiboss zombie.", CATEGORY_MISCMUTATIONS, 300, function(pl)
+	if pl:GetZombieClassTable().SemiBoss and pl:Alive() then
+		GAMEMODE:ConCommandErrorMessage(pl, "You are already a demiboss zombie!")
+		return false
+	elseif not GAMEMODE:GetWaveActive() then
+		GAMEMODE:ConCommandErrorMessage(pl, "Wave is currently not active!")
+		return false
+	end
+
+	GAMEMODE:SpawnSemiBossZombie(pl)
+	return true
+end, true, 10, math.huge)
+
 
 -- These are the honorable mentions that come at the end of the round.
 
