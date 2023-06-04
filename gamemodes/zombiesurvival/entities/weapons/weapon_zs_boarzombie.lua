@@ -27,7 +27,6 @@ function SWEP:ViewModelDrawn()
 	render.ModelMaterialOverride(0)
 end
 
-local matSheet = Material("models/props_wasteland/tugboat02")
 function SWEP:PreDrawViewModel(vm)
-	render.ModelMaterialOverride(matSheet)
+	render.SetColorModulation(0.7, 0.3, 0.1)
 end

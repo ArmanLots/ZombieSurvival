@@ -26,6 +26,7 @@ CLASS.DamageNeedPerPoint = GM.NoHeadboxZombiePointRatio
 CLASS.Points = CLASS.Health/GM.NoHeadboxZombiePointRatio
 
 CLASS.CanTaunt = true
+CLASS.Unlocked = true
 
 CLASS.VoicePitch = 0.75
 

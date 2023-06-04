@@ -24,7 +24,7 @@ CLASS.VoicePitch = 0.6
 
 CLASS.BloodColor = -1
 
---CLASS.Skeletal = true
+CLASS.Skeletal = true
 --CLASS.SkeletalRes = true
 
 

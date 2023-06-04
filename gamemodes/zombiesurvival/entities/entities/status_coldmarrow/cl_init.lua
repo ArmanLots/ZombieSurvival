@@ -53,7 +53,7 @@ function ENT:DrawTranslucent()
 
 			local particle = emitter:Add("!sprite_bloodspray"..math.random(8), pos + VectorRand():GetNormalized() * 5)
 			particle:SetDieTime(math.Rand(0.75, 0.85))
-			particle:SetStartSize(11)
+			particle:SetStartSize(4)
 			particle:SetEndSize(1)
 			particle:SetColor(70, 130, 180)
 			particle:SetStartAlpha(235)
@@ -61,7 +61,7 @@ function ENT:DrawTranslucent()
 			particle:SetVelocity(ent:GetVelocity())
 			particle:SetRoll(math.random(0, 360))
 			particle:SetRollDelta(math.random(5, -5))
-			particle:SetGravity(Vector(0, 0, -200))
+			particle:SetGravity(Vector(0, 0, -50))
 		end
 
 		emitter:Finish() emitter = nil collectgarbage("step", 64)

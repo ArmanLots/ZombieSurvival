@@ -285,11 +285,14 @@ if CLIENT then
 	CLASS.IconColor = Color(150, 75, 0)
 end
 
-local matSkin = Material("models/props_wasteland/tugboat02")
-function CLASS:PrePlayerDrawOverrideModel(pl)
+local matSkin = Material("models/Zombie_Classic/Zombie_Classic_sheet.vtf")
+
+function CLASS:PrePlayerDraw(pl)
 	render.ModelMaterialOverride(matSkin)
+	render.SetColorModulation(0.7, 0.3, 0.1)
 end
 
-function CLASS:PostPlayerDrawOverrideModel(pl)
-	render.ModelMaterialOverride(nil)
+function CLASS:PostPlayerDraw(pl)
+	render.ModelMaterialOverride()
+	render.SetColorModulation(1, 1, 1)
 end

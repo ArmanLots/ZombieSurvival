@@ -340,7 +340,13 @@ function meta:GetSemiBossZombieIndex()
 
 	if self:IsBot() then
 		desired = table.Random({
-			"The Butcher",
+			"The Tickle Monster",
+			"Cold Marrow",
+			"Chem Juggernaut",
+			"Prime Ghoul",
+			"Skeleton Warrior",
+			"Darkmare",
+			"Mutated Lacerator",
 		})
 	end
 

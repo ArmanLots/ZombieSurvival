@@ -22,7 +22,8 @@ CLASS.Health = 800
 CLASS.DynamicHealth = 50
 CLASS.Speed = 150
 
---CLASS.Skeletal = false
+CLASS.Skeletal = true
+CLASS.BloodColor = -1
 
 local ACT_HL2MP_SWIM_PISTOL = ACT_HL2MP_SWIM_PISTOL
 local ACT_HL2MP_IDLE_CROUCH_ZOMBIE = ACT_HL2MP_IDLE_CROUCH_ZOMBIE
@@ -104,12 +105,12 @@ function CLASS:ProcessDamage(pl, dmginfo)
 	local hp = pl:Health()
 
 	if pl:GetStatus("coldmarrow") and attacker:IsPlayer() and attacker:Team() == TEAM_HUMAN then
-		dmginfo:SetDamage(dmginfo:GetDamage() * 0.20)
+		dmginfo:SetDamage(dmginfo:GetDamage() * 0.10)
 		dmg = dmginfo:GetDamage()
 	end
 
-	local numthreshold = math_Clamp(math_ceil(hp / 200), 1, 9)
-	local dmgthreshold = math_Clamp(numthreshold * 200 - 200, 1, 2000)
+	local numthreshold = math_Clamp(math_ceil(hp / 400), 1, 9)
+	local dmgthreshold = math_Clamp(numthreshold * 400 - 400, 1, 2000)
 
 	local newhp = hp - dmg
 	local nulldmg = dmgthreshold - newhp

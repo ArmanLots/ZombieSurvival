@@ -92,9 +92,9 @@ if not CLIENT then return end
 CLASS.Icon = "zombiesurvival/killicons/nightmare2"
 
 function CLASS:PrePlayerDraw(pl)
-	render.SetColorModulation(0.2, 0, 0.4)
+	render.SetColorModulation(0.3, 0, 0.5)
 end
 
 function CLASS:PostPlayerDraw(pl)
-	render.SetColorModulation(0.2, 0, 0.4)
+	render.SetColorModulation(0.3, 0, 0.5)
 end

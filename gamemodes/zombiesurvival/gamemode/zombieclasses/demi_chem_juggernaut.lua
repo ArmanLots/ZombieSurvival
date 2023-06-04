@@ -66,8 +66,8 @@ function CLASS:PlayDeathSound(pl)
 end
 
 function CLASS:PlayPainSound(pl)
-	pl:EmitSound("npc/combine_gunship/gunship_pain.wav", 75, math_random(85, 95))
-	pl.NextPainSound = CurTime() + 1.5
+	pl:EmitSound("npc/combine_soldier/pain"..math_random(3)..".wav", 75, math.Rand(60, 65))
+	pl.NextPainSound = CurTime() + 0.5
 
 	return true
 end

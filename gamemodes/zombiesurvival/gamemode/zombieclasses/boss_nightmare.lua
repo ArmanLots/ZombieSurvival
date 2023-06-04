@@ -132,9 +132,9 @@ function CLASS:BuildBonePositions(pl)
 end
 
 function CLASS:PrePlayerDraw(pl)
-	render.SetColorModulation(0.1, 0.1, 0.1)
+	render.SetColorModulation(0, 0, 0)
 end
 
 function CLASS:PostPlayerDraw(pl)
-	render.SetColorModulation(1, 1, 1)
+	render.SetColorModulation(0, 0, 0)
 end
