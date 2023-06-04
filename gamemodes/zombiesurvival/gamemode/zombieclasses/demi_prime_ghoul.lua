@@ -10,6 +10,7 @@ CLASS.DynamicHealth = 20
 CLASS.Speed = 180
 
 CLASS.SemiBoss = true
+CLASS.Wave = 0
 CLASS.Unlocked = true
 
 CLASS.Points = CLASS.Health/GM.HumanoidZombiePointRatio

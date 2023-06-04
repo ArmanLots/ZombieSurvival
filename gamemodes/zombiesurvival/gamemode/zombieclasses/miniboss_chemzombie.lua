@@ -1,4 +1,4 @@
-CLASS.Name = "Chem Zombie (Miniboss)"
+CLASS.Name = "Chem Zombie"
 CLASS.TranslationName = "class_miniboss_chem_zombie"
 CLASS.Description = "description_miniboss_chem_zombie"
 CLASS.Help = "controls_miniboss_chem_zombie"

@@ -315,8 +315,10 @@ LANGUAGE.class_lacerator_charging					= "Charger"
 LANGUAGE.class_eradicator							= "Eradicator"
 LANGUAGE.class_howler								= "Howler"
 LANGUAGE.class_extinctioncrab						= "Extinction Crab"
+LANGUAGE.class_writher_zombie           = "Writher Zombie"
 
 -- Class descriptions
+LANGUAGE.description_writher_zombie     = "The forgotten one's. These creatures are some of oldest of their kind\nTheir attacks blind humans and pack a heavy punch against barricades\nwhile also being quite sturdy against all forms of attacks."
 LANGUAGE.description_drencher           = "A being worth avoiding, These brutes have greatly mutated blood cells\ngiving them superior strength and making them extremely hard to put down.\nTheir deaths are a violent blood storm, greatly damaging structures and humans nearby."
 LANGUAGE.description_boar_zombie      = "Boar zombies are durable evolutions of the standard zombie.\nBeing simply better in every way"
 LANGUAGE.description_zombie							= "The basic zombie is very durable and has powerful claws.\nIt's hard to keep down, especially if not shot in the head."
@@ -398,6 +400,7 @@ LANGUAGE.controls_chem_juggernaut   = "> PRIMARY: Acid Claws"
 LANGUAGE.controls_skeleton_warrior    = "> PRIMARY: Sword clave"
 
 -- Class control schemes
+LANGUAGE.controls_writher_zombie      = "> PRIMARY: Dim Claws\n> SECONDARY: Moan"
 LANGUAGE.controls_drencher              = "> PRIMARY: Bleeding Claws\n> SECONDARY: Moan\n> ON DEATH: Blood Storm"
 LANGUAGE.controls_zombie							= "> PRIMARY: Claws\n> SECONDARY: Scream\n> RELOAD: Moan\n> SPRINT: Feign death\n> ON FATAL HIT IN LEGS: Revive / Transform"
 LANGUAGE.controls_zombie_gore_blaster				= "> PRIMARY: Claws\n> ON HIT HUMAN: Bleed\n> SECONDARY: Scream\n> SPRINT: Feign death\n> ON DEATH: Gore Blast"
@@ -761,8 +764,8 @@ LANGUAGE.controls_semiboss_nightmare							= "> PRIMARY: Death touch\n> SECONDAR
 LANGUAGE.class_miniboss_eradicator							  = "Eradicator (Miniboss)"
 LANGUAGE.description_miniboss_eradicator					= "Bringers of death and destruction. The Eradicators sport a durable body that require a lot of fire power to take down.\nIncreased damage to cades."
 LANGUAGE.controls_miniboss_eradicator						  = "> PRIMARY: Claws\n> SECONDARY: Scream\n> ON FATAL HIT: Revive"
-LANGUAGE.class_miniboss_chem_zombie               = "Chem Zombie (Miniboss)"
-LANGUAGE.description_miniboss_chem_zombie         = "A volatile zombie that explodes when it dies, dealing poison damage to nearby survivors.\nHas chem aura that inflicts 4 poison damage every 2 seconds."
+LANGUAGE.class_miniboss_chem_zombie               = "Chem Zombie"
+LANGUAGE.description_miniboss_chem_zombie         = "A volatile zombie that explodes when it dies, dealing poison damage to nearby survivors.\nHas chem aura that inflicts damage to props."
 LANGUAGE.controls_miniboss_chem_zombie            = "> ON DEATH: Chemical Explosion"
 
 -- Achievements
@@ -786,7 +789,7 @@ LANGUAGE.ach_difficulty_10         = "Insanely Difficult"
 LANGUAGE.humans_lost            = "Humans have lost on wave %d!"
 LANGUAGE.wave_x                 = "Wave %d"
 LANGUAGE.super_x_has_risen		  = "A Superboss zombie has risen!"
-LANGUAGE.semi_x_has_risen		    = "A Superboss zombie has risen!"
+LANGUAGE.semi_x_has_risen		    = "A DemiBoss zombie has risen!"
 LANGUAGE.miniboss_class_select	= "You will be %s the next time you're a miniboss zombie."
 LANGUAGE.semiboss_class_select	= "You will be %s the next time you're a semiboss zombie."
 LANGUAGE.superboss_class_select	= "You will be %s the next time you're a Superboss zombie."

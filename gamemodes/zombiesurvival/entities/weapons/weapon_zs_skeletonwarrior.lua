@@ -3,7 +3,7 @@ AddCSLuaFile()
 SWEP.Base = "weapon_zs_longsword"
 
 SWEP.ZombieOnly = true
-SWEP.MeleeDamage = 28
+SWEP.MeleeDamage = 30
 SWEP.OriginalMeleeDamage = SWEP.MeleeDamage
 SWEP.Primary.Delay = 1.1
 
