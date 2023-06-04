@@ -413,6 +413,15 @@ killicon.Add("weapon_zs_mutatedhowler", "zombiesurvival/killicons/howler")
 killicon.Add("weapon_zs_omega_zombie", "zombiesurvival/killicons/zombie", Color(0, 128, 255))
 
 
+Killicon.Add("weapon_zs_coldmarrow", "zombiesurvival/killicons/skeletal_walker", Color(0, 0, 255))
+KillIcon.Add("weapon_zs_skeletonwarrior", "zombiesurvival/killicons/skeletal_walker", Color(125, 125, 125))
+Killicon.Add("weapon_zs_chemjuggernaut", "zombiesurvival/killicons/howler", Color(0, 255, 0))
+Killicon.Add("weapon_zs_darkmare", "zombiesurvival/killicons/nightmare2", Color(255,255,65))
+Killicon.Add("weapon_zs_primeghoul", "zombiesurvival/killicons/ghoul", Color(255, 0, 0))
+
+Killicon.Add("weapon_zs_writherzombie", "zombiesurvival/killicons/bloatedzombie", Color(0, 0, 0))
+
+
 
 net.Receive("zs_crow_kill_crow", function(length)
 	local victim = net.ReadString()
