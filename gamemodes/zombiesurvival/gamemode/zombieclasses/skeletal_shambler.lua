@@ -170,8 +170,8 @@ if SERVER then
 			dmginfo:SetDamage(dmginfo:GetDamage() * 0.45)
 		end
 
-		--[[local damage = dmginfo:GetDamage()
-		if damage >= 70 or damage < pl:Health() then return end
+		local damage = dmginfo:GetDamage()
+		if damage >= 0 or damage < pl:Health() then return end
 
 		local attacker, inflictor = dmginfo:GetAttacker(), dmginfo:GetInflictor()
 		if attacker == pl or not attacker:IsPlayer() or inflictor.IsMelee or inflictor.NoReviveFromKills then return end
@@ -195,7 +195,7 @@ if SERVER then
 			status:SetReviveHeal(10)
 		end
 
-		return true--]]
+		return true
 	end
 end
 
