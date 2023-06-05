@@ -401,6 +401,7 @@ killicon.AddFont("weapon_zs_doomstick", "zsdeathnotice", "0")
 killicon.Add("weapon_zs_ultrabutcherknife", "zombiesurvival/killicons/weapon_zs_butcherknife2")
 
 killicon.Add("weapon_zs_darkhammer", "zombiesurvival/killicons/weapon_zs_electrohammer", Color(63, 63, 63))
+killicon.Add("weapon_zs_galvanismhammer", "zombiesurvival/killicons/weapon_zs_electrohammer", Color(255, 0, 0))
 
 killicon.Add("weapon_zs_eradicator2", "zombiesurvival/killicons/poisonzombie", Color(88, 0, 0))
 killicon.Add("weapon_zs_eradicator3", "zombiesurvival/killicons/poisonzombie", Color(110, 44, 44))
@@ -411,6 +412,7 @@ killicon.Add("weapon_zs_sigilannihilator", "zombiesurvival/killicons/poisonzombi
 killicon.Add("weapon_zs_rebornnightmare", "zombiesurvival/killicons/nightmare2", Color(255,255,65))
 killicon.Add("weapon_zs_mutatedhowler", "zombiesurvival/killicons/howler")
 killicon.Add("weapon_zs_omega_zombie", "zombiesurvival/killicons/zombie", Color(0, 128, 255))
+killicon.Add("weapon_zs_chemzombie_miniboss", "zombiesurvival/killicons/chemzombie")
 
 
 killicon.Add("weapon_zs_coldmarrow", "zombiesurvival/killicons/skeletal_walker", Color(0, 0, 255))

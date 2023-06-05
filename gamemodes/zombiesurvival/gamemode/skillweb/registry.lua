@@ -879,7 +879,7 @@ s = GM:AddSkill(SKILL_HAMMERDISCIPLINE2, "Hammer Discipline II", GOOD.."-15% ham
 GM:AddSkillModifier(SKILL_HAMMERDISCIPLINE2, SKILLMOD_HAMMER_SWING_DELAY_MUL, -0.15)
 GM:AddSkillModifier(SKILL_HAMMERDISCIPLINE2, SKILLMOD_REPAIRRATE_MUL, -0.12)
 
-s = GM:AddSkill(SKILL_BARRICADEEXPERT, "Reinforcer", GOOD.."Gives 8% damage protection for props that were hit with a hammer for 2.5 seconds\n"..GOOD.."Gain points from protected props\n"..BAD.."+30% hammer swing delay\nElectrohammer gives prop buff for 3 seconds",
+s = GM:AddSkill(SKILL_BARRICADEEXPERT, "Reinforcer", GOOD.."Gives 8% damage protection for props that were hit with a hammer. length of buff is based on hammer quality\n"..GOOD.."Gain points from protected props\n"..BAD.."+30% hammer swing delay",
 0, 3, {SKILL_DOOR_DESTROYER}, TREE_BUILDINGTREE)
 GM:AddSkillModifier(SKILL_BARRICADEEXPERT, SKILLMOD_HAMMER_SWING_DELAY_MUL, 0.3)
 

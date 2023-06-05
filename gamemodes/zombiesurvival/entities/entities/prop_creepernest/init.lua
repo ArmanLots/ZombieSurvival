@@ -9,7 +9,7 @@ function ENT:Initialize()
 	self:PhysicsInitBox(Vector(-18, -18, 0), Vector(18, 18, 36))
 	self:SetCollisionBounds(Vector(-18, -18, 0), Vector(18, 18, 36))
 	self:SetSolid(SOLID_VPHYSICS)
-	self:SetModelScale(0.2, 0)
+	self:SetModelScale(0.05, 0)
 	self:SetUseType(SIMPLE_USE)
 	self:SetNestBuilt(true)
 
