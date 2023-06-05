@@ -110,6 +110,7 @@ include("vault/server.lua")
 
 include("skillweb/sv_registry.lua")
 include("skillweb/sv_skillweb.lua")
+include("skillweb/sv_skillmodifiers.lua")
 
 include("sv_zombieescape.lua")
 
