@@ -47,10 +47,6 @@ local ACT_HL2MP_WALK_CROUCH_ZOMBIE_01 = ACT_HL2MP_WALK_CROUCH_ZOMBIE_01
 local ACT_HL2MP_RUN_ZOMBIE = ACT_HL2MP_RUN_ZOMBIE
 local ACT_GMOD_GESTURE_TAUNT_ZOMBIE = ACT_GMOD_GESTURE_TAUNT_ZOMBIE
 
-function CLASS:ScalePlayerDamage(pl, hitgroup, dmginfo)
-	return true
-end
-
 function CLASS:IgnoreLegDamage(pl, dmginfo)
 	return true
 end
