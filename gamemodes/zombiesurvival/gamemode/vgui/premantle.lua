@@ -395,7 +395,7 @@ function PANEL:Paint(w, h)
 			local quals = GAMEMODE.WeaponQualities[hovquality]
 			if quals then
 				txt = self.RemantleNodes[hovbranch][hovquality].Name or hovbranch == 0 and quals[1] or quals[3]
-				scost = math.ceil(GAMEMODE:GetUpgradeScrap(self.GunTab, hovquality) * MySelf:GetRemantlerPrices())
+				scost = GAMEMODE:GetUpgradeScrap(self.GunTab, hovquality)
 			end
 
 			self.QualityName:SetText(txt)
@@ -449,7 +449,7 @@ net.Receive("zs_remantleconf", function()
 
 	GAMEMODE.GunTab = weapons.Get(upgclass)
 	local gtbl = GAMEMODE.GunTab
-	local scost = math.ceil(GAMEMODE:GetUpgradeScrap(gtbl, desiredqua) * MySelf:GetRemantlerPrices())
+	local scost = GAMEMODE:GetUpgradeScrap(gtbl, desiredqua)
 
 	path.RemantleNodes[hovbranch][hovquality].Unlocked = true
 	path.ScrapCost:SetTextColor((MySelf:GetAmmoCount("scrap") - scost) >= scost and COLOR_WHITE or COLOR_RED)
@@ -484,8 +484,7 @@ function PANEL:OnMousePressed(mc)
 				return
 			end
 
-			local scost = math.ceil(GAMEMODE:GetUpgradeScrap(self.GunTab, hovquality) * MySelf:GetRemantlerPrices())
-
+			local scost = GAMEMODE:GetUpgradeScrap(self.GunTab, hovquality)
 			if MySelf:GetAmmoCount("scrap") >= scost then
 				RunConsoleCommand("zs_upgrade", hovbranch ~= 0 and hovbranch)
 
