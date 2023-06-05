@@ -1,5 +1,5 @@
 include("registry.lua")
-include("skillmodifiers.lua")
+--include("skillmodifiers.lua")
 
 -- These are inverse functions of eachother!
 function GM:LevelForXP(xp)
