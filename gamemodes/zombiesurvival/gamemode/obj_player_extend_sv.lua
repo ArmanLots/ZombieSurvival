@@ -311,7 +311,7 @@ function meta:GetMiniBossZombieIndex()
 --		desired = "Giga Gore Child"
 		return
 	elseif desired == "[RANDOM]" or desired == "" then
-		desired = "Eradicator (Miniboss)"
+		desired = "Chem Zombie"
 	end
 
 	local minibossindex
