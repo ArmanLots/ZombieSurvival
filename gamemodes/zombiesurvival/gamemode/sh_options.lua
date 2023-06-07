@@ -690,6 +690,9 @@ GM:AddMutation("m_spawn_as_a_miniboss", "Miniboss Zombie", "Spawn as a miniboss 
 	if pl:GetZombieClassTable().MiniBoss and pl:Alive() then
 		GAMEMODE:ConCommandErrorMessage(pl, "You are already a miniboss zombie!")
 		return false
+	elseif pl:GetZombieClassTable().SemiBoss and pl:Alive() then
+		GAMEMODE:ConCommandErrorMessage(pl, "You are currently a demiboss zombie!")
+		return false
 	elseif not GAMEMODE:GetWaveActive() then
 		GAMEMODE:ConCommandErrorMessage(pl, "Wave is currently not active!")
 		return false
@@ -697,11 +700,14 @@ GM:AddMutation("m_spawn_as_a_miniboss", "Miniboss Zombie", "Spawn as a miniboss 
 
 	GAMEMODE:SpawnMiniBossZombie(pl)
 	return true
-end, true, 5, math.huge)
+end, true, 0, math.huge)
 
 GM:AddMutation("m_spawn_as_a_demiboss", "Demiboss Zombie", "Spawn as a demiboss zombie.", CATEGORY_MISCMUTATIONS, 300, function(pl)
 	if pl:GetZombieClassTable().SemiBoss and pl:Alive() then
 		GAMEMODE:ConCommandErrorMessage(pl, "You are already a demiboss zombie!")
+		return false
+	elseif pl:GetZombieClassTable().MiniBoss and pl:Alive() then
+		GAMEMODE:ConCommandErrorMessage(pl, "You are currently a miniboss zombie!")
 		return false
 	elseif not GAMEMODE:GetWaveActive() then
 		GAMEMODE:ConCommandErrorMessage(pl, "Wave is currently not active!")
@@ -710,7 +716,7 @@ GM:AddMutation("m_spawn_as_a_demiboss", "Demiboss Zombie", "Spawn as a demiboss 
 
 	GAMEMODE:SpawnSemiBossZombie(pl)
 	return true
-end, true, 10, math.huge)
+end, true, 0, math.huge)
 
 
 -- These are the honorable mentions that come at the end of the round.
