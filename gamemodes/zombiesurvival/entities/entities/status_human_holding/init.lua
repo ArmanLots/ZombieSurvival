@@ -263,8 +263,8 @@ function ENT:Think()
 		elseif owner:KeyDown(IN_WALK) then
 			local xdiff = math.NormalizeAngle(self.StartX - (owner.InputMouseX or 0))
 			local ydiff = math.NormalizeAngle(self.StartY - (owner.InputMouseY or 0))
-			local sxdiff = xdiff * FrameTime() * 60
-			local sydiff = ydiff * FrameTime() * 60
+			local sxdiff = xdiff * FrameTime() * 48
+			local sydiff = ydiff * FrameTime() * 48
 
 			self.ObjectAngles:RotateAroundAxis(owner:GetUp(), sxdiff)
 			self.ObjectAngles:RotateAroundAxis(owner:GetRight(), sydiff)
