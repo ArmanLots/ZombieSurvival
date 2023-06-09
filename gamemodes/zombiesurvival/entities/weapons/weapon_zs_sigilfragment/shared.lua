@@ -19,6 +19,8 @@ SWEP.Primary.Ammo = "sigilfragment"
 SWEP.Primary.Delay = 1
 SWEP.Primary.DefaultClip = 1
 
+SWEP.MaxStock = 5
+
 SWEP.Secondary.ClipSize = 1
 SWEP.Secondary.DefaultClip = 1
 SWEP.Secondary.Automatic = false

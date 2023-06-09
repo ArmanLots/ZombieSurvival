@@ -325,9 +325,9 @@ GM:AddStartingItem("corgasgrenade",		ITEMCAT_OTHER,			30,				"weapon_zs_corgasgr
 GM:AddStartingItem("crygasgrenade",		ITEMCAT_OTHER,			30,				"weapon_zs_crygasgrenade")--.SkillRequirement = SKILL_U_CRYGASGREN
 GM:AddStartingItem("detpck",			ITEMCAT_OTHER,			30,				"weapon_zs_detpack").Countables = "prop_detpack"
 item =
---GM:AddStartingItem("sigfragment",		ITEMCAT_OTHER,			25,				"weapon_zs_sigilfragment")
---item.NoClassicMode = true
---item =
+GM:AddStartingItem("sigfragment",		ITEMCAT_OTHER,			25,				"weapon_zs_sigilfragment")
+item.NoClassicMode = true
+item =
 --GM:AddStartingItem("corfragment",		ITEMCAT_OTHER,			35,				"weapon_zs_corruptedfragment")
 --item.NoClassicMode = true
 --item.SkillRequirement = SKILL_U_CORRUPTEDFRAGMENT
@@ -643,10 +643,10 @@ GM:AddPointShopItem("corgasgrenade",	ITEMCAT_OTHER,			30,				"weapon_zs_corgasgr
 GM:AddPointShopItem("sigfragment",		ITEMCAT_OTHER,			30,				"weapon_zs_sigilfragment")
 GM:AddPointShopItem("bloodshot",		ITEMCAT_OTHER,			30,				"weapon_zs_bloodshotbomb")
 item =
-GM:AddPointShopItem("corruptedfragment",ITEMCAT_OTHER,			55,				"weapon_zs_corruptedfragment")
-item.NoClassicMode = true
+--GM:AddPointShopItem("corruptedfragment",ITEMCAT_OTHER,			55,				"weapon_zs_corruptedfragment")
+--item.NoClassicMode = true
 --item.SkillRequirement = SKILL_U_CORRUPTEDFRAGMENT
-item =
+--item =
 GM:AddPointShopItem("medcloud",			ITEMCAT_OTHER,			30,				"weapon_zs_mediccloudbomb")
 --item.SkillRequirement = SKILL_U_MEDICCLOUD
 item =
