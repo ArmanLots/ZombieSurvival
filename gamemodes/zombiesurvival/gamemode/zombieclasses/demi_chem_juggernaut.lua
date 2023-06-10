@@ -20,7 +20,7 @@ CLASS.OverrideModel = Model("models/player/zombie_lacerator2.mdl")
 
 CLASS.Health = 975
 CLASS.DynamicHealth = 75
-CLASS.Speed = 195
+CLASS.Speed = 170
 
 CLASS.VoicePitch = 0.65
 
