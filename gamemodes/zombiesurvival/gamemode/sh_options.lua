@@ -693,6 +693,12 @@ GM:AddMutation("m_spawn_as_a_miniboss", "Miniboss Zombie", "Spawn as a miniboss 
 	elseif pl:GetZombieClassTable().SemiBoss and pl:Alive() then
 		GAMEMODE:ConCommandErrorMessage(pl, "You are currently a demiboss zombie!")
 		return false
+	elseif pl:GetZombieClassTable().Boss and pl:Alive() then
+		GAMEMODE:ConCommandErrorMessage(pl, "You are currently a boss zombie!")
+		return false
+	elseif pl:GetZombieClassTable().SuperBoss and pl:Alive() then
+		GAMEMODE:ConCommandErrorMessage(pl, "You are currently a superboss zombie!")
+		return false
 	elseif not GAMEMODE:GetWaveActive() then
 		GAMEMODE:ConCommandErrorMessage(pl, "Wave is currently not active!")
 		return false
@@ -708,6 +714,12 @@ GM:AddMutation("m_spawn_as_a_demiboss", "Demiboss Zombie", "Spawn as a demiboss 
 		return false
 	elseif pl:GetZombieClassTable().MiniBoss and pl:Alive() then
 		GAMEMODE:ConCommandErrorMessage(pl, "You are currently a miniboss zombie!")
+		return false
+	elseif pl:GetZombieClassTable().Boss and pl:Alive() then
+		GAMEMODE:ConCommandErrorMessage(pl, "You are currently a boss zombie!")
+		return false
+	elseif pl:GetZombieClassTable().SuperBoss and pl:Alive() then
+		GAMEMODE:ConCommandErrorMessage(pl, "You are currently a superboss zombie!")
 		return false
 	elseif not GAMEMODE:GetWaveActive() then
 		GAMEMODE:ConCommandErrorMessage(pl, "Wave is currently not active!")
