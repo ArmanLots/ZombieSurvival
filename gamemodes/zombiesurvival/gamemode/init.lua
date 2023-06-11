@@ -3274,7 +3274,7 @@ function GM:EntityTakeDamage(ent, dmginfo)
 								attacker:AddLifeHumanDamage(damage)
 								if not self.RoundEnded then
 									attacker:GainZSXP(self.InitialVolunteers[attacker:UniqueID()] and damage / 30 or damage / 50)
-									attacker:AddZombieTokens(damage / 5)
+									attacker:AddZombieTokens(damage / 3 + (math.max(self:GetWave() - 1, 0)) * 2)
 								end
 								GAMEMODE.StatTracking:IncreaseElementKV(STATTRACK_TYPE_ZOMBIECLASS, attacker:GetZombieClassTable().Name, "HumanDamage", damage)
 							end
@@ -4099,6 +4099,10 @@ end
 function GM:HumanKilledZombie(pl, attacker, inflictor, dmginfo, headshot, suicide)
 	if (pl:GetZombieClassTable().Points or 0) == 0 or self.RoundEnded then return end
 
+	if pl:Team() == TEAM_UNDEAD then
+		pl:AddZombieTokens(5 + (math.max(self:GetWave() - 1, 0)) * 2)
+	end
+
 	-- Simply distributes based on damage but also do some stuff for assists.
 
 	local totaldamage = 0
@@ -4208,7 +4212,7 @@ function GM:ZombieKilledHuman(pl, attacker, inflictor, dmginfo, headshot, suicid
 	attacker:AddBrains(1)
 	attacker:AddLifeBrainsEaten(1)
 	attacker:GainZSXP(xp)
-	attacker:AddZombieTokens(10 + (pl:GetMaxHealth() / 16))
+	attacker:AddZombieTokens(100 + (pl:GetMaxHealth() / 16))
 	attacker:GiveAchievementProgress("zmainer", 1)
 	attacker:GiveAchievementProgress("truezmainer", 1)
 	attacker:CenterNotify(COLOR_PINK, Format("Gained %s zombie tokens from killing %s", math.Round(tokensgain, 2), pl:GetName()))
