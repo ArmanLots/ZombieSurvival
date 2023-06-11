@@ -358,7 +358,7 @@ function meta:ResetLastBarricadeAttacker(attacker, dmginfo)
 				attacker:AddLifeBarricadeDamage(dmg)
 				if not GAMEMODE.RoundEnded then
 					attacker:GainZSXP(GAMEMODE.InitialVolunteers[attacker:UniqueID()] and dmg / 90 or dmg / 150)
-					attacker:AddZombieTokens(dmg / 2)
+					attacker:AddZombieTokens(dmg / 3)
 				end
 				GAMEMODE.StatTracking:IncreaseElementKV(STATTRACK_TYPE_ZOMBIECLASS, attacker:GetZombieClassTable().Name, "BarricadeDamage", dmg)
 			end
