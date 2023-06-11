@@ -681,10 +681,10 @@ GM:AddMutation("m_zombie_bloodarmordamage2", "Blood Armor Destroyer II", "Increa
 	return true
 end, true, false, 1)
 
-GM:AddMutation("m_token_converter", "Token Converter", "Convert Zombie tokens to 15XP.", CATEGORY_MISCMUTATIONS, 150, function(pl)
-	pl:AddZSXP(15)
-	return true
-end, false, 65, 5)
+--GM:AddMutation("m_token_converter", "Token Converter", "Convert Zombie tokens to 15XP.", CATEGORY_MISCMUTATIONS, 150, function(pl)
+	--pl:AddZSXP(15)
+	--return true
+--end, false, 65, 5)
 
 GM:AddMutation("m_spawn_as_a_miniboss", "Miniboss Zombie", "Spawn as a miniboss zombie.", CATEGORY_MISCMUTATIONS, 135, function(pl)
 	if pl:GetZombieClassTable().MiniBoss and pl:Alive() then
