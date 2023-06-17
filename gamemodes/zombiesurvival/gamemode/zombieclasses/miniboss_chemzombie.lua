@@ -93,7 +93,7 @@ if SERVER then
 		if DUMMY_CHEMZOMBIE:IsValid() then
 			DUMMY_CHEMZOMBIE:SetPos(pos)
 		end
-		util.PoisonBlastDamage(pl:GetActiveWeapon() or DUMMY_CHEMZOMBIE, pl, pos, 160, 85, true)
+		util.PoisonBlastDamage(pl:GetActiveWeapon() or DUMMY_CHEMZOMBIE, pl, pos, 90, 28, true)
 
 		pl:CheckRedeem()
 	end
