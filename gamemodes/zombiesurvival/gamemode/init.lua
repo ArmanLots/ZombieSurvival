@@ -4288,7 +4288,7 @@ function GM:DoPlayerDeath(pl, attacker, dmginfo)
 			effectdata:SetMagnitude(force:Length() * 3)
 			effectdata:SetNormal(force:GetNormalized())
 			effectdata:SetEntity(pl)
-		util.Effect("headshot", effectdata, true, true)
+		util.Effect("headshot", effectdata, false, false)
 	end
 
 	if not pl:CallZombieFunction5("OnKilled", attacker, inflictor, suicide, headshot, dmginfo) then

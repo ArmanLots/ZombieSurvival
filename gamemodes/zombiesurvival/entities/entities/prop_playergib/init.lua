@@ -81,7 +81,7 @@ function ENT:StartTouch(ent)
 	if self.DieTime ~= 0 and ent:IsValidLivingZombie() and ent:Health() < ent:GetMaxZombieHealth() and not ent:GetStatus("shockdebuff") --[[and not ent:GetZombieClassTable().Boss]] then
 		self.DieTime = 0
 
-		ent:SetHealth(math.min(ent:GetMaxZombieHealth(), ent:Health() + 10))
+		ent:SetHealth(math.min(ent:GetMaxZombieHealth(), ent:Health() + 35))
 
 		self:EmitSound("physics/body/body_medium_break"..math.random(2, 4)..".wav")
 		util.Blood(self:GetPos(), math.random(2), Vector(0, 0, 1), 100, self:GetDTInt(0), true)

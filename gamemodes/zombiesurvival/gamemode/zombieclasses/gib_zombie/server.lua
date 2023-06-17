@@ -15,7 +15,7 @@ local function Bomb(pl, pos, dir)
 		effectdata:SetNormal(dir:Forward())
 	util.Effect("explosion_fat", effectdata, false)
 
-	for i=1, 25 do
+	for i=1, 20 do
 		local ang = Angle()
 		ang:Set(dir)
 		ang:RotateAroundAxis(ang:Up(), math.Rand(-30, 30))
