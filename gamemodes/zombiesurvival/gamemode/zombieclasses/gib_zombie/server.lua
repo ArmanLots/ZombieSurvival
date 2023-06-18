@@ -13,7 +13,7 @@ local function Bomb(pl, pos, dir)
 	local effectdata = EffectData()
 		effectdata:SetOrigin(pos)
 		effectdata:SetNormal(dir:Forward())
-	util.Effect("explosion_fat", effectdata, false)
+	util.Effect("explosion_fat", effectdata, true)
 
 	for i=1, 20 do
 		local ang = Angle()
