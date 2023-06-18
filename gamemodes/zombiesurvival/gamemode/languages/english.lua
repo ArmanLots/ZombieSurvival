@@ -249,6 +249,7 @@ LANGUAGE.message_beacon_24							= "Zombies are coming. Build a barricade!"
 LANGUAGE.message_beacon_25							= "Plan B here"
 
 -- Class names
+LANGUAGE.class_gib_zombie             = "Gib Zombie"
 LANGUAGE.class_drencher               = "Drencher"
 LANGUAGE.class_zombie								= "Zombie"
 LANGUAGE.class_zombie_gore_blaster					= "Gore Blaster Zombie"
@@ -318,6 +319,7 @@ LANGUAGE.class_extinctioncrab						= "Extinction Crab"
 LANGUAGE.class_writher_zombie           = "Writher Zombie"
 
 -- Class descriptions
+LANGUAGE.description_gib_zombie         = "A rare variant of bloated zombie. Although quite slow,\nit can vomit large amouts of flesh, healing other zombies."
 LANGUAGE.description_writher_zombie     = "The forgotten one's. These creatures are some of oldest of their kind\nTheir attacks blind humans and pack a heavy punch against barricades\nwhile also being quite sturdy against all forms of attacks."
 LANGUAGE.description_drencher           = "A being worth avoiding, These brutes have greatly mutated blood cells\ngiving them superior strength and making them extremely hard to put down.\nTheir deaths are a violent blood storm, greatly damaging structures and humans nearby."
 LANGUAGE.description_boar_zombie      = "Boar zombies are durable evolutions of the standard zombie.\nBeing simply better in every way"
@@ -400,6 +402,7 @@ LANGUAGE.controls_chem_juggernaut   = "> PRIMARY: Acid Claws"
 LANGUAGE.controls_skeleton_warrior    = "> PRIMARY: Sword clave"
 
 -- Class control schemes
+LANGUAGE.controls_gib_zombie          = "> PRIMARY: Bleeding Claws\n> SECONDARY: Flesh Vomit\n> SPRINT: Feign death\n> ON DEATH: Gib Explosion"
 LANGUAGE.controls_writher_zombie      = "> PRIMARY: Dim Claws\n> SECONDARY: Moan"
 LANGUAGE.controls_drencher              = "> PRIMARY: Bleeding Claws\n> SECONDARY: Moan\n> ON DEATH: Blood Storm"
 LANGUAGE.controls_zombie							= "> PRIMARY: Claws\n> SECONDARY: Scream\n> RELOAD: Moan\n> SPRINT: Feign death\n> ON FATAL HIT IN LEGS: Revive / Transform"
