@@ -1,16 +1,17 @@
-CLASS.Name = "Deadly Charger"
+CLASS.Name = "Flesh Breaker"
 CLASS.TranslationName = "class_lacerator_charging_deadly"
 CLASS.Description = "description_lacerator_charging_deadly"
 CLASS.Help = "controls_lacerator_charging_deadly"
 
 CLASS.Model = Model("models/player/zombie_lacerator2.mdl")
 
-CLASS.Wave = 8 / GM.NumberOfWaves
+CLASS.Wave = 2 / GM.NumberOfWaves
+CLASS.MiniBoss = true
 
-CLASS.Health = 390
-CLASS.DynamicHealth = 6
+CLASS.Health = 500
+CLASS.DynamicHealth = 10
 CLASS.Speed = 210
-CLASS.SWEP = "weapon_zs_lacerator_charging_deadly"
+CLASS.SWEP = "weapon_zs_fleshbreaker"
 
 CLASS.Hull = {Vector(-16, -16, 0), Vector(16, 16, 58)}
 CLASS.HullDuck = {Vector(-16, -16, 0), Vector(16, 16, 32)}
@@ -195,7 +196,7 @@ if SERVER then
 end
 
 CLASS.Icon = "zombiesurvival/killicons/lacerator"
-CLASS.IconColor = Color(240, 35, 0)
+CLASS.IconColor = Color(105, 105, 105)
 
 function CLASS:CreateMove(pl, cmd)
 	local wep = pl:GetActiveWeapon()
@@ -217,7 +218,7 @@ function CLASS:CreateMove(pl, cmd)
 end
 
 function CLASS:PrePlayerDraw(pl)
-	render.SetColorModulation(0.7, 0.17, 0)
+	render.SetColorModulation(0.3, 0.3, 0.3)
 end
 
 function CLASS:PostPlayerDraw(pl)

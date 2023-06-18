@@ -2,7 +2,7 @@ AddCSLuaFile()
 
 DEFINE_BASECLASS("weapon_zs_zombie")
 
-SWEP.PrintName = "Deadly Charger"
+SWEP.PrintName = "Flesh Breaker"
 
 SWEP.ViewModel = Model("models/weapons/v_pza.mdl")
 
