@@ -78,7 +78,7 @@ function ENT:Think()
 end
 
 function ENT:StartTouch(ent)
-	if self.DieTime ~= 0 and ent:IsValidLivingZombie() and ent:Health() < ent:GetMaxZombieHealth() and not ent:GetStatus("shockdebuff") --[[and not ent:GetZombieClassTable().Boss]] then
+	if self.DieTime ~= 0 and ent:IsValidLivingZombie() and ent:Health() < ent:GetMaxZombieHealth() and not ent:GetStatus("shockdebuff") and not ent:GetZombieClassTable().Boss and not ent:GetZombieClassTable().SemiBoss and not ent:GetZombieClassTable().SuperBoss then
 		self.DieTime = 0
 
 		ent:SetHealth(math.min(ent:GetMaxZombieHealth(), ent:Health() + 35))

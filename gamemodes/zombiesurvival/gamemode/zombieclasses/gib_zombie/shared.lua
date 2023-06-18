@@ -8,9 +8,9 @@ CLASS.Help = "controls_gib_zombie"
 
 CLASS.MiniBoss = true
 
-CLASS.Health = 900
+CLASS.Health = 675
 CLASS.DynamicHealth = 25
-CLASS.Speed = 115
+CLASS.Speed = 135
 
 CLASS.Points = CLASS.Health/GM.HumanoidZombiePointRatio
 
