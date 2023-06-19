@@ -116,7 +116,7 @@ end
 
 if SERVER then
 	function CLASS:OnSpawned(pl)
-		pl:CreateAmbience("shadeambience")
+		pl:CreateAmbience("magicshadeambience")
 		pl:SetRenderMode(RENDERMODE_TRANSALPHA)
 	end
 
