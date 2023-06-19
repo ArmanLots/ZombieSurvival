@@ -1,6 +1,7 @@
 CLASS.Base = "fast_zombie"
 
-CLASS.Wave = 3 / GM.NumberOfWaves
+CLASS.Wave = 2 / GM.NumberOfWaves
+CLASS.MiniBoss = true
 
 CLASS.Name = "Slingshot Zombie"
 CLASS.TranslationName = "class_fast_zombie_slingshot"
@@ -9,9 +10,9 @@ CLASS.Help = "controls_fast_zombie_slingshot"
 
 CLASS.Revives = false
 
-CLASS.Health = 180
-CLASS.DynamicHealth = 2
-CLASS.Speed = 235
+CLASS.Health = 300
+CLASS.DynamicHealth = 6
+CLASS.Speed = 290
 CLASS.SWEP = "weapon_zs_fastzombie_slingshot"
 
 CLASS.DamageNeedPerPoint = GM.NoHeadboxZombiePointRatio
