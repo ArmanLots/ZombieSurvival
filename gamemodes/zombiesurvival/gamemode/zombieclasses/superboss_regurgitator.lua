@@ -9,7 +9,7 @@ CLASS.KnockbackScale = 0
 
 CLASS.FearPerInstance = 1
 
-CLASS.Health = 8250
+CLASS.Health = 7650
 CLASS.DynamicHealth = 0
 CLASS.SWEP = "weapon_zs_regurgitator"
 
@@ -128,14 +128,14 @@ local BonesToZero = {
 	"ValveBiped.Bip01_R_Finger31",
 	"ValveBiped.Bip01_R_Finger32"
 }
-function CLASS:BuildBonePositions(pl)
+--[[function CLASS:BuildBonePositions(pl)
 	for _, bone in pairs(BonesToZero) do
 		local boneid = pl:LookupBone(bone)
 		if boneid and boneid > 0 then
 			pl:ManipulateBoneScale(boneid, vector_tiny)
 		end
 	end
-end
+end--]]
 
 local function CreateFlesh(pl, damage, damagepos, damagedir)
 	damage = math.min(damage, 300)
@@ -193,7 +193,7 @@ end
 if not CLIENT then return end
 
 CLASS.Icon = "zombiesurvival/killicons/pukepus"
-CLASS.IconColor = Color(205, 0, 0)
+CLASS.IconColor = Color(170, 0, 0)
 
 local matSkin = Material("Models/Barnacle/barnacle_sheet")
 function CLASS:PrePlayerDraw(pl)
