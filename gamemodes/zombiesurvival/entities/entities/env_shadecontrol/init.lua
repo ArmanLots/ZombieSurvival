@@ -21,7 +21,7 @@ end
 local ShadowParams = {secondstoarrive = 0.05, maxangular = 15, maxangulardamp = 1, maxspeed = 100, maxspeeddamp = 1000, dampfactor = 0.65, teleportdistance = 0}
 function ENT:Think()
 	local owner = self:GetOwner()
-	if owner:IsValid() and owner:IsPlayer() and owner:Alive() and owner:Team() == TEAM_UNDEAD and owner:GetZombieClassTable().Name == "Shade" then
+	if owner:IsValid() and owner:IsPlayer() and owner:Alive() and owner:Team() == TEAM_UNDEAD and owner:GetZombieClassTable().Name == "Shade" or owner:GetZombieClassTable().Name == "Magic Shade" then
 		local ent = self:GetParent()
 		if ent:IsValid() then
 			local eyepos = owner:EyePos()

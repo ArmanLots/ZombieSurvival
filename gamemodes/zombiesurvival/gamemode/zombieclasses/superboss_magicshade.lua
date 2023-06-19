@@ -214,7 +214,7 @@ function CLASS:PreRenderEffects(pl)
 		red = 1 - math_Clamp((CurTime() - status:GetLastDamaged()) * 3, 0, 1) ^ 3
 	end
 
-	render.SetColorModulation(red, 0.1, 1 - red)
+	render.SetColorModulation(red, 1 * (1 - red), 0 - red)
 	render.SetBlend(0.5 + math_abs(math_cos(CurTime())) ^ 2 * 0.1)
 	render.SuppressEngineLighting(true)
 	render.ModelMaterialOverride(matWhite)
