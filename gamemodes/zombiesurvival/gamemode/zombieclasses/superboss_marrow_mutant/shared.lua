@@ -1,25 +1,25 @@
-CLASS.Name = "Red Marrow"
-CLASS.TranslationName = "class_red_marrow"
-CLASS.Description = "description_red_marrow"
-CLASS.Help = "controls_red_marrow"
+CLASS.Name = "Marrow Mutant"
+CLASS.TranslationName = "class_marrow_mutant"
+CLASS.Description = "description_marrow_mutant"
+CLASS.Help = "controls_marrow_mutant"
 
-CLASS.Boss = true
+CLASS.SuperBoss = true
 
 CLASS.KnockbackScale = 0
 
 CLASS.FearPerInstance = 1
 
 CLASS.DamageNeedPerPoint = 0
-CLASS.Points = 30
+CLASS.Points = 110
 
 CLASS.Model = Model("models/player/skeleton.mdl")
 
 CLASS.VoicePitch = 0.65
 
-CLASS.SWEP = "weapon_zs_redmarrow"
+CLASS.SWEP = "weapon_zs_marrowmutant"
 
-CLASS.Health = 1800
-CLASS.DynamicHealth = 80
+CLASS.Health = 4000
+CLASS.DynamicHealth = 0
 CLASS.Speed = 165
 
 CLASS.Skeletal = true
@@ -103,13 +103,13 @@ function CLASS:ProcessDamage(pl, dmginfo)
 	local dmg = dmginfo:GetDamage()
 	local hp = pl:Health()
 
-	if pl:GetStatus("redmarrow") and attacker:IsPlayer() and attacker:Team() == TEAM_HUMAN then
-		dmginfo:SetDamage(dmginfo:GetDamage() * 0.10)
+	if pl:GetStatus("marrowmutant") and attacker:IsPlayer() and attacker:Team() == TEAM_HUMAN then
+		dmginfo:SetDamage(dmginfo:GetDamage() * 0.05)
 		dmg = dmginfo:GetDamage()
 	end
 
-	local numthreshold = math_Clamp(math_ceil(hp / 200), 1, 9)
-	local dmgthreshold = math_Clamp(numthreshold * 200 - 200, 1, 2000)
+	local numthreshold = math_Clamp(math_ceil(hp / 250), 1, 9)
+	local dmgthreshold = math_Clamp(numthreshold * 250 - 250, 1, 4000)
 
 	local newhp = hp - dmg
 	local nulldmg = dmgthreshold - newhp
@@ -117,14 +117,14 @@ function CLASS:ProcessDamage(pl, dmginfo)
 	if newhp <= dmgthreshold and pl["bloodth"..numthreshold] then
 		pl["bloodth"..numthreshold] = false
 		dmginfo:SetDamage(dmg - nulldmg)
-		pl:GiveStatus("redmarrow", 5)
+		pl:GiveStatus("marrowmutant", 5)
 
 		local effectdata = EffectData()
 			effectdata:SetOrigin(pl:WorldSpaceCenter())
 		util.Effect("explosion_bonemesh", effectdata)
 
 		pl:GodEnable()
-		util.BlastDamageEx(pl, pl, pl:GetPos(), 55, 7, DMG_CLUB)
+		util.BlastDamageEx(pl, pl, pl:GetPos(), 55, 15, DMG_CLUB)
 		pl:GodDisable()
 	end
 end
