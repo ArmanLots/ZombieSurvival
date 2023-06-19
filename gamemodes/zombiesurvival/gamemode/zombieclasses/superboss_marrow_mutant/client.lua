@@ -15,7 +15,7 @@ local vecEyeRight = Vector(4, -4.6, 1)
 
 local matSkin = Material("Models/Barnacle/barnacle_sheet")
 function CLASS:PrePlayerDraw(pl)
-	render.SetColorModulation(0.3, 0.3, 0)
+	render.SetColorModulation(0.5, 0.5, 0)
 	render.ModelMaterialOverride(matSkin)
 end
 

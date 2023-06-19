@@ -18,7 +18,7 @@ CLASS.VoicePitch = 0.65
 
 CLASS.SWEP = "weapon_zs_marrowmutant"
 
-CLASS.Health = 4000
+CLASS.Health = 3000
 CLASS.DynamicHealth = 0
 CLASS.Speed = 165
 
@@ -108,8 +108,8 @@ function CLASS:ProcessDamage(pl, dmginfo)
 		dmg = dmginfo:GetDamage()
 	end
 
-	local numthreshold = math_Clamp(math_ceil(hp / 250), 1, 9)
-	local dmgthreshold = math_Clamp(numthreshold * 250 - 250, 1, 4000)
+	local numthreshold = math_Clamp(math_ceil(hp / 200), 1, 9)
+	local dmgthreshold = math_Clamp(numthreshold * 200 - 200, 1, 1600)
 
 	local newhp = hp - dmg
 	local nulldmg = dmgthreshold - newhp
@@ -117,14 +117,14 @@ function CLASS:ProcessDamage(pl, dmginfo)
 	if newhp <= dmgthreshold and pl["bloodth"..numthreshold] then
 		pl["bloodth"..numthreshold] = false
 		dmginfo:SetDamage(dmg - nulldmg)
-		pl:GiveStatus("marrowmutant", 5)
+		pl:GiveStatus("marrowmutant", 9)
 
 		local effectdata = EffectData()
 			effectdata:SetOrigin(pl:WorldSpaceCenter())
 		util.Effect("explosion_bonemesh", effectdata)
 
 		pl:GodEnable()
-		util.BlastDamageEx(pl, pl, pl:GetPos(), 55, 15, DMG_CLUB)
+		util.BlastDamageEx(pl, pl, pl:GetPos(), 55, 20, DMG_CLUB)
 		pl:GodDisable()
 	end
 end

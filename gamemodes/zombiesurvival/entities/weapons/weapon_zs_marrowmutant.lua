@@ -130,6 +130,6 @@ end
 
 local matSheet = Material("Models/flesh")
 function SWEP:PreDrawViewModel(vm)
-    render.SetColorModulation(0.3, 0.3, 0)
+    render.SetColorModulation(0.5, 0.5, 0)
 	render.ModelMaterialOverride(matSheet)
 end

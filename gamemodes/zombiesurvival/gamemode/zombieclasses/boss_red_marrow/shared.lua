@@ -109,7 +109,7 @@ function CLASS:ProcessDamage(pl, dmginfo)
 	end
 
 	local numthreshold = math_Clamp(math_ceil(hp / 200), 1, 9)
-	local dmgthreshold = math_Clamp(numthreshold * 200 - 200, 1, 2000)
+	local dmgthreshold = math_Clamp(numthreshold * 200 - 200, 1, 1600)
 
 	local newhp = hp - dmg
 	local nulldmg = dmgthreshold - newhp
