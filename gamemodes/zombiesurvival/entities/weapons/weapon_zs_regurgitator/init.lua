@@ -8,7 +8,7 @@ function SWEP:Think()
 		self.NextEmit = CurTime() + 0.1
 		pl.LastRangedAttack = CurTime()
 
-		local ent = ents.Create(self.PukeLeft % 2 == 1 and "prop_playergib")
+		local ent = ents.Create(self.PukeLeft % 2 == 1 and "prop_playergib" or "prop_playergib")
 		if ent:IsValid() then
 			ent:SetPos(pl:EyePos())
 			ent:SetOwner(pl)
@@ -19,7 +19,7 @@ function SWEP:Think()
 				local ang = pl:EyeAngles()
 				ang:RotateAroundAxis(ang:Forward(), math.Rand(-6, 6))
 				ang:RotateAroundAxis(ang:Up(), math.Rand(-22, 22))
-				phys:SetVelocityInstantaneous(ang:Forward() * math.Rand(625, 750))
+				phys:SetVelocityInstantaneous(ang:Forward() * math.Rand(300, 350))
 			end
 		end
 	end
