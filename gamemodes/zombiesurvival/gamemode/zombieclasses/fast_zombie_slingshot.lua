@@ -1,7 +1,9 @@
 CLASS.Base = "fast_zombie"
 
-CLASS.Wave = 2 / GM.NumberOfWaves
+--CLASS.Wave = 2 / GM.NumberOfWaves
 CLASS.MiniBoss = true
+CLASS.Wave = 0
+CLASS.Unlocked = true
 
 CLASS.Name = "Slingshot Zombie"
 CLASS.TranslationName = "class_fast_zombie_slingshot"

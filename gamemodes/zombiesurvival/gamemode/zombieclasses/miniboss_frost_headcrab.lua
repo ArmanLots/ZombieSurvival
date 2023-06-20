@@ -11,8 +11,10 @@ CLASS.DamageNeedPerPoint = GM.HeadcrabZombiePointRatio
 CLASS.Points = CLASS.Health/GM.HeadcrabZombiePointRatio
 CLASS.Speed = 160
 
-CLASS.Wave = 2 / GM.NumberOfWaves
+--CLASS.Wave = 2 / GM.NumberOfWaves
 CLASS.MiniBoss = true
+CLASS.Wave = 0
+CLASS.Unlocked = true
 
 CLASS.SWEP = "weapon_zs_frostheadcrab"
 

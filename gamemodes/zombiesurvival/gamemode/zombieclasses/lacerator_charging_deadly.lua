@@ -5,8 +5,10 @@ CLASS.Help = "controls_lacerator_charging_deadly"
 
 CLASS.Model = Model("models/player/zombie_lacerator2.mdl")
 
-CLASS.Wave = 2 / GM.NumberOfWaves
+--CLASS.Wave = 2 / GM.NumberOfWaves
 CLASS.MiniBoss = true
+CLASS.Wave = 0
+CLASS.Unlocked = true
 
 CLASS.Health = 500
 CLASS.DynamicHealth = 10
@@ -188,7 +190,7 @@ if SERVER then
 --			if wep.IsChargeCritical and wep:IsChargeCritical() then
 --				dmginfo:ScaleDamage(0.75)
 --			else
-				dmginfo:ScaleDamage(0.8)
+				dmginfo:ScaleDamage(0.2)
 --			end
 		end
 	end

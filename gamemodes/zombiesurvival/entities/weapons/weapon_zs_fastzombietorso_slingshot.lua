@@ -8,10 +8,11 @@ SWEP.ViewModel = Model("models/weapons/v_fza.mdl")
 
 SWEP.MeleeDelay = 0.25
 SWEP.MeleeDamage = 20
+SWEP.BleedDamageMul = 10 / SWEP.MeleeDamage
 SWEP.MeleeReach = 40
 SWEP.SwingAnimSpeed = 2.4
 
-SWEP.PounceDamage = 20
+SWEP.PounceDamage = 40
 SWEP.PounceDamageVsPlayerMul = 0.75
 SWEP.PounceReach = 26
 SWEP.PounceSize = 12
@@ -117,6 +118,18 @@ end
 
 function SWEP:PlayAttackSound()
 	self:EmitSound("npc/fast_zombie/leap1.wav", nil, nil, nil, CHAN_AUTO)
+end
+
+function SWEP:ApplyMeleeDamage(ent, trace, damage)
+	if SERVER and ent:IsPlayer() then
+		local bleed = ent:GiveStatus("bleed")
+		if bleed and bleed:IsValid() then
+			bleed:AddDamage(damage * self.BleedDamageMul)
+			bleed.Damager = self:GetOwner()
+		end
+	end
+
+	self.BaseClass.ApplyMeleeDamage(self, ent, trace, damage)
 end
 
 function SWEP:PlayIdleSound()

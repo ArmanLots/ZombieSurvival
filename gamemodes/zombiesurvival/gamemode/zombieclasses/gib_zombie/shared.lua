@@ -7,6 +7,8 @@ CLASS.Help = "controls_gib_zombie"
 
 
 CLASS.MiniBoss = true
+CLASS.Wave = 0
+CLASS.Unlocked = true
 
 CLASS.Health = 675
 CLASS.DynamicHealth = 25
