@@ -138,7 +138,7 @@ if SERVER then
                     effectdata:SetStart(pl:WorldToLocal(hitpos))
                     effectdata:SetAngles((center - hitpos):Angle())
                     effectdata:SetEntity(pl)
-                util.Effect("shadedeflect", effectdata, true, true)
+                util.Effect("shadedeflectm", effectdata, true, true)
     
                 local status = pl.status_magicshadeambience
                 if status and status:IsValid() then
@@ -148,7 +148,7 @@ if SERVER then
         end
     end
 
-	function CLASS:ShadeShield(pl)
+	--[[function CLASS:ShadeShield(pl)
 		local shadeshield = pl.ShadeShield
 		local curtime = CurTime()
 		if pl.NextShield and curtime <= pl.NextShield then return end
@@ -178,7 +178,7 @@ if SERVER then
 
 	function CLASS:AltUse(pl)
 		self:ShadeShield(pl)
-	end
+	end--]]
 end
 
 if not CLIENT then return end

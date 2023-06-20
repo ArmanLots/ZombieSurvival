@@ -38,7 +38,7 @@ function SWEP:PrimaryAttack()
 
 				if CLIENT then return end
 
-				local vel = owner:GetAimVector() * 1000
+				local vel = owner:GetAimVector() * 2000
 
 				local phys = obj:GetPhysicsObject()
 				if phys:IsValid() and phys:IsMoveable() and phys:GetMass() <= 300 then
