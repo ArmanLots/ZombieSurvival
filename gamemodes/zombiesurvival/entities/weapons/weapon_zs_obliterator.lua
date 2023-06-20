@@ -42,5 +42,5 @@ function SWEP:ViewModelDrawn()
 end
 
 function SWEP:PreDrawViewModel(vm)
-	render.SetColorModulation(0, 1, 0)
+	render.SetColorModulation(0, 0, 0)
 end
