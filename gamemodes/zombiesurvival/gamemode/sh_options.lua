@@ -686,7 +686,7 @@ end, true, false, 1)
 	--return true
 --end, false, 65, 5)
 
-GM:AddMutation("m_spawn_as_a_miniboss", "Miniboss Zombie", "Spawn as a miniboss zombie.", CATEGORY_MISCMUTATIONS, 135, function(pl)
+GM:AddMutation("m_spawn_as_a_miniboss", "Miniboss Zombie", "Spawn as a miniboss zombie.", CATEGORY_MISCMUTATIONS, 150, function(pl)
 	if pl:GetZombieClassTable().MiniBoss and pl:Alive() then
 		GAMEMODE:ConCommandErrorMessage(pl, "You are already a miniboss zombie!")
 		return false
@@ -708,7 +708,7 @@ GM:AddMutation("m_spawn_as_a_miniboss", "Miniboss Zombie", "Spawn as a miniboss 
 	return true
 end, true, 0, math.huge)
 
-GM:AddMutation("m_spawn_as_a_demiboss", "Demiboss Zombie", "Spawn as a demiboss zombie.", CATEGORY_MISCMUTATIONS, 300, function(pl)
+GM:AddMutation("m_spawn_as_a_demiboss", "Demiboss Zombie", "Spawn as a demiboss zombie.", CATEGORY_MISCMUTATIONS, 400, function(pl)
 	if pl:GetZombieClassTable().SemiBoss and pl:Alive() then
 		GAMEMODE:ConCommandErrorMessage(pl, "You are already a demiboss zombie!")
 		return false

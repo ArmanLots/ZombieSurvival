@@ -14,6 +14,9 @@ CLASS.CanTaunt = true
 CLASS.DamageNeedPerPoint = 0
 CLASS.Points = 135
 
+CLASS.Disabled = true
+CLASS.Hidden = true
+
 CLASS.SWEP = "weapon_zs_mutatedhowler"
 
 CLASS.Model = Model("models/player/zombie_classic_hbfix.mdl")

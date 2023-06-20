@@ -193,11 +193,11 @@ end
 if not CLIENT then return end
 
 CLASS.Icon = "zombiesurvival/killicons/pukepus"
-CLASS.IconColor = Color(170, 0, 0)
+CLASS.IconColor = Color(75, 0, 0)
 
 local matSkin = Material("Models/Barnacle/barnacle_sheet")
 function CLASS:PrePlayerDraw(pl)
-    render.SetColorModulation(0.5, 0, 0)
+    render.SetColorModulation(0.3, 0, 0)
 	render.ModelMaterialOverride(matSkin)
 end
 

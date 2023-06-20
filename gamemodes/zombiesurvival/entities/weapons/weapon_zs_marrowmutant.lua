@@ -51,7 +51,7 @@ function SWEP:Think()
 				end
 				
 				for _, ent in pairs(ents.FindInSphere(center, 120)) do
-					if ent:IsValidLivingZombie() and WorldVisible(ent:WorldSpaceCenter(), center)then
+					if ent:IsValidLivingZombie() and not ent:GetStatus("zombie_regen") and WorldVisible(ent:WorldSpaceCenter(), center)then
 						local zombieclasstbl = ent:GetZombieClassTable()
 						local ehp = zombieclasstbl.Boss and ent:GetMaxHealth() * 0.4 or ent:GetMaxHealth() * 1.25
 						if ent:Health() <= ehp then

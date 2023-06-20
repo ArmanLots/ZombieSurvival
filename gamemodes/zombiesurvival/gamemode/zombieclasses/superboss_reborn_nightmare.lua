@@ -5,6 +5,9 @@ CLASS.Help = "controls_reborn_nightmare"
 
 CLASS.SuperBoss = true
 
+CLASS.Disabled = true
+CLASS.Hidden = true
+
 CLASS.KnockbackScale = 0
 
 CLASS.Health = 5500
