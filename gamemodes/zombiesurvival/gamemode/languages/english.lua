@@ -249,6 +249,7 @@ LANGUAGE.message_beacon_24							= "Zombies are coming. Build a barricade!"
 LANGUAGE.message_beacon_25							= "Plan B here"
 
 -- Class names
+LANGUAGE.class_obliterator            = "Obliterator"
 LANGUAGE.class_frost_headcrab         = "Frost Headcrab"
 LANGUAGE.class_marrow_mutant          = "Marrow Mutant"
 LANGUAGE.class_regurgitator           = "Regurgitator"
@@ -323,6 +324,7 @@ LANGUAGE.class_extinctioncrab						= "Extinction Crab"
 LANGUAGE.class_writher_zombie           = "Writher Zombie"
 
 -- Class descriptions
+LANGUAGE.description_obliterator        = "Entity of pure chaos, can shread barricades easily while being quite resilient to bullets.\nIt's vital to kill this creature quickly before it wreaks havoc on everything"
 LANGUAGE.description_frost_headcrab     = "A unique type of headcrab, capable of giving bleed and frost to humans while also be quite strong"
 LANGUAGE.description_marrow_mutant      = "A redmarrow that undergone violent mutations making it by far the strongest kind\nthe Marrow Mutant can let out a resurgence scream, buffing and healing nearby zombies"
 LANGUAGE.description_regurgitator       = "A walking fleshpile. This behemoth can vomit large quantites of gibs\nhealing zombies greatly"
@@ -410,6 +412,7 @@ LANGUAGE.controls_chem_juggernaut   = "> PRIMARY: Acid Claws"
 LANGUAGE.controls_skeleton_warrior    = "> PRIMARY: Sword clave"
 
 -- Class control schemes
+LANGUAGE.controls_obliterator         = "> PRIMARY: Claws\n> SECONDARY: Moan"
 LANGUAGE.controls_frost_headcrab      = "> PRIMARY: Bite\n> SECONDARY: Shoot frost projectile"
 LANGUAGE.controls_marrow_mutant       = "> PRIMARY: Claws\n> SECONDARY: Resurgence Scream\n> ON EVERY 200 DAMAGE TAKEN: Create Blood Shield for 95% resistance"
 LANGUAGE.controls_regurgitator        = "> PRIMARY: Vomit Gibs\n> ON DAMAGE TAKEN: Create Gibs"

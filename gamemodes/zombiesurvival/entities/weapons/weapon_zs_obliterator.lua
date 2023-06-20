@@ -8,7 +8,7 @@ SWEP.Base = "weapon_zs_zombie"
 
 SWEP.MeleeDamage = 48
 SWEP.MeleeDamageVsProps = 85
-SWEP.Primary.Delay = 1.1
+SWEP.Primary.Delay = 1.2
 
 SWEP.AlertDelay = 3.5
 
@@ -30,7 +30,7 @@ end
 SWEP.PlayIdleSound = SWEP.PlayAlertSound
 
 function SWEP:PlayAttackSound()
-	self:EmitSound("npc/zombie_poison/pz_warn"..math.random(2)..".wav", 80, math.random(55, 65), 0.5, CHAN_AUTO)
+	self:EmitSound("npc/metropolice/pain"..math.random(2)..".wav", 95, math.Rand(45, 50), 0.95, CHAN_AUTO)
 	--self:EmitSound("npc/antlion_guard/angry"..math.random(3)..".wav", 80, math.random(112, 115), 0.5, CHAN_AUTO)
 end
 

@@ -38,6 +38,8 @@ local math_random = math.random
 local math_min = math.min
 local math_ceil = math.ceil
 local CurTime = CurTime
+local bit_band = bit.band
+local DMG_BULLET = DMG_BULLET
 
 local DIR_BACK = DIR_BACK
 local ACT_INVALID = ACT_INVALID
@@ -62,7 +64,7 @@ function CLASS:PlayDeathSound(pl)
 end
 
 function CLASS:PlayPainSound(pl)
-	pl:EmitSound("npc/combine_soldier/pain"..math_random(3)..".wav", 75, math.Rand(60, 65))
+	pl:EmitSound("npc/combine_soldier/pain"..math_random(3)..".wav", 75, math.Rand(50, 55))
 	pl.NextPainSound = CurTime() + 0.5
 
 	return true
@@ -76,9 +78,9 @@ local ScuffSounds = {
 }
 function CLASS:PlayerFootstep(pl, vFootPos, iFoot, strSoundName, fVolume, pFilter)
 	if iFoot == 0 and math_random() < 0.333 then
-		pl:EmitSound(ScuffSounds[math_random(#ScuffSounds)], 80, 90)
+		pl:EmitSound(ScuffSounds[math_random(#ScuffSounds)], 60, 70)
 	else
-		pl:EmitSound(StepSounds[math_random(#StepSounds)], 80, 90)
+		pl:EmitSound(StepSounds[math_random(#StepSounds)], 60, 70)
 	end
 
 	return true
@@ -121,6 +123,14 @@ function CLASS:DoAnimationEvent(pl, event, data)
 	end
 end
 
+if SERVER then
+	function CLASS:ProcessDamage(pl, dmginfo)
+		if bit_band(dmginfo:GetDamageType(), DMG_BULLET) ~= 0 then
+			dmginfo:SetDamage(dmginfo:GetDamage() * 0.5)
+		end
+	end
+end
+
 if not CLIENT then return end
 
 CLASS.Icon = "zombiesurvival/killicons/howler"
@@ -128,10 +138,10 @@ CLASS.IconColor = Color(30, 30, 30)
 
 function CLASS:PrePlayerDraw(pl)
 	render.ModelMaterialOverride(matSkin)
-	render.SetColorModulation(0.1, 0.1, 0.1)
+	render.SetColorModulation(1, 1, 1)
 end
 
 function CLASS:PostPlayerDraw(pl)
 	render.ModelMaterialOverride()
-	render.SetColorModulation(1, 1, 1)
+	render.SetColorModulation(0.1, 0.1, 0.1)
 end
