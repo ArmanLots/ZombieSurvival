@@ -249,6 +249,9 @@ LANGUAGE.message_beacon_24							= "Zombies are coming. Build a barricade!"
 LANGUAGE.message_beacon_25							= "Plan B here"
 
 -- Class names
+LANGUAGE.class_marrow_mutant          = "Marrow Mutant"
+LANGUAGE.class_regurgitator           = "Regurgitator"
+LANGUAGE.class_magic_shade            = "Magic Shade"
 LANGUAGE.class_gib_zombie             = "Gib Zombie"
 LANGUAGE.class_drencher               = "Drencher"
 LANGUAGE.class_zombie								= "Zombie"
@@ -319,6 +322,9 @@ LANGUAGE.class_extinctioncrab						= "Extinction Crab"
 LANGUAGE.class_writher_zombie           = "Writher Zombie"
 
 -- Class descriptions
+LANGUAGE.description_marrow_mutant      = "A redmarrow that undergone violent mutations making it by far the strongest kind\nthe Marrow Mutant can let out a resurgence scream, buffing and healing nearby zombies"
+LANGUAGE.description_regurgitator       = "A walking fleshpile. This behemoth can vomit large quantites of gibs\nhealing zombies greatly"
+LANGUAGE.description_magic_shade        = "By far the most dangerous type of shade, the magic shade\nis a much brighter green compared to the others.\nWhile it has lost it's shield capabilities, it's magnetic field has been extroted so much, allowing it to throw props with more force\nIt's only weakness seems to be light sources as bullets and melee attacks render useless against it."
 LANGUAGE.description_gib_zombie         = "A rare variant of bloated zombie. Although quite slow,\nit can vomit large amouts of flesh, healing other zombies."
 LANGUAGE.description_writher_zombie     = "The forgotten one's. These creatures are some of oldest of their kind\nTheir attacks blind humans and pack a heavy punch against barricades\nwhile also being quite sturdy against all forms of attacks."
 LANGUAGE.description_drencher           = "A being worth avoiding, These brutes have greatly mutated blood cells\ngiving them superior strength and making them extremely hard to put down.\nTheir deaths are a violent blood storm, greatly damaging structures and humans nearby."
@@ -397,11 +403,14 @@ LANGUAGE.description_chem_juggernaut    = "The Chem zombie next evolution stage 
 LANGUAGE.description_skeleton_warrior   = "Forgotten warriors from ages past\nThe weapons they carry made them dangerous against other melee attackers."
 LANGUAGE.description_primeghoul   = "The ascended God of all ghouls\nTheir waves of projectiles will totally triple unlucky victims\nand their body will discharge poison towards attackers when harmed."
 
-LANGUAGE.controls_cold_marrow   = "> PRIMARY: Frost Claws\n> ON 400 DAMAGE TAKEN: Frost Shield"
+LANGUAGE.controls_cold_marrow   = "> PRIMARY: Frost Claws\n> ON 400 DAMAGE TAKEN: Create Frost Shield for 80% resistance"
 LANGUAGE.controls_chem_juggernaut   = "> PRIMARY: Acid Claws"
 LANGUAGE.controls_skeleton_warrior    = "> PRIMARY: Sword clave"
 
 -- Class control schemes
+LANGUAGE.controls_marrow_mutant       = "> PRIMARY: Claws\n> SECONDARY: Resurgence Scream\n> ON EVERY 200 DAMAGE TAKEN: Create Blood Shield for 95% resistance"
+LANGUAGE.controls_regurgitator        = "> PRIMARY: Vomit Gibs\n> ON DAMAGE TAKEN: Create Gibs"
+LANGUAGE.controls_magic_shade         = "> PRIMARY: Throw Prop\n> SECONDARY: Pick Up Prop\n> Reload: Pull Rock From Ground"
 LANGUAGE.controls_gib_zombie          = "> PRIMARY: Bleeding Claws\n> SECONDARY: Flesh Vomit\n> SPRINT: Feign death\n> ON DEATH: Gib Explosion"
 LANGUAGE.controls_writher_zombie      = "> PRIMARY: Dim Claws\n> SECONDARY: Moan"
 LANGUAGE.controls_drencher              = "> PRIMARY: Bleeding Claws\n> SECONDARY: Moan\n> ON DEATH: Blood Storm"
@@ -446,7 +455,7 @@ LANGUAGE.controls_shadow_gore_child					= "> PRIMARY: Claws\n> ON HIT: Dim Visio
 LANGUAGE.controls_asskicker							= "> PRIMARY: Left kick\n> SECONDARY: Right kick"
 LANGUAGE.controls_shitslapper						= "> PRIMARY: Slap"
 LANGUAGE.controls_doomcrab							= "> PRIMARY: Leap attack\n> SECONDARY: Doom ball"
-LANGUAGE.controls_red_marrow						= "> PRIMARY: Claws\n> SECONDARY: Scream\n> ON EVERY 200 DAMAGE TAKEN: Create blood shield"
+LANGUAGE.controls_red_marrow						= "> PRIMARY: Claws\n> SECONDARY: Scream\n> ON EVERY 200 DAMAGE TAKEN: Create blood shield for 90% resistance"
 LANGUAGE.controls_skeletal_walker					= "> PRIMARY: Claws\n> SECONDARY: Scream\n> RELOAD: Moan\n> SPRINT: Feign death\n> ON HIT BY BULLET: Resist damage"
 LANGUAGE.controls_skeletal_shambler					= "> PRIMARY: Claws\n> SECONDARY: Scream\n> RELOAD: Moan\n> SPRINT: Feign death\n> ON HIT BY BULLET: Resist damage\n> ON FATAL HIT IN LEGS: Revive"
 LANGUAGE.controls_skeletal_lurker					= "> PRIMARY: Claws\n> SECONDARY: Moan\n> ON HIT BY BULLET: Resist damage"
