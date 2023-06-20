@@ -12,6 +12,8 @@ SWEP.Primary.Ammo = "spotlamp"
 SWEP.Primary.Delay = 1
 SWEP.Primary.Automatic = true
 
+SWEP.MaxStock = 6
+
 SWEP.Secondary.ClipSize = 1
 SWEP.Secondary.DefaultClip = 1
 SWEP.Secondary.Automatic = false

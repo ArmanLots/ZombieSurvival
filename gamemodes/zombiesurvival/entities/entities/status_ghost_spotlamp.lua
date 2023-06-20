@@ -8,5 +8,5 @@ ENT.GhostRotation = Angle(270, 180, 0)
 ENT.GhostHitNormalOffset = 0
 ENT.GhostEntity = "prop_spotlamp"
 ENT.GhostWeapon = "weapon_zs_spotlamp"
-ENT.GhostDistance = 200
+ENT.GhostDistance = 30
 ENT.GhostLimitedNormal = 0.75

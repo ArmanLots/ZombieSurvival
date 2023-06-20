@@ -537,6 +537,9 @@ item.Countables = "prop_zapper_arc"
 item.NoClassicMode = true
 --item.SkillRequirement = SKILL_U_ZAPPER_ARC
 item =
+GM:AddPointShopItem("spotlamp",			ITEMCAT_DEPLOYABLES,			30,				"weapon_zs_spotlamp",			nil,							nil,									nil,											function(pl) pl:GiveEmptyWeapon("weapon_zs_spotlamp") pl:GiveAmmo(1, "spotlamp") end)
+item.Countables = "prop_spotlamp"
+item =
 GM:AddPointShopItem("ffemitter",		ITEMCAT_DEPLOYABLES,			45,				"weapon_zs_ffemitter",			nil,							nil,									nil,											function(pl) pl:GiveEmptyWeapon("weapon_zs_ffemitter") pl:GiveAmmo(1, "slam") pl:GiveAmmo(30, "pulse") end)
 item.Countables = "prop_ffemitter"
 GM:AddPointShopItem("propanetank",		ITEMCAT_TOOLS,			15,				"comp_propanecan")
