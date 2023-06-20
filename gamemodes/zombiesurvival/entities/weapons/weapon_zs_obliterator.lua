@@ -2,6 +2,7 @@ AddCSLuaFile()
 
 if CLIENT then
 	SWEP.PrintName = "Obliterator"
+end
 
 SWEP.Base = "weapon_zs_zombie"
 
