@@ -4,8 +4,8 @@ SWEP.PrintName = "Drencher"
 
 SWEP.Base = "weapon_zs_zombie"
 
-SWEP.MeleeDamage = 46
-SWEP.MeleeDamageVsProps = 76
+SWEP.MeleeDamage = 45
+SWEP.MeleeDamageVsProps = 62
 SWEP.BleedDamageMul = 30 / SWEP.MeleeDamage 
 SWEP.SlowDownScale = 2
 SWEP.MeleeReach = 78

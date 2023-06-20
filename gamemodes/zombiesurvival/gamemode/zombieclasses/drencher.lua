@@ -9,8 +9,8 @@ CLASS.Help = "controls_drencher"
 
 CLASS.SuperBoss = true
 
-CLASS.Health = 9000
-CLASS.DynamicHealth = 225
+CLASS.Health = 9200
+CLASS.DynamicHealth = 0
 CLASS.Speed = 130
 
 CLASS.CanTaunt = true
@@ -199,12 +199,12 @@ if SERVER then
 		if pl.EradiVived then return end
 
 		local damage = dmginfo:GetDamage()
-		if damage >= 0 or damage < pl:Health() then return end
+		if damage >= 9999 or damage < pl:Health() then return end
 
 		local attacker, inflictor = dmginfo:GetAttacker(), dmginfo:GetInflictor()
 		if attacker == pl or not attacker:IsPlayer() or inflictor.IsMelee or inflictor.NoReviveFromKills then return end
 
-		if pl:WasHitInHead() or pl:GetStatus("shockdebuff") then return end
+		--if pl:WasHitInHead() or pl:GetStatus("shockdebuff") then return end
 
 		local dmgtype = dmginfo:GetDamageType()
 		if bit_band(dmgtype, DMG_ALWAYSGIB) ~= 0 or bit_band(dmgtype, DMG_BURN) ~= 0 or bit_band(dmgtype, DMG_CRUSH) ~= 0 then return end
