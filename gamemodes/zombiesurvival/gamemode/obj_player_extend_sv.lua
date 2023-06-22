@@ -386,7 +386,10 @@ function meta:GetBossZombieIndex()
 			"Nightmare",
 			"Ancient Nightmare",
 			"Red Marrow",
-			"The Grave Digger"
+			"The Grave Digger",
+			"The Butcher",
+			"Howler",
+			"Puke Pus",
 		})
 	end
 
@@ -421,9 +424,9 @@ function meta:GetSuperBossZombieIndex()
 	local desired = self:GetInfo("zs_superbossclass") or ""
 	if GAMEMODE:IsBabyMode() then
 --		desired = "Giga Frost Gore Child"
-		desired = "Reborn Nightmare"
+		desired = "Drencher"
 	elseif desired == "[RANDOM]" or desired == "" then
-		desired = "Reborn Nightmare"
+		desired = "Drencher"
 	end
 
 	local superbossindex

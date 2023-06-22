@@ -6,7 +6,7 @@ end
 
 SWEP.Base = "weapon_zs_zombie"
 
-SWEP.MeleeDamage = 35
+SWEP.MeleeDamage = 32
 
 SWEP.HowlDelay = 10
 
