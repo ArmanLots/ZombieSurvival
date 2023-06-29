@@ -218,13 +218,13 @@ trinket = GM:AddTrinket("Momentum Scaffold", "momentumsupsysiii", false, mveles,
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_SWING_DELAY_MUL, -0.20)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_KNOCKBACK_MUL, 0.12)
 
-GM:AddSkillModifier(GM:AddTrinket("Hemo-Adrenal Converter I", "hemoadrenali", false, mveles, mweles, nil, "+2% melee damage converted to blood armor."), SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.02)
+GM:AddSkillModifier(GM:AddTrinket("Hemo-Adrenal Converter I", "hemoadrenali", false, mveles, mweles, nil, "+4% melee damage converted to blood armor."), SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.04)
 
 trinket = GM:AddTrinket("Hemo-Adrenaline Amplifier", "hemoadrenalii", false, mveles, mweles, 3, "+3% melee damage converted to blood armor\n+30 speed on melee kill for 10 seconds")
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.03)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_MOVEMENTSPEED_ON_KILL, 30)
 
-GM:AddSkillModifier(GM:AddTrinket("Hemo-Adrenal Converter II", "hemoadrenaliii", false, mveles, mweles, 4, "+4% melee damage converted to blood armor."), SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.04)
+GM:AddSkillModifier(GM:AddTrinket("Hemo-Adrenal Converter II", "hemoadrenaliii", false, mveles, mweles, 4, "+8% melee damage converted to blood armor."), SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.08)
 
 GM:AddSkillModifier(GM:AddTrinket("Power Gauntlet", "powergauntlet", false, mveles, mweles, 3, "Charges your melee damage up to +45% with each hit\nMissing resets damage"), SKILLMOD_MELEE_POWERATTACK_MUL, 0.45)
 

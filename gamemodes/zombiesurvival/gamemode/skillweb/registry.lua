@@ -524,10 +524,10 @@ s = GM:AddSkill(SKILL_BLOODARMOR, "Blood Armor", GOOD.."Regenerate 1 blood armor
 2, 2, {SKILL_IRONBLOOD, SKILL_BLOODLETTER, SKILL_D_HEMOPHILIA}, TREE_HEALTHTREE)
 GM:AddSkillModifier(SKILL_BLOODARMOR, SKILLMOD_HEALTH, -13)
 
-s = GM:AddSkill(SKILL_IRONBLOOD, "Iron Blood", GOOD.."+30% blood armor damage absorption\n"..GOOD.."+20% additional blood armor damage absorption if health is 50% or less\n"..BAD.."-50% maximum blood armor",
+s = GM:AddSkill(SKILL_IRONBLOOD, "Iron Blood", GOOD.."+30% blood armor damage absorption\n"..GOOD.."+20% additional blood armor damage absorption if health is 50% or less\n"..BAD.."-30% maximum blood armor",
 2, 4, {SKILL_HAEMOSTASIS, SKILL_CIRCULATION}, TREE_HEALTHTREE)
 GM:AddSkillModifier(SKILL_IRONBLOOD, SKILLMOD_BLOODARMOR_DMG_REDUCTION, 0.30)
-GM:AddSkillModifier(SKILL_IRONBLOOD, SKILLMOD_BLOODARMOR_MUL, -0.5)
+GM:AddSkillModifier(SKILL_IRONBLOOD, SKILLMOD_BLOODARMOR_MUL, -0.3)
 
 s = GM:AddSkill(SKILL_D_WEAKNESS, "Debuff: Weakness", GOOD.."+15 starting Worth\n"..GOOD.."+1 end of wave points\n"..BAD.."-45 maximum health",
 1, -1, {}, TREE_HEALTHTREE)
@@ -570,9 +570,9 @@ s = GM:AddSkill(SKILL_SUGARRUSH, "Sugar Rush", GOOD.."+35 speed boost from food 
 4, 0, {SKILL_GOURMET}, TREE_HEALTHTREE)
 GM:AddSkillModifier(SKILL_SUGARRUSH, SKILLMOD_FOODRECOVERY_MUL, -0.35)
 
-s = GM:AddSkill(SKILL_CIRCULATION, "Circulation", GOOD.."+1 maximum blood armor",
+s = GM:AddSkill(SKILL_CIRCULATION, "Circulation", GOOD.."+6 maximum blood armor",
 4, 4, {SKILL_SANGUINE1}, TREE_HEALTHTREE)
-GM:AddSkillModifier(SKILL_CIRCULATION, SKILLMOD_BLOODARMOR, 1)
+GM:AddSkillModifier(SKILL_CIRCULATION, SKILLMOD_BLOODARMOR, 6)
 
 s = GM:AddSkill(SKILL_SANGUINE1, "Sanguine I", GOOD.."+8 maximum blood armor\n"..BAD.."-6 maximum health",
 6, 2, {SKILL_SANGUINE2}, TREE_HEALTHTREE)
@@ -639,10 +639,10 @@ s.CanUseInZE = true
 GM:AddSkillModifier(SKILL_AGILE3, SKILLMOD_JUMPPOWER_MUL, 0.05)
 GM:AddSkillModifier(SKILL_AGILE3, SKILLMOD_SPEED, -2.5)
 
-s = GM:AddSkill(SKILL_JUMPER, "Jumper", GOOD.."+1% jumping power",
+s = GM:AddSkill(SKILL_JUMPER, "Jumper", GOOD.."+5% jumping power",
 4, -4, {}, TREE_SPEEDTREE)
 s.CanUseInZE = true
-GM:AddSkillModifier(SKILL_JUMPER, SKILLMOD_JUMPPOWER_MUL, 0.01)
+GM:AddSkillModifier(SKILL_JUMPER, SKILLMOD_JUMPPOWER_MUL, 0.05)
 
 s = GM:AddSkill(SKILL_D_SLOW, "Debuff: Slow", GOOD.."+15 starting Worth\n"..GOOD.."+1 end of wave points\n"..BAD.."-33.75 movement speed",
 0, -4, {}, TREE_SPEEDTREE)
@@ -742,10 +742,10 @@ s = GM:AddSkill(SKILL_ROBUST, "Robust", GOOD.."-6% movement speed reduction with
 5, -5, {}, TREE_SPEEDTREE)
 GM:AddSkillModifier(SKILL_ROBUST, SKILLMOD_WEAPON_WEIGHT_SLOW_MUL, -0.06)
 
-s = GM:AddSkill(SKILL_CARDIOTONIC, "Cardiotonic", GOOD.."Hold shift to run whilst draining blood armor\n"..BAD.."-12 movement speed\n"..BAD.."-20% blood armor damage absorption\nSprinting grants +40 move speed",
+s = GM:AddSkill(SKILL_CARDIOTONIC, "Cardiotonic", GOOD.."Hold shift to run whilst draining blood armor\n"..BAD.."-12 movement speed\nSprinting grants +40 move speed",
 -6, -4, {}, TREE_SPEEDTREE)
 GM:AddSkillModifier(SKILL_CARDIOTONIC, SKILLMOD_SPEED, -12)
-GM:AddSkillModifier(SKILL_CARDIOTONIC, SKILLMOD_BLOODARMOR_DMG_REDUCTION, -0.2)
+--GM:AddSkillModifier(SKILL_CARDIOTONIC, SKILLMOD_BLOODARMOR_DMG_REDUCTION, -0.2)
 
 s = GM:AddSkill(SKILL_UNBOUND, "Unbound", GOOD.."-60% reduced delay from switching weapons affecting movement speed\n"..BAD.."-4 movement speed",
 -4, -4, {}, TREE_SPEEDTREE)
@@ -805,10 +805,10 @@ end)
 --0, -2, {SKILL_DISPERSION}, TREE_SUPPORTTREE)
 --s.AlwaysActive = true
 
-s = GM:AddSkill(SKILL_SMARTTARGETING, "Smart Targeting", GOOD.."Medical weapon darts lock onto targets with right click\n"..BAD.."+75% medic tool fire delay\n"..BAD.."-20% healing effectiveness on medical darts",
+s = GM:AddSkill(SKILL_SMARTTARGETING, "Smart Targeting", GOOD.."Medical weapon darts lock onto targets with right click\n"..BAD.."+25% medic tool fire delay",
 0, 2, {}, TREE_SUPPORTTREE)
-GM:AddSkillModifier(SKILL_SMARTTARGETING, SKILLMOD_MEDGUN_FIRE_DELAY_MUL, 0.75)
-GM:AddSkillModifier(SKILL_SMARTTARGETING, SKILLMOD_MEDDART_EFFECTIVENESS_MUL, -0.2)
+GM:AddSkillModifier(SKILL_SMARTTARGETING, SKILLMOD_MEDGUN_FIRE_DELAY_MUL, 0.25)
+--GM:AddSkillModifier(SKILL_SMARTTARGETING, SKILLMOD_MEDDART_EFFECTIVENESS_MUL, -0.2)
 
 s = GM:AddSkill(SKILL_RECLAIMSOL, "Recoverable Solution", GOOD.."60% of wasted medical dart ammo is returned to you\n"..BAD.."+150% medic tool fire delay\n"..BAD.."-40% medic tool reload speed\n"..BAD.."Cannot speed boost full health players",
 0, 4, {SKILL_SMARTTARGETING}, TREE_SUPPORTTREE)
@@ -1022,10 +1022,10 @@ GM:AddSkillFunction(SKILL_STOWAGE, function(pl, active)
 	pl.Stowage = active
 end)
 
-s = GM:AddSkill(SKILL_DOOR_DESTROYER, "Door Destroyer", GOOD.."3x damage dealt to hinged doors\n"..BAD.."-10% repair rate\n"..BAD.."-5% health to nailed props",
+s = GM:AddSkill(SKILL_DOOR_DESTROYER, "Door Destroyer", GOOD.."3x damage dealt to hinged doors",
 4, 2, {SKILL_INSIGHT, SKILL_TECHNICIAN}, TREE_BUILDINGTREE)
-GM:AddSkillModifier(SKILL_DOOR_DESTROYER, SKILLMOD_REPAIRRATE_MUL, -0.1)
-GM:AddSkillModifier(SKILL_DOOR_DESTROYER, SKILLMOD_BARRICADE_HEALTH_MUL, -0.05)
+--GM:AddSkillModifier(SKILL_DOOR_DESTROYER, SKILLMOD_REPAIRRATE_MUL, -0.1)
+--GM:AddSkillModifier(SKILL_DOOR_DESTROYER, SKILLMOD_BARRICADE_HEALTH_MUL, -0.05)
 
 -- Gunnery Tree
 

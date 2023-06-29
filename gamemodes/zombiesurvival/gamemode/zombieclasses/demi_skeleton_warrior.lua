@@ -9,6 +9,8 @@ CLASS.Health = 800
 CLASS.DynamicHealth = 35
 CLASS.Speed = 180
 
+CLASS.KnockbackScale = 0
+
 CLASS.CanTaunt = false
 CLASS.CanFeignDeath = false
 

@@ -57,7 +57,7 @@ SWEP.PropModels = {
 	Model("models/props_c17/FurnitureShelf001a.mdl"),
 	Model("models/props_trainstation/BenchOutdoor01a.mdl"),
 	Model("models/props_wasteland/prison_bedframe001b.mdl"),
-	Model("models/props_c17/Lockers001a.mdl"),
+	--Model("models/props_c17/Lockers001a.mdl"),
 	Model("models/props_c17/FurnitureTable002a.mdl"),
 	--Model("models/props_interiors/sofa_chair02.mdl"),
 	--Model("models/props_interiors/chairlobby01.mdl"),

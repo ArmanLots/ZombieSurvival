@@ -13,6 +13,8 @@ CLASS.Health = 9000
 CLASS.DynamicHealth = 0
 CLASS.Speed = 130
 
+CLASS.KnockbackScale = 0
+
 CLASS.CanTaunt = true
 CLASS.FearPerInstance = 1
 

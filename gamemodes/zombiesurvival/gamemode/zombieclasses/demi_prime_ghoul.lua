@@ -9,6 +9,8 @@ CLASS.Health = 820
 CLASS.DynamicHealth = 20
 CLASS.Speed = 180
 
+CLASS.KnockbackScale = 0
+
 CLASS.SemiBoss = true
 CLASS.Wave = 0
 CLASS.Unlocked = true

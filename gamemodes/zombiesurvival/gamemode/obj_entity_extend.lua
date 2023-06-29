@@ -524,7 +524,7 @@ function meta:PoisonDamage(damage, attacker, inflictor, hitpos, noreduction, ins
 			damage = damage * self.ProjDamageTakenMul
 		end
 
-		self:ViewPunch(Angle(math.random(-10, 10), math.random(-10, 10), math.random(-20, 20)))
+		self:ViewPunch(Angle(math.random(-2, 2), math.random(-2, 2), math.random(-2, 2)))
 		self:EmitSound(string.format("player/pl_pain%d.wav", math.random(5, 7)))
 
 		if not instant then
