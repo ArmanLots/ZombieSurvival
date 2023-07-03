@@ -1952,7 +1952,7 @@ function meta:PulseResonance(attacker, inflictor)
 end
 
 function meta:CryogenicInduction(attacker, inflictor, damage)
-	if self:Health() > self:GetMaxHealthEx() * (damage/100) or math.random(50) > damage then return end
+	if self:Health() > self:GetMaxHealthEx() * (damage/50) or math.random(50) > damage then return end
 
 	timer.Create("Cryogenic" .. attacker:UniqueID(), 0.06, 1, function()
 		if not attacker:IsValid() or not self:IsValid() then return end
@@ -1960,7 +1960,7 @@ function meta:CryogenicInduction(attacker, inflictor, damage)
 		local pos = self:WorldSpaceCenter()
 		pos.z = pos.z + 16
 
-		self:TakeSpecialDamage(self:Health() + 90, DMG_DIRECT, attacker, inflictor, pos)
+		self:TakeSpecialDamage(self:Health() + 180, DMG_DIRECT, attacker, inflictor, pos)
 
 		if attacker:IsValidLivingHuman() then
 			util.BlastDamagePlayer(inflictor, attacker, pos, 100, math.min(self:GetMaxHealthEx() * 0.12, 100), DMG_DROWN, 0.95)
