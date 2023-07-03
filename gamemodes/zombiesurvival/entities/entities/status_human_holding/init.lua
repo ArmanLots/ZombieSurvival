@@ -192,7 +192,7 @@ concommand.Add("_zs_rotateang", function(sender, command, arguments)
 	end
 end)
 
-local ShadowParams = {secondstoarrive = 0.01, maxangular = 1000, maxangulardamp = 10000, maxspeed = 500, maxspeeddamp = 1000, dampfactor = 0.65, teleportdistance = 0}
+local ShadowParams = {secondstoarrive = 0.01, maxangular = 10000, maxangulardamp = 10000, maxspeed = 10000, maxspeeddamp = 10000, dampfactor = 0.95, teleportdistance = 0}
 function ENT:Think()
 	local ct = CurTime()
 
@@ -263,8 +263,8 @@ function ENT:Think()
 		elseif owner:KeyDown(IN_WALK) then
 			local xdiff = math.NormalizeAngle(self.StartX - (owner.InputMouseX or 0))
 			local ydiff = math.NormalizeAngle(self.StartY - (owner.InputMouseY or 0))
-			local sxdiff = xdiff * FrameTime() * 48
-			local sydiff = ydiff * FrameTime() * 48
+			local sxdiff = xdiff * FrameTime() * 24
+			local sydiff = ydiff * FrameTime() * 24
 
 			self.ObjectAngles:RotateAroundAxis(owner:GetUp(), sxdiff)
 			self.ObjectAngles:RotateAroundAxis(owner:GetRight(), sydiff)
