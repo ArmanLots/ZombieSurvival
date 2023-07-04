@@ -1107,9 +1107,9 @@ function GM:PlayerSelectSpawn(pl)
 					spawn = self:GetClosestSpawnPoint(potential, epicenter or self:GetTeamEpicentre(TEAM_HUMAN))
 				elseif pl:KeyDown(IN_RELOAD) then
 					spawn = self:GetFurthestSpawnPoint(potential, epicenter or self:GetTeamEpicentre(TEAM_HUMAN))
-				elseif math.random(2) == 2 then
+				--elseif math.random(2) == 2 then
 					-- Let every other left click masher spawn randomly instead of closest so we have wandering zombies.
-					spawn = table.Random(potential)
+					--spawn = table.Random(potential)
 				else
 					spawn = self:GetClosestSpawnPoint(potential, epicenter or self:GetTeamEpicentre(TEAM_HUMAN))
 				end

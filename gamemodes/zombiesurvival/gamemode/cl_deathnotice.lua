@@ -427,7 +427,7 @@ killicon.Add("weapon_zs_gibzombie", "zombiesurvival/killicons/bloatedzombie", Co
 killicon.Add("weapon_zs_frostheadcrab", "zombiesurvival/killicons/poisonheadcrab", Color(0, 0, 255))
 
 killicon.Add("weapon_zs_drencher", "zombiesurvival/killicons/poisonzombie", Color(255, 0, 0))
-Killicon.Add("weapon_zs_obliterator", "zombiesurvival/killicons/howler", Color(10, 10, 10))
+killicon.Add("weapon_zs_obliterator", "zombiesurvival/killicons/howler", Color(10, 10, 10))
 killicon.Add("weapon_zs_marrowmutant", "zombiesurvival/killicons/skeletal_walker", Color(145, 145, 0))
 killicon.Add("weapon_zs_magicshade", "zombiesurvival/killicons/shadev2", Color(0, 255, 0))
 killicon.Add("weapon_zs_regurgitator", "zombiesurvival/killicons/pukepus", Color(150, 0, 0))
