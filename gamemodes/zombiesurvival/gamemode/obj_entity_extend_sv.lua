@@ -484,7 +484,7 @@ function meta:DamageNails(attacker, inflictor, damage, dmginfo)
 			self:RemoveNail(nail, nil, nil, true)
 		end
 
-		if nails_amount >= 2 then
+		if nails_amount >= 1 then
 			self:SetMoveType(MOVETYPE_NONE)
 		end
 
