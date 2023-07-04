@@ -693,6 +693,8 @@ GM:AddMutation("m_spawn_as_a_miniboss", "Miniboss Zombie", "Spawn as a miniboss 
 	if pl:GetZombieClassTable().MiniBoss and pl:Alive() then
 		GAMEMODE:ConCommandErrorMessage(pl, "You are already a miniboss zombie!")
 		return false
+	elseif pl:IsBot() then
+		return false
 	elseif pl:GetZombieClassTable().SemiBoss and pl:Alive() then
 		GAMEMODE:ConCommandErrorMessage(pl, "You are currently a demiboss zombie!")
 		return false
