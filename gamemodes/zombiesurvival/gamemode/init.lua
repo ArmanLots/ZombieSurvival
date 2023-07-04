@@ -4212,7 +4212,7 @@ function GM:ZombieKilledHuman(pl, attacker, inflictor, dmginfo, headshot, suicid
 	attacker:AddBrains(1)
 	attacker:AddLifeBrainsEaten(1)
 	attacker:GainZSXP(xp)
-	attacker:AddZombieTokens(100 + (pl:GetMaxHealth() / 16))
+	attacker:AddZombieTokens(10 + (pl:GetMaxHealth() / 16))
 	attacker:GiveAchievementProgress("zmainer", 1)
 	attacker:GiveAchievementProgress("truezmainer", 1)
 	attacker:CenterNotify(COLOR_PINK, Format("Gained %s zombie tokens from killing %s", math.Round(tokensgain, 2), pl:GetName()))
