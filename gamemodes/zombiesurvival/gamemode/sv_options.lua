@@ -129,14 +129,14 @@ cvars.AddChangeCallback("zs_xpgainmul_zombie", function(cvar, oldvalue, newvalue
 	GAMEMODE.ZombieXPMulti = tonumber(newvalue) or 1
 end)
 
-GM.BarricadeHealthMassFactor = math.ceil(100 * CreateConVar("zs_barricadehealthmassfactor", "2.5", FCVAR_ARCHIVE + FCVAR_NOTIFY, "Nailed props receive this much health per kg."):GetFloat()) * 0.01
+GM.BarricadeHealthMassFactor = math.ceil(100 * CreateConVar("zs_barricadehealthmassfactor", "3", FCVAR_ARCHIVE + FCVAR_NOTIFY, "Nailed props receive this much health per kg."):GetFloat()) * 0.01
 cvars.AddChangeCallback("zs_barricadehealthmassfactor", function(cvar, oldvalue, newvalue)
-	GAMEMODE.BarricadeHealthMassFactor = tonumber(newvalue) or 2.5
+	GAMEMODE.BarricadeHealthMassFactor = tonumber(newvalue) or 3
 end)
 
-GM.BarricadeHealthMax = CreateConVar("zs_barricadehealthmax", "99999", FCVAR_ARCHIVE + FCVAR_NOTIFY, "Nailed props can not have more than this health."):GetInt()
+GM.BarricadeHealthMax = CreateConVar("zs_barricadehealthmax", "999999", FCVAR_ARCHIVE + FCVAR_NOTIFY, "Nailed props can not have more than this health."):GetInt()
 cvars.AddChangeCallback("zs_barricadehealthmax", function(cvar, oldvalue, newvalue)
-	GAMEMODE.BarricadeHealthMax = tonumber(newvalue) or 99999
+	GAMEMODE.BarricadeHealthMax = tonumber(newvalue) or 999999
 end)
 
 
