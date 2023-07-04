@@ -7,6 +7,7 @@ ENT.CanPackUp = true
 ENT.PackUpTime = 3
 ENT.IgnorePackTimeMul = true
 ENT.IgnoreBullets = true
+ENT.IgnoreMelee = true
 
 ENT.IsBarricadeObject = true
 
