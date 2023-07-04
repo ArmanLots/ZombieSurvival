@@ -50,3 +50,7 @@ function ENT:GetSpotLightAngles()
 	ang:RotateAroundAxis(ang:Up(), 180)
 	return ang
 end
+
+function ENT:ShouldNotCollide(ent)
+	return ent:IsPlayer() and ent:Team() == TEAM_HUMAN
+	end
