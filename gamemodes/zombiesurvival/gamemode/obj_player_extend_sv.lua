@@ -304,7 +304,12 @@ function meta:GetMiniBossZombieIndex()
 	local desired = self:GetInfo("zs_minibossclass") or ""
 
 	if self:IsBot() then
---		desired = table.Random({})
+		desired = table.Random({
+			"Chem Zombie",
+			"Gib Zombie",
+			"Slingshot Zombie",
+			"Flesh Breaker",
+		})
 	end
 
 	if GAMEMODE:IsBabyMode() then
@@ -422,6 +427,16 @@ function meta:GetSuperBossZombieIndex()
 	if #superbossclasses == 0 then return -1 end
 
 	local desired = self:GetInfo("zs_superbossclass") or ""
+
+	if self:IsBot() then
+		desired = table.Random({
+			"Drencher",
+			"Obliterator",
+			"Marrow Mutant",
+			"Regurgitator",
+		})
+	end
+	
 	if GAMEMODE:IsBabyMode() then
 --		desired = "Giga Frost Gore Child"
 		desired = "Drencher"
