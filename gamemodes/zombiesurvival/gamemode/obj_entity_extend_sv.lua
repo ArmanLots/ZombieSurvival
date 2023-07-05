@@ -480,9 +480,9 @@ function meta:DamageNails(attacker, inflictor, damage, dmginfo)
 
 		local nails_amount = #nails
 
-		for _, nail in pairs(nails) do
-			self:RemoveNail(nail, nil, nil, true)
-		end
+		--for _, nail in pairs(nails) do
+			--self:RemoveNail(nail, nil, nil, true)
+		--end
 
 		if nails_amount >= 1 then
 			self:SetMoveType(MOVETYPE_NONE)
