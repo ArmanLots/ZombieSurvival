@@ -6,8 +6,8 @@ SWEP.Base = "weapon_zs_zombie"
 
 SWEP.MeleeDamage = 45
 SWEP.MeleeDamageVsProps = 62
-SWEP.BleedDamageMul = 30 / SWEP.MeleeDamage 
-SWEP.SlowDownScale = 2
+SWEP.BleedDamageMul = 22 / SWEP.MeleeDamage 
+SWEP.SlowDownScale = 1
 SWEP.MeleeReach = 78
 SWEP.MeleeForceScale = 1.5
 --SWEP.NextAura = 0

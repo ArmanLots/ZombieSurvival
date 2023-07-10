@@ -78,7 +78,7 @@ function SWEP:SecondaryAttack()
 	self:SetBattlecry(CurTime() + 5)
 
 	if SERVER then
-		owner:EmitSound("npc/fast_zombie/fz_scream1.wav", 75, math.random(60,70), 0.5)
+		owner:EmitSound("npc/fast_zombie/fz_scream1.wav", 75, math.random(50,60), 1)
 		--util.ScreenShake(pos, 5, 5, 3, 560)
 
 		local center = owner:WorldSpaceCenter()
@@ -96,14 +96,14 @@ function SWEP:SecondaryAttack()
 end
 
 function SWEP:PlayAlertSound()
+	self:GetOwner():EmitSound("npc/fast_zombie/fz_scream1.wav", 75, math.random(50,60), 0.5)
 	self:GetOwner():EmitSound("npc/fast_zombie/fz_scream1.wav", 75, math.random(60,70), 0.5)
-	self:GetOwner():EmitSound("npc/fast_zombie/fz_scream1.wav", 75, math.random(70,80), 0.5)
 end
 SWEP.PlayIdleSound = SWEP.PlayAlertSound
 
 function SWEP:PlayAttackSound()
-	self:GetOwner():EmitSound("npc/combine_soldier/die"..math.random(1,3)..".wav", 75, math.random(70,75), 0.5)
-	self:GetOwner():EmitSound("npc/combine_soldier/die"..math.random(1,3)..".wav", 75, math.random(78,90), 0.5)
+	self:GetOwner():EmitSound("npc/combine_soldier/die"..math.random(1,3)..".wav", 75, math.random(60,65), 0.5)
+	self:GetOwner():EmitSound("npc/combine_soldier/die"..math.random(1,3)..".wav", 75, math.random(68,80), 0.5)
 end
 
 function SWEP:SetBattlecry(time)

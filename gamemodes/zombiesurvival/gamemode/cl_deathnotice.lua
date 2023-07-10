@@ -415,7 +415,7 @@ killicon.Add("weapon_zs_omega_zombie", "zombiesurvival/killicons/zombie", Color(
 killicon.Add("weapon_zs_chemzombie_miniboss", "zombiesurvival/killicons/chemzombie")
 
 
-killicon.Add("weapon_zs_coldmarrow", "zombiesurvival/killicons/skeletal_walker", Color(0, 0, 255))
+killicon.Add("weapon_zs_coldmarrow", "zombiesurvival/killicons/skeletal_walker", Color(65, 105, 225))
 killicon.Add("weapon_zs_skeletonwarrior", "zombiesurvival/killicons/skeletal_walker", Color(125, 125, 125))
 killicon.Add("weapon_zs_chemjuggernaut", "zombiesurvival/killicons/howler", Color(0, 255, 0))
 killicon.Add("weapon_zs_darkmare", "zombiesurvival/killicons/nightmare2", Color(255,255,65))

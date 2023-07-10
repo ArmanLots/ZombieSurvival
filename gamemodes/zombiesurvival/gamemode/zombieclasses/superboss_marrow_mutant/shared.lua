@@ -18,7 +18,7 @@ CLASS.VoicePitch = 0.65
 
 CLASS.SWEP = "weapon_zs_marrowmutant"
 
-CLASS.Health = 3000
+CLASS.Health = 3600
 CLASS.DynamicHealth = 0
 CLASS.Speed = 165
 
@@ -32,6 +32,10 @@ local ACT_HL2MP_RUN_ZOMBIE = ACT_HL2MP_RUN_ZOMBIE
 local math_random = math.random
 local math_ceil = math.ceil
 local math_Clamp = math.Clamp
+
+function CLASS:IgnoreLegDamage(pl, dmginfo)
+	return true
+end
 
 function CLASS:PlayerFootstep(pl, vFootPos, iFoot, strSoundName, fVolume, pFilter)
 	if math_random(2) == 1 then
@@ -108,8 +112,8 @@ function CLASS:ProcessDamage(pl, dmginfo)
 		dmg = dmginfo:GetDamage()
 	end
 
-	local numthreshold = math_Clamp(math_ceil(hp / 200), 1, 9)
-	local dmgthreshold = math_Clamp(numthreshold * 200 - 200, 1, 1600)
+	local numthreshold = math_Clamp(math_ceil(hp / 400), 1, 9)
+	local dmgthreshold = math_Clamp(numthreshold * 400 - 400, 1, 3200)
 
 	local newhp = hp - dmg
 	local nulldmg = dmgthreshold - newhp
@@ -117,7 +121,7 @@ function CLASS:ProcessDamage(pl, dmginfo)
 	if newhp <= dmgthreshold and pl["bloodth"..numthreshold] then
 		pl["bloodth"..numthreshold] = false
 		dmginfo:SetDamage(dmg - nulldmg)
-		pl:GiveStatus("marrowmutant", 9)
+		pl:GiveStatus("marrowmutant", 6)
 
 		local effectdata = EffectData()
 			effectdata:SetOrigin(pl:WorldSpaceCenter())
