@@ -406,7 +406,7 @@ killicon.Add("weapon_zs_galvanismhammer", "zombiesurvival/killicons/weapon_zs_el
 killicon.Add("weapon_zs_eradicator2", "zombiesurvival/killicons/poisonzombie", Color(88, 0, 0))
 killicon.Add("weapon_zs_eradicator3", "zombiesurvival/killicons/poisonzombie", Color(110, 44, 44))
 killicon.Add("weapon_zs_mutated_lacerator", "zombiesurvival/killicons/lacerator", Color(180, 225, 0))
-killicon.Add("weapon_zs_lacerator_charging_deadly", "zombiesurvival/killicons/lacerator", Color(240, 35, 0))
+killicon.Add("weapon_zs_fleshbreaker", "zombiesurvival/killicons/lacerator", Color(105, 105, 105))
 killicon.Add("weapon_zs_undeadfastzombie", "zombiesurvival/killicons/fastzombie", Color(85, 245, 25))
 killicon.Add("weapon_zs_sigilannihilator", "zombiesurvival/killicons/poisonzombie", Color(63, 255, 63))
 killicon.Add("weapon_zs_rebornnightmare", "zombiesurvival/killicons/nightmare2", Color(255,255,65))
