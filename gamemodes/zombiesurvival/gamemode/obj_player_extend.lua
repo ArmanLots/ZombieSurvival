@@ -344,7 +344,7 @@ function meta:AddLegDamageExt(damage, attacker, inflictor, type)
 		if SERVER and attacker:HasTrinket("resonance") then
 			attacker.AccuPulse = (attacker.AccuPulse or 0) + (self:GetFlatLegDamage() - startleg)
 
-			if attacker.AccuPulse > 80 then
+			if attacker.AccuPulse > 60 then
 				self:PulseResonance(attacker, inflictor)
 			end
 		end
