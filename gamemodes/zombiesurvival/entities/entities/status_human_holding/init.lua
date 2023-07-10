@@ -192,7 +192,7 @@ concommand.Add("_zs_rotateang", function(sender, command, arguments)
 	end
 end)
 
-local ShadowParams = {secondstoarrive = 0.01, maxangular = 10000, maxangulardamp = 10000, maxspeed = 10000, maxspeeddamp = 10000, dampfactor = 0.95, teleportdistance = 0}
+local ShadowParams = {secondstoarrive = 0.01, maxangular = 1000, maxangulardamp = 10000, maxspeed = 500, maxspeeddamp = 1000, dampfactor = 0.65, teleportdistance = 0}
 function ENT:Think()
 	local ct = CurTime()
 

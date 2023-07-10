@@ -58,5 +58,7 @@ end
 
 local matSheet = Material("Models/Charple/Charple1_sheet")
 function SWEP:PreDrawViewModel(vm)
-	render.ModelMaterialOverride(matSheet)
+	render.SetColorModulation(0, 0, 0)
 end
+
+

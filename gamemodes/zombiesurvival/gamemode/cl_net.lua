@@ -219,11 +219,11 @@ net.Receive("zs_semiboss_spawned", function(length)
 	local kid = {killicon = "default"}
 
 	if ent == MySelf and ent:IsValid() then
-		GAMEMODE:CenterNotify(ki, " ", COLOR_YELLOW, translate.Format("you_are_x", translate.Get(classtbl.TranslationName)), ki)
+		GAMEMODE:CenterNotify(ki, " ", COLOR_RORANGE, translate.Format("you_are_x", translate.Get(classtbl.TranslationName)), ki)
 	elseif ent:IsValid() and P_Team(MySelf) == TEAM_UNDEAD or P_Team(MySelf) == TEAM_HUMAN then
-		GAMEMODE:CenterNotify(ki, " ", COLOR_ORANGE, translate.Format("x_has_risen_as_y", ent:Name(), translate.Get(classtbl.TranslationName)), ki)
+		GAMEMODE:CenterNotify(ki, " ", COLOR_RORANGE, translate.Format("x_has_risen_as_y", ent:Name(), translate.Get(classtbl.TranslationName)), ki)
 	else
-		GAMEMODE:CenterNotify(kid, " ", COLOR_ORANGE, translate.Get("semi_x_has_risen"), kid)
+		GAMEMODE:CenterNotify(kid, " ", COLOR_RORANGE, translate.Get("semi_x_has_risen"), kid)
 	end
 end)
 
@@ -235,7 +235,7 @@ net.Receive("zs_boss_spawned", function(length)
 	local kid = {killicon = "default"}
 
 	if ent == MySelf and ent:IsValid() then
-		GAMEMODE:CenterNotify(ki, " ", COLOR_RORANGE, translate.Format("you_are_x", translate.Get(classtbl.TranslationName)), ki)
+		GAMEMODE:CenterNotify(ki, " ", COLOR_RED, translate.Format("you_are_x", translate.Get(classtbl.TranslationName)), ki)
 	elseif ent:IsValid() and P_Team(MySelf) == TEAM_UNDEAD or P_Team(MySelf) == TEAM_HUMAN then
 		GAMEMODE:CenterNotify(ki, " ", COLOR_RED, translate.Format("x_has_risen_as_y", ent:Name(), translate.Get(classtbl.TranslationName)), ki)
 	else
@@ -274,11 +274,11 @@ net.Receive("zs_superboss_spawned", function(length)
 	local kid = {killicon = "default"}
 
 	if ent == MySelf and ent:IsValid() then
-		GAMEMODE:CenterNotify(ki, " ", COLOR_RED, translate.Format("you_are_x", translate.Get(classtbl.TranslationName)), ki)
+		GAMEMODE:CenterNotify(ki, " ", Color(125, 0, 180), translate.Format("you_are_x", translate.Get(classtbl.TranslationName)), ki)
 	elseif ent:IsValid() and P_Team(MySelf) == TEAM_UNDEAD or P_Team(MySelf) == TEAM_HUMAN then
-		GAMEMODE:CenterNotify(ki, " ", COLOR_SOFTRED, translate.Format("x_has_risen_as_y", ent:Name(), translate.Get(classtbl.TranslationName)), ki)
+		GAMEMODE:CenterNotify(ki, " ", Color(125, 0, 180), translate.Format("x_has_risen_as_y", ent:Name(), translate.Get(classtbl.TranslationName)), ki)
 	else
-		GAMEMODE:CenterNotify(kid, " ", COLOR_SOFTRED, translate.Get("super_x_has_risen"), kid)
+		GAMEMODE:CenterNotify(kid, " ", Color(125, 0, 180), translate.Get("super_x_has_risen"), kid)
 	end
 
 	if MySelf:IsValid() then

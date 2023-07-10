@@ -433,7 +433,6 @@ function meta:GetSuperBossZombieIndex()
 			"Drencher",
 			"Obliterator",
 			"Marrow Mutant",
-			"Regurgitator",
 		})
 	end
 	

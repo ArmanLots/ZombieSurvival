@@ -581,7 +581,7 @@ function PANEL:Init()
 	end
 
 	local resettime = GAMEMODE.NextSkillReset or 0
-	local hours = math.floor(resettime / 3600)
+	local hours = math.floor(resettime / 0)
 
 	local reset = vgui.Create("DButton", bottomlefttop)
 	reset:SetFont("ZSHUDFontSmaller")
@@ -593,7 +593,7 @@ function PANEL:Init()
 	reset:Dock(TOP)
 	reset.DoClick = function(me)
 		Derma_Query(
-			"Reset all skills and refund SP?\nYou can only do this once per 8 hours.",
+			"Reset all skills and refund SP?",
 			"Warning",
 			"OK",
 			function() net.Start("zs_skills_reset") net.SendToServer() end,

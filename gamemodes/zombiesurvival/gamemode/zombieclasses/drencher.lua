@@ -66,6 +66,10 @@ local DMG_BURN = DMG_BURN
 local DMG_CRUSH = DMG_CRUSH
 local bit_band = bit.band
 
+function CLASS:IgnoreLegDamage(pl, dmginfo)
+	return true
+end
+
 function CLASS:KnockedDown(pl, status, exists)
 	pl:AnimResetGestureSlot(GESTURE_SLOT_ATTACK_AND_RELOAD)
 end

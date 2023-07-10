@@ -53,6 +53,10 @@ function CLASS:PlayerFootstep(pl, vFootPos, iFoot, strSoundName, fVolume, pFilte
 	return true
 end
 
+function CLASS:IgnoreLegDamage(pl, dmginfo)
+	return true
+end
+
 function CLASS:CalcMainActivity(pl, velocity)
 	if pl:WaterLevel() >= 3 then
 		return ACT_HL2MP_SWIM_PISTOL, -1

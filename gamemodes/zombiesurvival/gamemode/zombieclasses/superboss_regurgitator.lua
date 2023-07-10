@@ -73,6 +73,10 @@ function CLASS:PlayerFootstep(pl, vFootPos, iFoot, strSoundName, fVolume, pFilte
 	return true
 end
 
+function CLASS:IgnoreLegDamage(pl, dmginfo)
+	return true
+end
+
 function CLASS:PlayerStepSoundTime(pl, iType, bWalking)
 	if iType == STEPSOUNDTIME_NORMAL or iType == STEPSOUNDTIME_WATER_FOOT then
 		return (365 - pl:GetVelocity():Length()) * 1.5
