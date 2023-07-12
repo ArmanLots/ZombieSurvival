@@ -22,7 +22,7 @@ end
 SWEP.Base = "weapon_zs_hammer"
 
 SWEP.MeleeDamage = 40 --40
-SWEP.Primary.Delay = 1.3
+--SWEP.Primary.Delay = 1.3
 SWEP.HealStrength = 4
 SWEP.ReinforceDuration = 5
 
@@ -31,5 +31,5 @@ SWEP.WorldModel = "models/weapons/w_hammer.mdl"
 
 SWEP.AllowQualityWeapons = true
 
-GAMEMODE:SetPrimaryWeaponModifier(SWEP, WEAPON_MODIFIER_FIRE_DELAY, -0.04)
+GAMEMODE:SetPrimaryWeaponModifier(SWEP, WEAPON_MODIFIER_FIRE_DELAY, -0.08)
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_MELEE_RANGE, 3, 1)
