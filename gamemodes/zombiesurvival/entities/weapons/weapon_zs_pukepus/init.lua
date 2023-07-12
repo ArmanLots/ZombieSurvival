@@ -5,7 +5,7 @@ function SWEP:Think()
 
 	if self.PukeLeft > 0 and CurTime() >= self.NextPuke then
 		self.PukeLeft = self.PukeLeft - 1
-		self.NextEmit = CurTime() + 0.4
+		self.NextEmit = CurTime() + 0.1
 		pl.LastRangedAttack = CurTime()
 
 		local ent = ents.Create(self.PukeLeft % 6 == 1 and "projectile_ghoulfleshpuke" or "projectile_poisonpuke")
