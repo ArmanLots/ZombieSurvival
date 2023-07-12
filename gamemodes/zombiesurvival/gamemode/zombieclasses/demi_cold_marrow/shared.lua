@@ -105,7 +105,7 @@ function CLASS:ProcessDamage(pl, dmginfo)
 	local hp = pl:Health()
 
 	if pl:GetStatus("coldmarrow") and attacker:IsPlayer() and attacker:Team() == TEAM_HUMAN then
-		dmginfo:SetDamage(dmginfo:GetDamage() * 0.40)
+		dmginfo:SetDamage(dmginfo:GetDamage() * 0.20)
 		dmg = dmginfo:GetDamage()
 	end
 
