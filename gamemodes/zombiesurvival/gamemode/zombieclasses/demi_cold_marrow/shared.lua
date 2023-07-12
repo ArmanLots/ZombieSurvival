@@ -105,7 +105,7 @@ function CLASS:ProcessDamage(pl, dmginfo)
 	local hp = pl:Health()
 
 	if pl:GetStatus("coldmarrow") and attacker:IsPlayer() and attacker:Team() == TEAM_HUMAN then
-		dmginfo:SetDamage(dmginfo:GetDamage() * 0.20)
+		dmginfo:SetDamage(dmginfo:GetDamage() * 0.40)
 		dmg = dmginfo:GetDamage()
 	end
 
@@ -118,7 +118,7 @@ function CLASS:ProcessDamage(pl, dmginfo)
 	if newhp <= dmgthreshold and pl["bloodth"..numthreshold] then
 		pl["bloodth"..numthreshold] = false
 		dmginfo:SetDamage(dmg - nulldmg)
-		pl:GiveStatus("coldmarrow", 4)
+		pl:GiveStatus("coldmarrow", 3)
 
 		local effectdata = EffectData()
 			effectdata:SetOrigin(pl:WorldSpaceCenter())
