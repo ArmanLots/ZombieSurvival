@@ -167,7 +167,7 @@ GM.BarricadeHealthMin = 75 --50
 GM.BarricadeHealthMax = 1300 * 0.85 --1100 * 0.85	-- Note: Unaffected by health prop mul skill modifier
 GM.BarricadeHealthMassFactor = 3.625 * 0.85 --3.5 * 0.85
 GM.BarricadeHealthVolumeFactor = 4.125 * 0.85 --4 * 0.85
-GM.BarricadeRepairCapacity = 1.75 --1.25
+GM.BarricadeRepairCapacity = 1.5 --1.25
 
 -- Allow Semiboss zombies?
 GM.SemiBossZombies = true
