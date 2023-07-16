@@ -8,6 +8,9 @@ CLASS.Model = Model("models/Zombie/Poison.mdl")
 CLASS.Wave = 7 / GM.NumberOfWaves
 CLASS.Infliction = 0.82
 
+CLASS.Disabled = true
+CLASS.Hidden = true
+
 CLASS.Health = 335
 CLASS.DynamicHealth = 5
 CLASS.Speed = 130

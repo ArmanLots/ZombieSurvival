@@ -12,7 +12,7 @@ SWEP.BleedDamageMul = 10 / SWEP.MeleeDamage
 SWEP.MeleeReach = 40
 SWEP.SwingAnimSpeed = 2.4
 
-SWEP.PounceDamage = 40
+SWEP.PounceDamage = 60
 SWEP.PounceDamageVsPlayerMul = 0.75
 SWEP.PounceReach = 26
 SWEP.PounceSize = 12

@@ -14,6 +14,7 @@ end
 SWEP.MeleeDelay = 0
 SWEP.MeleeReach = 42
 SWEP.MeleeDamage = 9
+SWEP.BleedDamageMul = 10 / SWEP.MeleeDamage
 SWEP.MeleeForceScale = 0.1
 SWEP.MeleeSize = 4.5
 SWEP.MeleeDamageType = DMG_SLASH
@@ -24,7 +25,7 @@ SWEP.SlowMeleeDamage = 24
 
 SWEP.PounceStartDelay = 0.33
 SWEP.PounceDelay = 1.25
-SWEP.PounceVelocity = 1100
+SWEP.PounceVelocity = 1400
 
 SWEP.RoarTime = 1.6
 
@@ -462,6 +463,18 @@ function SWEP:PlayMissSound()
 end
 
 function SWEP:PlayAttackSound()
+end
+
+function SWEP:ApplyMeleeDamage(ent, trace, damage)
+	if SERVER and ent:IsPlayer() then
+		local bleed = ent:GiveStatus("bleed")
+		if bleed and bleed:IsValid() then
+			bleed:AddDamage(damage * self.BleedDamageMul)
+			bleed.Damager = self:GetOwner()
+		end
+	end
+
+	self.BaseClass.ApplyMeleeDamage(self, ent, trace, damage)
 end
 
 function SWEP:PlayIdleSound()

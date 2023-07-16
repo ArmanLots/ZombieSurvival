@@ -42,7 +42,7 @@ function SWEP:ApplyMeleeDamage(ent, trace, damage)
 		if gt and gt:IsValid() then
 			gt.Applier = owner
 		end
-		ent:AddLegDamageExt(12, owner, self, SLOWTYPE_COLD)
+		--ent:AddLegDamageExt(12, owner, self, SLOWTYPE_COLD)
 	end
 
 	self.BaseClass.ApplyMeleeDamage(self, ent, trace, damage)

@@ -190,7 +190,7 @@ if SERVER then
 --			if wep.IsChargeCritical and wep:IsChargeCritical() then
 --				dmginfo:ScaleDamage(0.75)
 --			else
-				dmginfo:ScaleDamage(0.2)
+				dmginfo:ScaleDamage(0.3)
 --			end
 		end
 	end

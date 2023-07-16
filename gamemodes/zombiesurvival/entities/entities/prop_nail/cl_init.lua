@@ -206,8 +206,8 @@ function ENT:DrawTranslucent()
 					col.a = 125 * vis
 
 					draw.SimpleText(displayowner, "ZS3D2DUnstyleSmallest", 0, y + 20, col, TEXT_ALIGN_CENTER)
-					draw.SimpleText(math.Round(nhp, 1) .."/".. math.Round(self:GetMaxNailHealth(), 1).." ("..math.Round(nhp / self:GetMaxNailHealth() * 100).."%)", "ZS3D2DUnstyleTiny", x + 25, y - 30, col, TEXT_ALIGN_CENTER)
-					draw.SimpleText(math.Round(repairs, 1) .."/".. math.Round(mrps, 1).." ("..math.Round(repairs / mrps * 100).."%)", "ZS3D2DUnstyleTiny", x + 25, y - 48, Color(207,255,255), TEXT_ALIGN_CENTER)
+					draw.SimpleText(math.floor(nhp, 1) .."/".. math.floor(self:GetMaxNailHealth(), 1).." ("..math.floor(nhp / self:GetMaxNailHealth() * 100).."%)", "ZS3D2DUnstyleTiny", x + 25, y - 30, col, TEXT_ALIGN_CENTER)
+					draw.SimpleText(math.floor(repairs, 1) .."/".. math.floor(mrps, 1).." ("..math.floor(repairs / mrps * 100).."%)", "ZS3D2DUnstyleTiny", x + 25, y - 48, Color(207,255,255), TEXT_ALIGN_CENTER)
 				end
 			end
 		cam.End3D2D()

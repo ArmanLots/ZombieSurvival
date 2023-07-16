@@ -4,7 +4,7 @@ SWEP.MeleeReach = 52
 SWEP.MeleeDelay = 0.36
 SWEP.MeleeSize = 4.5
 SWEP.MeleeDamage = 24
-SWEP.SlowDownScale = 3
+--SWEP.SlowDownScale = 0.5
 SWEP.MeleeDamageType = DMG_SLASH
 SWEP.MeleeAnimationDelay = 0.05
 

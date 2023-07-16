@@ -55,7 +55,7 @@ function ENT:Hit(vHitPos, vHitNormal, ent)
 				self.Exploded = true
 
 				ent:TakeSpecialDamage(8, DMG_GENERIC, owner, self)
-				ent:KnockDown()
+				--ent:KnockDown()
 
 				local status = ent:GiveStatus("devourer")
 				if status and status:IsValid() then

@@ -9,7 +9,7 @@ CLASS.SWEP = "weapon_zs_frigidrevenant"
 
 CLASS.Wave = 4 / GM.NumberOfWaves
 
-CLASS.Health = 300
+CLASS.Health = 270
 CLASS.DynamicHealth = 5
 CLASS.Speed = 170
 

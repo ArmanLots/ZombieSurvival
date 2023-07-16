@@ -7,7 +7,7 @@ CLASS.TranslationName = "class_noxiousghoul"
 CLASS.Description = "description_noxiousghoul"
 CLASS.Help = "controls_noxiousghoul"
 
-CLASS.Health = 320
+CLASS.Health = 260
 CLASS.DynamicHealth = 4
 CLASS.Speed = 165
 
