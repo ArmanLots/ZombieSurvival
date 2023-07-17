@@ -181,6 +181,9 @@ function ENT:Think()
 			self:SetAmmo(self:GetAmmo() - 1)
 
 			count = count + 1
+            if self:GetAmmo() == 0 then
+				owner:SendDeployableOutOfAmmoMessage(self)
+			end
 
 			if count >= 3 or self:GetAmmo() <= 0 then break end
 		end

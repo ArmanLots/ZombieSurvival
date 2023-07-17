@@ -918,7 +918,11 @@ function meta:GiveStatus(sType, fDie)
 		if ent:IsValid() then
 			ent:Spawn()
 			if fDie then
-				ent:SetDie(fDie)
+				local newend = CurTime() + fDie
+				local oldend = cur.DieTime
+				if not oldend or newend > oldend then
+					cur:SetDie(newend)
+				end
 			end
 			ent:SetPlayer(self)
 			return ent

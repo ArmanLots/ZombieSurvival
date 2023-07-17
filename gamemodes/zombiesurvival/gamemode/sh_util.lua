@@ -543,5 +543,5 @@ pulseeffect:SetScale(1)
 function util.CreatePulseImpactEffect(hitpos, hitnormal)
 	pulseeffect:SetOrigin(hitpos)
 	pulseeffect:SetNormal(hitnormal)
-	util.Effect("cball_bounce", pulseeffect)
+	util.Effect("AR2Impact", pulseeffect)
 end

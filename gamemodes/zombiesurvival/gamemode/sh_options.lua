@@ -982,7 +982,7 @@ GM.WaveIntermissionLengthMaxClassic = 25
 
 -- Max amount of damage left to tick on these. Any more pending damage is ignored.
 GM.MaxPoisonDamage = 50
-GM.MaxBleedDamage = 50
+GM.MaxBleedDamage = 100
 
 -- Give humans this many points when the wave ends.
 GM.EndWavePointsBonus = 5
@@ -991,13 +991,13 @@ GM.EndWavePointsBonus = 5
 GM.EndWavePointsBonusPerWave = 1
 
 -- Should humans need to be near arsenal crates to buy items
-GM.NeedArsenalToBuyItems = true
+GM.NeedArsenalToBuyItems = false
 
 -- Use the zombie class for classic mode
 GM.ClassicZombieClass = "Classic Zombie"
 
 -- Enable or disable difficulty by default
-GM.DifficultyEnabledByDefault = true
+GM.DifficultyEnabledByDefault = false
 
 -- Allow players voting for endless mode.
 GM.AllowEndlessModeVoting = true

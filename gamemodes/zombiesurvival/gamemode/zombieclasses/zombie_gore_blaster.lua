@@ -11,6 +11,7 @@ CLASS.Wave = 2 / GM.NumberOfWaves
 --CLASS.Unlocked = true
 
 CLASS.Health = 220
+CLASS.DynamicHealth = 4
 CLASS.Speed = 160
 CLASS.Revives = false
 

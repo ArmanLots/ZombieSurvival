@@ -87,9 +87,15 @@ function meta:HitFence(data, phys)
 	local vel = data.OurOldVelocity
 	local endpos = data.HitPos + vel:GetNormalized()
 	if util.TraceLine({start = pos, endpos = endpos, mask = MASK_SOLID, filter = self}).Hit and not util.TraceLine({start = pos, endpos = endpos, mask = MASK_SHOT, filter = self}).Hit then -- Essentially hit a fence or passable object.
-		self:SetPos(data.HitPos)
-		phys:SetPos(data.HitPos)
-		phys:SetVelocityInstantaneous(vel)
+        local datahit = data.HitPos
+
+        timer.Simple(0, function()
+			if self:IsValid() and phys:IsValid() then
+				self:SetPos(datahit)
+				phys:SetPos(datahit)
+				phys:SetVelocityInstantaneous(vel)
+			end
+		end)
 
 		return true
 	end
@@ -183,6 +189,12 @@ local function CheckItemCreated(self)
 		end
 	end
 	for _, ent in pairs(ents.FindByClass("prop_weapon")) do
+		if not ent.PlacedInMap then
+			table.insert(tab, ent)
+		end
+	end
+    
+	for _, ent in pairs(ents.FindByClass("prop_invitem")) do
 		if not ent.PlacedInMap then
 			table.insert(tab, ent)
 		end

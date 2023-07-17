@@ -407,7 +407,7 @@ LANGUAGE.description_chem_juggernaut    = "The Chem zombie next evolution stage 
 LANGUAGE.description_skeleton_warrior   = "Forgotten warriors from ages past\nThe weapons they carry made them dangerous against other melee attackers."
 LANGUAGE.description_primeghoul   = "The ascended God of all ghouls\nTheir waves of projectiles will totally triple unlucky victims\nand their body will discharge poison towards attackers when harmed."
 
-LANGUAGE.controls_cold_marrow   = "> PRIMARY: Frost Claws\n> ON 400 DAMAGE TAKEN: Create Frost Shield for 80% resistance"
+LANGUAGE.controls_cold_marrow   = "> PRIMARY: Frost Claws\n> ON 400 DAMAGE TAKEN: Create Frost Shield for 60% resistance"
 LANGUAGE.controls_chem_juggernaut   = "> PRIMARY: Acid Claws"
 LANGUAGE.controls_skeleton_warrior    = "> PRIMARY: Swing Axe"
 

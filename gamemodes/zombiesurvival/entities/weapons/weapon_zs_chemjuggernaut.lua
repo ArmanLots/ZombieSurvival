@@ -8,7 +8,7 @@ SWEP.Base = "weapon_zs_zombie"
 
 SWEP.MeleeDamage = 28
 SWEP.MeleeDamageVsProps = 60
-SWEP.Primary.Delay = 1.6
+SWEP.Primary.Delay = 1.5
 
 SWEP.AlertDelay = 3.5
 
