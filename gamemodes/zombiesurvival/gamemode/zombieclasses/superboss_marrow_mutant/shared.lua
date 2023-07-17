@@ -122,6 +122,8 @@ function CLASS:ProcessDamage(pl, dmginfo)
 		pl["bloodth"..numthreshold] = false
 		dmginfo:SetDamage(dmg - nulldmg)
 		pl:GiveStatus("marrowmutant", 6)
+		pl:EmitSound("npc/fast_zombie/fz_scream1.wav", 75, math.random(50,60), 1)
+		pl:EmitSound("npc/fast_zombie/fz_scream1.wav", 75, math.random(60,70), 1)
 
 		local effectdata = EffectData()
 			effectdata:SetOrigin(pl:WorldSpaceCenter())

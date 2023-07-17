@@ -409,7 +409,7 @@ LANGUAGE.description_primeghoul   = "The ascended God of all ghouls\nTheir waves
 
 LANGUAGE.controls_cold_marrow   = "> PRIMARY: Frost Claws\n> ON 400 DAMAGE TAKEN: Create Frost Shield for 80% resistance"
 LANGUAGE.controls_chem_juggernaut   = "> PRIMARY: Acid Claws"
-LANGUAGE.controls_skeleton_warrior    = "> PRIMARY: Sword clave"
+LANGUAGE.controls_skeleton_warrior    = "> PRIMARY: Swing Axe"
 
 -- Class control schemes
 LANGUAGE.controls_obliterator         = "> PRIMARY: Claws\n> SECONDARY: Moan"
@@ -417,7 +417,7 @@ LANGUAGE.controls_frost_headcrab      = "> PRIMARY: Bite\n> SECONDARY: Shoot fro
 LANGUAGE.controls_marrow_mutant       = "> PRIMARY: Claws\n> SECONDARY: Resurgence Scream\n> ON EVERY 400 DAMAGE TAKEN: Create Blood Shield for 95% resistance"
 LANGUAGE.controls_regurgitator        = "> PRIMARY: Vomit Gibs\n> ON DAMAGE TAKEN: Create Gibs"
 LANGUAGE.controls_magic_shade         = "> PRIMARY: Throw Prop\n> SECONDARY: Pick Up Prop\n> Reload: Pull Rock From Ground"
-LANGUAGE.controls_gib_zombie          = "> PRIMARY: Bleeding Claws\n> SECONDARY: Flesh Vomit\n> SPRINT: Feign death\n> ON DEATH: Gib Explosion"
+LANGUAGE.controls_gib_zombie          = "> PRIMARY: Claws\n> SECONDARY: Gib Vomit\n> SPRINT: Feign death\n> ON DEATH: Gib Explosion"
 LANGUAGE.controls_writher_zombie      = "> PRIMARY: Dim Claws\n> SECONDARY: Moan"
 LANGUAGE.controls_drencher              = "> PRIMARY: Bleeding Claws\n> SECONDARY: Moan\n> ON DEATH: Blood Storm"
 LANGUAGE.controls_zombie							= "> PRIMARY: Claws\n> SECONDARY: Scream\n> RELOAD: Moan\n> SPRINT: Feign death\n> ON FATAL HIT IN LEGS: Revive / Transform"
@@ -749,8 +749,8 @@ LANGUAGE.controls_eradicator_iii					        = "> PRIMARY: Claws\n> SECONDARY: S
 LANGUAGE.class_infected_citizen		 				        = "Infected Citizen"
 LANGUAGE.description_infected_citizen		          = "These are the zombie variants from the city being mutated due to zombie outbreak.\nIt is also believed to be more resillient and are faster."
 LANGUAGE.controls_infected_citizen				        = "> PRIMARY: Claws\n> SECONDARY: Scream\n> SPRINT: Feign death"
-LANGUAGE.class_mutated_lacerator		 			        = "Mutated Lacerator"
-LANGUAGE.description_mutated_lacerator		        = "Lacerators are identical to Fast Zombies in almost every way.\nDespite their similarities, they are even deadlier and do not share their counterpart's fragility"
+LANGUAGE.class_mutated_lacerator		 			        = "Venom Dripper"
+LANGUAGE.description_mutated_lacerator		        = "Dangerously fast jumpers that roam large open areas, seeking their next target.\nTheir claws are loaded with deadly toxins. Any human unlucky enough to encounter this zombie would likely be torn apart."
 LANGUAGE.controls_mutated_lacerator				        = "> PRIMARY: Claws\n> SECONDARY: Lunge / Climb wall\n> RELOAD: Scream"
 LANGUAGE.class_undead_fast_zombie                 = "Undead Fast Zombie"
 LANGUAGE.description_undead_fast_zombie           = "The Fast Zombie that has been mutated in the past, inflicting only destruction.\nThese will only arrive when humans are struggling to fight against zombies."

@@ -4,11 +4,11 @@ SWEP.PrintName = "Noxious Ghoul"
 
 SWEP.Base = "weapon_zs_zombie"
 
-SWEP.MeleeDamage = 32
-SWEP.MeleeDamageVsProps = 24
+SWEP.MeleeDamage = 28
+SWEP.MeleeDamageVsProps = 26
 SWEP.MeleeForceScale = 0.5
-SWEP.SlowDownScale = 0.25
-SWEP.EnfeebleDurationMul = 10 / SWEP.MeleeDamage
+--SWEP.SlowDownScale = 0.25
+SWEP.EnfeebleDurationMul = 8 / SWEP.MeleeDamage
 
 function SWEP:ApplyMeleeDamage(ent, trace, damage)
 	ent:PoisonDamage(damage, self:GetOwner(), self, trace.HitPos)

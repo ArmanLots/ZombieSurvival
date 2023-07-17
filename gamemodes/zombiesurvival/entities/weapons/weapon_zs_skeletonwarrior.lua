@@ -1,15 +1,15 @@
 AddCSLuaFile()
 
-SWEP.Base = "weapon_zs_longsword"
+SWEP.Base = "weapon_zs_executioner"
 
 SWEP.ZombieOnly = true
-SWEP.MeleeDamage = 30
+SWEP.MeleeDamage = 36
 SWEP.OriginalMeleeDamage = SWEP.MeleeDamage
 SWEP.Primary.Delay = 1.1
 
 function SWEP:OnMeleeHit(hitent, hitflesh, tr)
 	if not hitent:IsPlayer() then
-		self.MeleeDamage = 30
+		self.MeleeDamage = 46
 	end
 end
 

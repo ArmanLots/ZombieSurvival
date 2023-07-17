@@ -2,17 +2,17 @@ SWEP.PrintName = "Gib Zombie"
 
 SWEP.Base = "weapon_zs_zombie"
 
-SWEP.MeleeDamage = 22
-SWEP.MeleeDamageVsProps = 24
-SWEP.BleedDamageMul = 10 / SWEP.MeleeDamage
+SWEP.MeleeDamage = 26
+SWEP.MeleeDamageVsProps = 30
+--SWEP.BleedDamageMul = 10 / SWEP.MeleeDamage
 SWEP.MeleeForceScale = 1.25
 
-SWEP.Primary.Delay = 1.6
+SWEP.Primary.Delay = 1.35
 
 SWEP.NextPuke = 0
 SWEP.PukeLeft = 0
 
-function SWEP:ApplyMeleeDamage(ent, trace, damage)
+--[[function SWEP:ApplyMeleeDamage(ent, trace, damage)
 	if SERVER and ent:IsPlayer() then
 		local bleed = ent:GiveStatus("bleed")
 		if bleed and bleed:IsValid() then
@@ -22,7 +22,7 @@ function SWEP:ApplyMeleeDamage(ent, trace, damage)
 	end
 
 	self.BaseClass.ApplyMeleeDamage(self, ent, trace, damage)
-end
+end--]]
 
 function SWEP:Reload()
 	self.BaseClass.SecondaryAttack(self)

@@ -1,7 +1,7 @@
 CLASS.Base = "lacerator"
 CLASS.Revives = false
 
-CLASS.Name = "Mutated Lacerator"
+CLASS.Name = "Venom Dripper"
 CLASS.TranslationName = "class_mutated_lacerator"
 CLASS.Description = "description_mutated_lacerator"
 CLASS.Help = "controls_lacerator"

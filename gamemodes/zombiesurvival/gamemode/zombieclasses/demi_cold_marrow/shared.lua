@@ -22,6 +22,8 @@ CLASS.Health = 800
 CLASS.DynamicHealth = 50
 CLASS.Speed = 150
 
+CLASS.ResistFrost = true
+
 CLASS.Skeletal = true
 CLASS.BloodColor = -1
 
@@ -105,7 +107,7 @@ function CLASS:ProcessDamage(pl, dmginfo)
 	local hp = pl:Health()
 
 	if pl:GetStatus("coldmarrow") and attacker:IsPlayer() and attacker:Team() == TEAM_HUMAN then
-		dmginfo:SetDamage(dmginfo:GetDamage() * 0.20)
+		dmginfo:SetDamage(dmginfo:GetDamage() * 0.40)
 		dmg = dmginfo:GetDamage()
 	end
 
@@ -119,10 +121,12 @@ function CLASS:ProcessDamage(pl, dmginfo)
 		pl["bloodth"..numthreshold] = false
 		dmginfo:SetDamage(dmg - nulldmg)
 		pl:GiveStatus("coldmarrow", 3)
-
+		pl:EmitSound("npc/fast_zombie/fz_scream1.wav", 75, math.random(60,70), 0.5)
+		pl:EmitSound("npc/fast_zombie/fz_scream1.wav", 75, math.random(70,80), 0.5)
+		
 		local effectdata = EffectData()
 			effectdata:SetOrigin(pl:WorldSpaceCenter())
-		util.Effect("explosion_bonemesh", effectdata)
+		util.Effect("explosion_cold", effectdata)
 
 		pl:GodEnable()
 		util.BlastDamageEx(pl, pl, pl:GetPos(), 55, 7, DMG_CLUB)

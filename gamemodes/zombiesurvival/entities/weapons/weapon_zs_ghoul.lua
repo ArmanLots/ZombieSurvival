@@ -4,10 +4,10 @@ SWEP.PrintName = "Ghoul"
 
 SWEP.Base = "weapon_zs_zombie"
 
-SWEP.MeleeDamage = 23
+SWEP.MeleeDamage = 18
 SWEP.MeleeForceScale = 0.5
-SWEP.SlowDownScale = 0.25
-SWEP.EnfeebleDurationMul = 10 / SWEP.MeleeDamage
+--SWEP.SlowDownScale = 0.25
+SWEP.EnfeebleDurationMul = 6 / SWEP.MeleeDamage
 --[[SWEP.MeleeForceScale = 0.1
 SWEP.SlowDownScale = 2.25
 SWEP.SlowDownImmunityTime = 2]]

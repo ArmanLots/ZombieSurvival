@@ -38,7 +38,7 @@ end
 SWEP.PlayIdleSound = SWEP.PlayAlertSound
 
 function SWEP:PlayAttackSound()
-	self:EmitSound("npc/fast_zombie/leap1.wav", 74, math.Rand(110, 130))
+	self:EmitSound("npc/fast_zombie/leap1.wav", 74, math.Rand(90, 110))
 end
 
 local PoisonPattern = {
