@@ -162,53 +162,42 @@ function ENT:DrawTranslucent()
 				)
 			end
 
-			if self:GetMaxRepairs() > 0 or self:GetMaxNailHealth() > 0 then
+			if self:GetMaxRepairs() > 0 then
 				local repairs = self:GetRepairs()
-				local mrps = self:GetMaxRepairs()
+				local ru = 1 - math.Clamp(repairs / self:GetMaxRepairs(), 0, 1)
+				surface.SetDrawColor(0, 0, 0, 220)
+				surface.DrawRect(x, y, wid, hei)
+				surface.SetDrawColor(40, 40, 40, 220)
+				surface.DrawOutlinedRect(x, y, wid, hei)
+				surface.SetDrawColor(230, 5, 5, ru == 1 and (150 + math.abs(math.sin(RealTime() * 5)) * 105) or 220)
+				surface.DrawRect(x + 1, y + 1, (wid - 2) * ru, hei - 2)
 
-				local repairs2 = math.min(repairs, 6000)
-				local mrps2 = math.min(mrps, 6000)
-				local nhp2 = math.min(nhp, 6000)
-				local mnhp2 = math.min(mnhp, 6000)
+				draw.SimpleText(math.ceil(repairs), "ZS3D2DFont2Smaller", x + wid, y - 1, repairs <= 0 and COLOR_DARKRED or COLOR_GRAY--[[Color(20, 170, 255)--]], TEXT_ALIGN_RIGHT, TEXT_ALIGN_BOTTOM)
+			end
 
-				surface.SetDrawColor(0, 0, 0, 210 * vis)
-				surface.DrawRect(x - 1, y, mrps/5 + mrps/50 + 1, hei)
-
-				for i = 0, repairs2, 200 do
-					local val = math.Clamp(repairs - i, 0, 200)
-
-					surface.SetDrawColor(100, 170, 215, 240 * vis)
-					surface.DrawRect(x + 1 + i/5 + i/50, y + 1, val/5, hei - 2)
-				end
-
-				local mu = math.Clamp(nhp / mnhp, 0, 1)
+			if self:GetMaxNailHealth() > 0 then
+				local mu = math.Clamp(self:GetNailHealth() / self:GetMaxNailHealth(), 0, 1)
 				local green = mu * 200
 				colNail.r = 200 - green
 				colNail.g = green
-				colNail.a = 240 * vis
 
 				y = y + hei + 3
 				hei = 8
 				x = wid * -0.5 + 2
+				surface.SetDrawColor(0, 0, 0, 220)
+				surface.DrawRect(x, y, wid, hei)
+				surface.SetDrawColor(40, 40, 40, 220)
+				surface.DrawOutlinedRect(x, y, wid, hei)
+				surface.SetDrawColor(colNail)
+				surface.DrawRect(x + 1, y + 1, (wid - 2) * mu, hei - 2)
 
-				surface.SetDrawColor(0, 0, 0, 210 * vis)
-				surface.DrawRect(x - 1, y, mnhp/5 + mnhp/50 + 2, hei)
+				draw.SimpleText(math.ceil(self:GetNailHealth()).." / "..math.ceil(self:GetMaxNailHealth()), "ZS3D2DFont2Smaller", x + wid / 2, y + hei + 1, colNail, TEXT_ALIGN_CENTER)
+			end
 
-				for i = 0, nhp2, 200 do
-					local val = math.Clamp(nhp - i, 0, 200)
-
-					surface.SetDrawColor(colNail)
-					surface.DrawRect(x + 1 + i/5 + i/50, y + 1, val/5, hei - 2)
-				end
-
-				if displayowner then
-					local col = redname and colDead or colText
-					col.a = 125 * vis
-
-					draw.SimpleText(displayowner, "ZS3D2DUnstyleSmallest", 0, y + 20, col, TEXT_ALIGN_CENTER)
-					draw.SimpleText(math.floor(nhp, 1) .."/".. math.floor(self:GetMaxNailHealth(), 1).." ("..math.floor(nhp / self:GetMaxNailHealth() * 100).."%)", "ZS3D2DUnstyleTiny", x + 25, y - 30, col, TEXT_ALIGN_CENTER)
-					draw.SimpleText(math.floor(repairs, 1) .."/".. math.floor(mrps, 1).." ("..math.floor(repairs / mrps * 100).."%)", "ZS3D2DUnstyleTiny", x + 25, y - 48, Color(207,255,255), TEXT_ALIGN_CENTER)
-				end
+			if displayowner then
+				local col = redname and colDead or colText
+				col.a = 125 * vis
+				draw.SimpleText(displayowner, "ZS3D2DUnstyleSmallest", 0, y + 45, col, TEXT_ALIGN_CENTER)
 			end
 		cam.End3D2D()
 
