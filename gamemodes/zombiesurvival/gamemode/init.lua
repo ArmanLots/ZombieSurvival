@@ -4100,7 +4100,7 @@ function GM:HumanKilledZombie(pl, attacker, inflictor, dmginfo, headshot, suicid
 	if (pl:GetZombieClassTable().Points or 0) == 0 or self.RoundEnded then return end
 
 	if pl:Team() == TEAM_UNDEAD then
-		pl:AddZombieTokens(5 + (math.max(self:GetWave() - 1, 0)) * 2)
+		pl:AddZombieTokens(8 + (math.max(self:GetWave() - 1, 0)) * 2)
 	end
 
 	-- Simply distributes based on damage but also do some stuff for assists.

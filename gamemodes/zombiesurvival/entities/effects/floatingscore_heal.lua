@@ -6,7 +6,7 @@ function EFFECT:Init(data)
 	self.Seed = math.Rand(0, 10)
 
 	self.Pos = data:GetOrigin()
-	self.Amount = math.Round(data:GetMagnitude(), 2)
+	self.Amount = math.floor(data:GetMagnitude(), 2)
 
 	self.DeathTime = CurTime() + self.LifeTime
 end
