@@ -217,7 +217,7 @@ function PANEL:Text1Paint()
 			end
 		else
 			--draw.SimpleText(translate.Format("points_x", MySelf:GetPoints().." / "..MySelf:Frags()), self.Font, 0, 0, COLOR_GRAY)
-			draw.SimpleText("Points: "..MySelf:GetPoints().." / Score: "..MySelf:Frags(), self.Font, 0, 0, COLOR_GRAY)
+			draw.SimpleText("Points: "..MySelf:GetPoints(), self.Font, 0, 0, COLOR_RED)
 		end
 	end
 
@@ -228,7 +228,7 @@ function PANEL:Text2Paint()
 	if MySelf:IsValid() and MySelf:Team() == TEAM_HUMAN then
 		if not GAMEMODE.ZombieEscape then
 			local resupplyready = CurTime() >= (MySelf.NextUse or 0)
-			draw.SimpleText(MySelf.Stowage and Format("Resupply usages: %s", MySelf.StowageCaches or 0) or resupplyready and "Resupply cache is ready!" or Format("Next resupply: %ss", math.ceil(MySelf.NextUse - CurTime())), self.Font, 0, 0, (MySelf.Stowage and (MySelf.StowageCaches or 0) > 0 or resupplyready) and COLOR_GREEN or COLOR_GRAY)
+			draw.SimpleText(MySelf.Stowage and Format("Resupply usages: %s", MySelf.StowageCaches or 0) or resupplyready and "Resupply is ready!" or Format("Next resupply: %ss", math.ceil(MySelf.NextUse - CurTime())), self.Font, 0, 0, (MySelf.Stowage and (MySelf.StowageCaches or 0) > 0 or resupplyready) and COLOR_GREEN or COLOR_GRAY)
 		end
 	elseif MySelf:IsValid() and MySelf:Team() == TEAM_UNDEAD then
 		draw.SimpleText(Format("Zombie Tokens: %s", MySelf:GetZombieTokens()), self.Font, 0, 0, COLOR_RORANGE)

@@ -923,7 +923,7 @@ GM.EndGameTime = 35
 GM.SurvivalClips = 4 --2
 
 -- How long do humans have to wait before being able to get more ammo from a resupply box?
-GM.ResupplyBoxCooldown = 45
+GM.ResupplyBoxCooldown = 30
 
 -- Put your unoriginal, 5MB Rob Zombie and Metallica music here. (Now accepts table values)
 GM.LastHumanSound = {
