@@ -1,19 +1,4 @@
-AddCSLuaFile()
-
-ENT.Base = "prop_gunturret"
-
-ENT.SWEP = "weapon_zs_gunturret_pulse"
-
-ENT.AmmoType = "pulse"
-ENT.FireDelay = 0.22
-ENT.NumShots = 1
-ENT.Damage = 30
-ENT.PlayLoopingShootSound = false
-ENT.Spread = 2
-ENT.SearchDistance = 225
-ENT.MaxAmmo = 300
-
-if CLIENT then
+INC_CLIENT()
 
 function ENT:Initialize()
 	self.BaseClass.Initialize(self)
@@ -53,10 +38,4 @@ function ENT:OnRemove()
 
 	self.ScanningSound:Stop()
 	self.ShootingSound:Stop()
-end
-
-end
-
-function ENT:PlayShootSound()
-	self:EmitSound("Airboat.FireGunHeavy")
 end
