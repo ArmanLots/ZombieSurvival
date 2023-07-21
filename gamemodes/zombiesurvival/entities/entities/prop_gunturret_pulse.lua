@@ -2,9 +2,9 @@ AddCSLuaFile()
 
 ENT.Base = "prop_gunturret"
 
-ENT.SWEP = "weapon_zs_gunturret_pluse"
+ENT.SWEP = "weapon_zs_gunturret_pulse"
 
-ENT.AmmoType = "pluse"
+ENT.AmmoType = "pulse"
 ENT.FireDelay = 0.22
 ENT.NumShots = 1
 ENT.Damage = 30

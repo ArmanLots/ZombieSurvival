@@ -506,8 +506,8 @@ GM:AddPointShopItem("rocketturret",		ITEMCAT_DEPLOYABLES,			140,			"weapon_zs_gu
 item.Countables = "prop_gunturret_rocket"
 item.NoClassicMode = true
 --item.SkillRequirement = SKILL_U_ROCKETTURRET
-GM:AddPointShopItem("pluseturret",		ITEMCAT_DEPLOYABLES,			140,			"weapon_zs_gunturret_pluse",	nil,							nil,									nil,											function(pl) pl:GiveEmptyWeapon("weapon_zs_gunturret_pluse") pl:GiveAmmo(1,	"turret_pluse") end)
-item.Countables = "prop_gunturret_pluse"
+GM:AddPointShopItem("pulseturret",		ITEMCAT_DEPLOYABLES,			140,			"weapon_zs_gunturret_pulse",	nil,							nil,									nil,											function(pl) pl:GiveEmptyWeapon("weapon_zs_gunturret_pulse") pl:GiveAmmo(1,	"turret_pulse") end)
+item.Countables = "prop_gunturret_pulse"
 item.NoClassicMode = true
 GM:AddPointShopItem("manhack",			ITEMCAT_DEPLOYABLES,			25,				"weapon_zs_manhack").Countables = "prop_manhack"
 item =
@@ -810,7 +810,7 @@ GM:AddDeployableInfo("prop_gunturret", 			"Gun Turret",	 		"weapon_zs_gunturret"
 GM:AddDeployableInfo("prop_gunturret_assault", 	"Assault Turret",	 	"weapon_zs_gunturret_assault")
 GM:AddDeployableInfo("prop_gunturret_buckshot",	"Blast Turret",	 		"weapon_zs_gunturret_buckshot")
 GM:AddDeployableInfo("prop_gunturret_rocket",	"Rocket Turret",	 	"weapon_zs_gunturret_rocket")
-GM:AddDeployableInfo("prop_gunturret_pluse",	"Pluse Turret",			"weapon_zs_gunturret_pluse")
+GM:AddDeployableInfo("prop_gunturret_pulse",	"Pulse Turret",			"weapon_zs_gunturret_pulse")
 GM:AddDeployableInfo("prop_repairfield",		"Repair Field Emitter",	"weapon_zs_repairfield")
 GM:AddDeployableInfo("prop_zapper",				"Zapper",				"weapon_zs_zapper")
 GM:AddDeployableInfo("prop_zapper_arc",			"Arc Zapper",			"weapon_zs_zapper_arc")

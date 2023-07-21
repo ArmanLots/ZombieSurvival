@@ -162,7 +162,7 @@ function GM:AddCustomAmmo()
 	game.AddAmmoType({name = "turret_buckshot"})
 	game.AddAmmoType({name = "turret_assault"})
 	game.AddAmmoType({name = "turret_rocket"})
-	game.AddAmmoType({name = "turret_pluse"})
+	game.AddAmmoType({name = "turret_pulse"})
 	game.AddAmmoType({name = "camera"})
 	game.AddAmmoType({name = "tv"})
 
