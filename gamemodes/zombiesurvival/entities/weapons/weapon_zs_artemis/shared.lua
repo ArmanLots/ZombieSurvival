@@ -42,7 +42,7 @@ SWEP.UseHands = true
 SWEP.CSMuzzleFlashes = false
 
 SWEP.Primary.Delay = 0.5
-SWEP.Primary.Damage = 85
+SWEP.Primary.Damage = 88
 
 SWEP.Primary.ClipSize = 4
 SWEP.Primary.Automatic = false
